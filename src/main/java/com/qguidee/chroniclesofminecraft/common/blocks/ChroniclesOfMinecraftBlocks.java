@@ -1,6 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.blocks;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
+import com.qguidee.chroniclesofminecraft.common.blocks.flowers.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
@@ -16,12 +17,31 @@ public class ChroniclesOfMinecraftBlocks {
     public static Block distiller;
     public static Block alembic;
 
+    // Flowers
+    public static Block flowerRosaRosea;
+    public static Block flowerRosaAlba;
+    public static Block flowerRosaHyacinus;
+    public static Block flowerLiliaceaeCandela;
+
+    public static Block flowerAloesCandela;
+    public static Block flowerCapparaceaeTropicalumBottom;
+    public static Block flowerCapparaceaeTropicalumTop;
+
     public static void init() {
 
         // Distillery
         distiller = new Distiller(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller");
-        alembic = new Alembic(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic");
+        alembic = new Alembic(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE))/*.setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic")*/;
 
+        // Flowers
+        flowerRosaRosea = new RosaRosea(Block.Properties.create(Material.PLANTS).hardnessAndResistance(1).harvestLevel(0).harvestTool(ToolType.SHOVEL)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea");
+        flowerRosaAlba = new RosaAlba(Block.Properties.create(Material.PLANTS).hardnessAndResistance(1).harvestLevel(0).harvestTool(ToolType.SHOVEL)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba");
+        flowerRosaHyacinus = new RosaHyacinus(Block.Properties.create(Material.PLANTS).hardnessAndResistance(1).harvestLevel(0).harvestTool(ToolType.SHOVEL)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus");
+        flowerLiliaceaeCandela = new LiliaceaeCandela(Block.Properties.create(Material.PLANTS).hardnessAndResistance(1).harvestLevel(0).harvestTool(ToolType.SHOVEL)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_liliaceae_candela");
+
+        flowerAloesCandela = new AloesCandela(Block.Properties.create(Material.PLANTS).hardnessAndResistance(1).harvestLevel(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela");
+        flowerCapparaceaeTropicalumBottom = new CapparaceaeTropicalumBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(1).harvestLevel(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_bottom");
+        flowerCapparaceaeTropicalumTop = new CapparaceaeTropicalumTop(Block.Properties.create(Material.PLANTS).hardnessAndResistance(1).harvestLevel(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_top");
     }
 
     @SubscribeEvent
@@ -29,8 +49,11 @@ public class ChroniclesOfMinecraftBlocks {
         init();
 
         event.getRegistry().registerAll(
-                distiller, alembic
+                distiller, alembic,
+
+                flowerRosaRosea, flowerRosaAlba, flowerRosaHyacinus, flowerLiliaceaeCandela,
+
+                flowerAloesCandela, flowerCapparaceaeTropicalumBottom, flowerCapparaceaeTropicalumTop
         );
     }
-
 }

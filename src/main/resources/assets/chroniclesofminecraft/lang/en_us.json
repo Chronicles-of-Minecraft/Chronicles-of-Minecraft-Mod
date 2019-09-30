@@ -19,5 +19,9 @@
     "block.chroniclesofminecraft.distiller": "Distiller",
     "block.chroniclesofminecraft.alembic": "Alembic",
 
+    "block.chroniclesofminecraft.flower_rosa_rosea": "rosa_rosea",
+    "block.chroniclesofminecraft.flower_rosa_hyacinus": "rosa_hyacinus",
+    "block.chroniclesofminecraft.flower_rosa_alba": "rosa_alba",
+
     "itemGroup.chroniclesOfMinecraftCore": "Chronicles of Minecraft Core"
 }

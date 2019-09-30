@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "chroniclesofminecraft:block/flower_capparaceae_tropicalum_bottom_stage1"
+    }
+}

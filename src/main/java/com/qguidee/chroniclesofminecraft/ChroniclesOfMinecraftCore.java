@@ -1,11 +1,21 @@
 package com.qguidee.chroniclesofminecraft;
 
+import com.qguidee.chroniclesofminecraft.common.blocks.Alembic;
+import com.qguidee.chroniclesofminecraft.common.blocks.ChroniclesOfMinecraftContainers;
+import com.qguidee.chroniclesofminecraft.common.blocks.alembic.AlembicContainer;
+import com.qguidee.chroniclesofminecraft.common.setup.ClientProxy;
+import com.qguidee.chroniclesofminecraft.common.setup.IProxy;
+import com.qguidee.chroniclesofminecraft.common.setup.ServerProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -24,6 +34,8 @@ import java.util.stream.Collectors;
 public class ChroniclesOfMinecraftCore
 {
     public static final String MOD_ID = "chroniclesofminecraft";
+
+    public static IProxy proxy = DistExecutor.runForDist(() -> ClientProxy::new, () -> ServerProxy::new);
 
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
@@ -44,6 +56,7 @@ public class ChroniclesOfMinecraftCore
 
     private void setup(final FMLCommonSetupEvent event)
     {
+        proxy.init();
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
@@ -83,5 +96,13 @@ public class ChroniclesOfMinecraftCore
             // register a new block here
             LOGGER.info("HELLO from Register Block");
         }
+    }
+
+    @SubscribeEvent
+    public static void onContainerRegistry(final RegistryEvent.Register<ContainerType<?>> event) {
+        event.getRegistry().register(IForgeContainerType.create((windowId, inv, data) -> {
+            BlockPos pos = data.readBlockPos();
+            return new AlembicContainer(windowId, ChroniclesOfMinecraftCore.proxy.getClientWorld(), pos, inv, ChroniclesOfMinecraftCore.proxy.getClientPlayer());
+        }).setRegistryName("alembic"));
     }
 }

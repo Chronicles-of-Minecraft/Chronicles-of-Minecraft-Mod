@@ -3,6 +3,7 @@ package com.qguidee.chroniclesofminecraft.common.items;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
 import com.qguidee.chroniclesofminecraft.common.CustomItemGroup;
 import com.qguidee.chroniclesofminecraft.common.blocks.ChroniclesOfMinecraftBlocks;
+import com.qguidee.chroniclesofminecraft.common.blocks.ChroniclesOfMinecraftContainers;
 import com.qguidee.chroniclesofminecraft.common.others.ItemTierCustom;
 import net.minecraft.item.*;
 import net.minecraftforge.event.RegistryEvent;
@@ -33,6 +34,14 @@ public class ChroniclesOfMinecraftItems {
 
     public static Item distiller;
     public static Item alembic;
+
+    public static Item flowerRosaRosea;
+    public static Item flowerRosaAlba;
+    public static Item flowerRosaHyacinus;
+    public static Item flowerLiliaceaeCandela;
+
+    public static Item flowerAloesCandela;
+    public static Item flowerCapparaceaeTropicalum;
 
     public static void init() {
 
@@ -66,6 +75,16 @@ public class ChroniclesOfMinecraftItems {
 
         distiller = new BlockItem(ChroniclesOfMinecraftBlocks.distiller, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller");
         alembic = new BlockItem(ChroniclesOfMinecraftBlocks.alembic, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic");
+
+        // Flowers
+        flowerRosaRosea = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaRosea, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName("flower_rosa_rosea");
+        flowerRosaAlba = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaAlba, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName("flower_rosa_alba");
+        flowerRosaHyacinus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaHyacinus, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName("flower_rosa_hyacinus");
+        flowerLiliaceaeCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerLiliaceaeCandela, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName("flower_liliaceae_candela");
+
+        flowerAloesCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerAloesCandela, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName("flower_aloes_candela");
+        flowerCapparaceaeTropicalum = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumBottom, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName("flower_capparaceae_tropicalum");
+
     }
 
     @SubscribeEvent
@@ -83,7 +102,11 @@ public class ChroniclesOfMinecraftItems {
 
             ingotAlchemium,
 
-            distiller, alembic
+            distiller, alembic,
+
+            flowerRosaRosea, flowerRosaAlba, flowerRosaHyacinus, flowerLiliaceaeCandela,
+
+            flowerAloesCandela, flowerCapparaceaeTropicalum
         );
     }
 }
