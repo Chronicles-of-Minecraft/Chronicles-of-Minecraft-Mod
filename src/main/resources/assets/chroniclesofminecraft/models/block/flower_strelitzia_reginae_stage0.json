@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "chroniclesofminecraft:block/flower_strelitzia_reginae_stage0"
+    }
+}

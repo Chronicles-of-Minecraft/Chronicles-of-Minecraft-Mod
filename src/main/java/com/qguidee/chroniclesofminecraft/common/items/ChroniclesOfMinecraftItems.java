@@ -42,6 +42,13 @@ public class ChroniclesOfMinecraftItems {
 
     public static Item flowerAloesCandela;
     public static Item flowerCapparaceaeTropicalum;
+    public static Item flowerStrelitziaReginae;
+    public static Item flowerArumTitan;
+
+    // Petals
+    public static Item flowerRosaRoseaPetals;
+    public static Item flowerRosaAlbaPetals;
+    public static Item flowerRosaHyacinusPetals;
 
     public static void init() {
 
@@ -84,7 +91,13 @@ public class ChroniclesOfMinecraftItems {
 
         flowerAloesCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerAloesCandela, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName("flower_aloes_candela");
         flowerCapparaceaeTropicalum = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumBottom, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName("flower_capparaceae_tropicalum");
+        flowerStrelitziaReginae = new BlockItem(ChroniclesOfMinecraftBlocks.flowerStrelitziaReginae, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName("flower_strelitzia_reginae");
+        flowerArumTitan = new BlockItem(ChroniclesOfMinecraftBlocks.flowerArumTitanBottom, new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName("flower_arum_titan");
 
+        // Petals
+        flowerRosaRoseaPetals = new Item(new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea_petals");
+        flowerRosaAlbaPetals = new Item(new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba_petals");
+        flowerRosaHyacinusPetals = new Item(new Item.Properties().maxStackSize(64).group(CustomItemGroup.CHRONICLES_OF_MINECRAFT_CORE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus_petals");
     }
 
     @SubscribeEvent
@@ -104,9 +117,11 @@ public class ChroniclesOfMinecraftItems {
 
             distiller, alembic,
 
-            flowerRosaRosea, flowerRosaAlba, flowerRosaHyacinus, flowerLiliaceaeCandela,
+            flowerRosaRosea, flowerRosaAlba, flowerRosaHyacinus, flowerLiliaceaeCandela, flowerStrelitziaReginae, flowerArumTitan,
 
-            flowerAloesCandela, flowerCapparaceaeTropicalum
+            flowerAloesCandela, flowerCapparaceaeTropicalum,
+
+            flowerRosaRoseaPetals, flowerRosaAlbaPetals, flowerRosaHyacinusPetals
         );
     }
 }

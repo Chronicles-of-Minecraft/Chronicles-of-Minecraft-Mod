@@ -1,23 +1,16 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.flowers;
 
 import com.qguidee.chroniclesofminecraft.common.blocks.ChroniclesOfMinecraftBlocks;
-import com.qguidee.chroniclesofminecraft.common.items.ChroniclesOfMinecraftItems;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.CropsBlock;
-import net.minecraft.block.IGrowable;
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class CapparaceaeTropicalumTop extends CapparaceaeTropicalumBottom {
+public class ArumTitanMid extends ArumTitanBottom {
 
-    public CapparaceaeTropicalumTop(Properties builder) {
+    public ArumTitanMid(Properties builder) {
         super(builder);
     }
 
@@ -33,6 +26,6 @@ public class CapparaceaeTropicalumTop extends CapparaceaeTropicalumBottom {
 
     @Override
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.getBlock() == ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumBottom;
+        return state.getBlock() == ChroniclesOfMinecraftBlocks.flowerArumTitanBottom;
     }
 }
