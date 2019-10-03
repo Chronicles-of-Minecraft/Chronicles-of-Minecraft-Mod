@@ -4,6 +4,7 @@ import com.mojang.blaze3d.platform.GlStateManager;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
+import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
@@ -11,9 +12,11 @@ import net.minecraft.util.text.ITextComponent;
 public class MortarPestleScreen extends ContainerScreen<MortarPestleContainer> {
 
     private static ResourceLocation gui = new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/mortar_pestle.png");
+    private MortarPestleContainer container;
 
     public MortarPestleScreen(MortarPestleContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
+        this.container = screenContainer;
     }
 
     @Override
@@ -36,5 +39,12 @@ public class MortarPestleScreen extends ContainerScreen<MortarPestleContainer> {
         int relX = (this.width - this.xSize) / 2;
         int relY = (this.height - this.ySize) / 2;
         this.blit(relX, relY, 0, 0, this.xSize, this.ySize);
+
+        this.addButton(new Button(relX + 22, relY + 59, 70, 20, "Grind", new Button.IPressable() {
+            @Override
+            public void onPress(Button p_onPress_1_) {
+                container.grind();
+            }
+        }));
     }
 }

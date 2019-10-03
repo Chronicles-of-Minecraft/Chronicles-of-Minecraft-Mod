@@ -102,5 +102,19 @@ public class MortarPestleContainer extends Container {
         return itemstack;
     }
 
+    public void grind() {
+        int itemCount = customInventory.getStackInSlot(0).getCount();
+
+        if (customInventory.getStackInSlot(0).getItem() == ChroniclesOfMinecraftItems.flowerRosaRosea) {
+
+            ((ItemStackHandler) customInventory).setStackInSlot(0, ItemStack.EMPTY);
+            ((ItemStackHandler) customInventory).setStackInSlot(1, new ItemStack(ChroniclesOfMinecraftItems.flowerRosaRoseaPetals, itemCount));
+
+//            customInventory.getStackInSlot(0).shrink(itemCount);
+//            customInventory.insertItem(1, new ItemStack(ChroniclesOfMinecraftItems.flowerRosaRoseaPetals, 1), false);
+
+
+        }
+    }
 
 }
