@@ -30,13 +30,12 @@ import net.minecraftforge.items.ItemStackHandler;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-public class MortarPestle extends Item implements ICapabilityProvider {
+public class MortarPestle extends Item {
 
-    private ItemStackHandler itemHandler;
+    public ICapabilityProvider capabilityProvider = null;
 
     public MortarPestle(Properties properties) {
         super(properties);
-        this.itemHandler = new ItemStackHandler(7);
     }
 
     @Override
@@ -56,16 +55,9 @@ public class MortarPestle extends Item implements ICapabilityProvider {
         return super.onItemRightClick(worldIn, playerIn, handIn);
     }
 
-    @Nonnull
+    @Nullable
     @Override
-    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
-            return LazyOptional.of(() -> this.itemHandler).cast();
-
-        return LazyOptional.empty();
-    }
-
-    public ItemStackHandler getItemHandler() {
-        return itemHandler;
+    public ICapabilityProvider initCapabilities(ItemStack stack, @Nullable CompoundNBT nbt) {
+        return capabilityProvider = new MortarPestleCapabilityProvider();
     }
 }

@@ -4,6 +4,8 @@ import com.qguidee.chroniclesofminecraft.common.blocks.ChroniclesOfMinecraftCont
 import com.qguidee.chroniclesofminecraft.common.items.ChroniclesOfMinecraftItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
@@ -22,20 +24,12 @@ public class MortarPestleContainer extends Container {
     @CapabilityInject(IItemHandler.class)
     private static LazyOptional<IItemHandler> ITEM_HANDLER_CAPABILITY = LazyOptional.empty();
 
+    private IItemHandler customInventory;
+
     public MortarPestleContainer(int id, PlayerInventory playerInventory) {
         super(ChroniclesOfMinecraftContainers.mortarPestle, id);
 
-        ITEM_HANDLER_CAPABILITY = ((MortarPestle) ChroniclesOfMinecraftItems.mortarPestleStone).getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
-
-        /*this.mortarPestleInventory = new Inventory(7);
-
-        addSlot(new Slot(mortarPestleInventory, 0, 25, 35));
-        addSlot(new Slot(mortarPestleInventory, 1, 104, 10));
-        addSlot(new Slot(mortarPestleInventory, 2, 133, 10));
-        addSlot(new Slot(mortarPestleInventory, 3, 104, 33));
-        addSlot(new Slot(mortarPestleInventory, 4, 133, 33));
-        addSlot(new Slot(mortarPestleInventory, 5, 104, 57));
-        addSlot(new Slot(mortarPestleInventory, 6, 133, 57));*/
+        ITEM_HANDLER_CAPABILITY = ((MortarPestle) ChroniclesOfMinecraftItems.mortarPestleStone).capabilityProvider.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
 
         NonNullSupplier<IItemHandler> nonNullSupplier = new NonNullSupplier<IItemHandler>() {
             @Nonnull
@@ -45,7 +39,7 @@ public class MortarPestleContainer extends Container {
             }
         };
 
-        IItemHandler customInventory = ITEM_HANDLER_CAPABILITY.orElseGet(nonNullSupplier);
+        customInventory = ITEM_HANDLER_CAPABILITY.orElseGet(nonNullSupplier);
 
         addSlot(new SlotItemHandler(customInventory, 0, 25, 35));
         addSlot(new SlotItemHandler(customInventory, 1, 104, 10));
@@ -69,6 +63,15 @@ public class MortarPestleContainer extends Container {
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
         return true;
+    }
+
+    @Override
+    public void onContainerClosed(PlayerEntity playerIn) {
+        super.onContainerClosed(playerIn);
+
+        for (int i = 0; i < customInventory.getSlots(); i++) {
+            playerIn.inventory.addItemStackToInventory(customInventory.getStackInSlot(i));
+        }
     }
 
     @Nonnull
@@ -98,4 +101,6 @@ public class MortarPestleContainer extends Container {
 
         return itemstack;
     }
+
+
 }

@@ -1,0 +1,36 @@
+package com.qguidee.chroniclesofminecraft.common.items.mortarpestle;
+
+import net.minecraft.util.Direction;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
+public class MortarPestleCapabilityProvider implements ICapabilityProvider {
+
+
+    private ItemStackHandler itemHandler;
+
+    public MortarPestleCapabilityProvider() {
+        this.itemHandler = new ItemStackHandler(7);
+    }
+
+    public MortarPestleCapabilityProvider(ItemStackHandler itemHandler) {
+        this.itemHandler = itemHandler;
+    }
+
+    @Nonnull
+    @Override
+    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
+        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+            return LazyOptional.of(() -> this.itemHandler).cast();
+
+        return LazyOptional.empty();
+    }
+
+
+}
