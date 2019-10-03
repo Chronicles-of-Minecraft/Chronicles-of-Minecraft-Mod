@@ -28,7 +28,7 @@ public class ChroniclesOfMinecraftTileEntities {
     public static void registerTileEntities(RegistryEvent.Register<TileEntityType<?>> event) {
         init();
 
-        event.getRegistry().register(
+        event.getRegistry().registerAll(
                 alembic
         );
     }

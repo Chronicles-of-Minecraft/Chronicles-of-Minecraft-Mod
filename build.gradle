@@ -117,7 +117,7 @@ jar {
         attributes([
             "Specification-Title": "Chronicles Of Minecraft",
             "Specification-Vendor": "Chronicles Of Minecraft Team",
-            "Specification-Version": "0.0.1", // We are version 1 of ourselves
+            "Specification-Version": "0.1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"Chronicles Of Minecraft Team",
