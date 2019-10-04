@@ -15,6 +15,7 @@ class ChroniclesOfMinecraftItemGroups {
         }
     }).setTabPath("chronicles_of_minecraft_alchemy");
 
+
     static final ItemGroup BIOMES = (new ItemGroup("chroniclesOfMinecraftBiomes") {
         @OnlyIn(Dist.CLIENT)
         public ItemStack createIcon() {
