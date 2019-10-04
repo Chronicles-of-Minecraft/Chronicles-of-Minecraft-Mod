@@ -1,10 +1,8 @@
 {
-    "item.chroniclesofminecraft.fire_wand": "Fire Wand",
-    "item.chroniclesofminecraft.water_wand": "Water Wand",
-    "item.chroniclesofminecraft.earth_wand": "Earth Wand",
-    "item.chroniclesofminecraft.air_wand": "Air Wand",
-
-    "item.chroniclesofminecraft.rose_petal": "Rose petal",
+    "item.chroniclesofminecraft.fire_wand": "Fire wand",
+    "item.chroniclesofminecraft.water_wand": "Water wand",
+    "item.chroniclesofminecraft.earth_wand": "Earth wand",
+    "item.chroniclesofminecraft.air_wand": "Air wand",
 
     "item.chroniclesofminecraft.sickle_gold": "Gold sickle",
     "item.chroniclesofminecraft.sickle_iron": "Iron sickle",
@@ -14,7 +12,12 @@
     "item.chroniclesofminecraft.mortar_pestle_gold": "Gold mortar and pestle",
     "item.chroniclesofminecraft.mortar_pestle_alchemium": "Alchemium mortar and pestle",
 
+    "item.chroniclesofminecraft.flower_rosa_rosea_petals": "Rosa rosea petals",
+    "item.chroniclesofminecraft.flower_rosa_hyacinus_petals": "Rosa hyacinus petals",
+    "item.chroniclesofminecraft.flower_rosa_alba_petals": "Rosa alba petals",
+
     "item.chroniclesofminecraft.ingot_alchemium": "Alchemium ingot",
+
 
     "block.chroniclesofminecraft.distiller": "Distiller",
     "block.chroniclesofminecraft.alembic": "Alembic",
@@ -23,5 +26,7 @@
     "block.chroniclesofminecraft.flower_rosa_hyacinus": "Rosa hyacinus",
     "block.chroniclesofminecraft.flower_rosa_alba": "Rosa alba",
 
-    "itemGroup.chroniclesOfMinecraftCore": "Chronicles of Minecraft Core"
+
+    "itemGroup.chroniclesOfMinecraftBiomes": "Chronicles of Minecraft Biomes",
+    "itemGroup.chroniclesOfMinecraftAlchemy": "Chronicles of Minecraft Alchemy"
 }

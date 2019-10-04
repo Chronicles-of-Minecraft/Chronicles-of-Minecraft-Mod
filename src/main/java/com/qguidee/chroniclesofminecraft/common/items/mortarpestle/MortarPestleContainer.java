@@ -1,24 +1,16 @@
 package com.qguidee.chroniclesofminecraft.common.items.mortarpestle;
 
-import com.qguidee.chroniclesofminecraft.common.blocks.ChroniclesOfMinecraftContainers;
-import com.qguidee.chroniclesofminecraft.common.items.ChroniclesOfMinecraftItems;
-import net.minecraft.client.renderer.texture.ITickable;
+import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftContainers;
+import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.tileentity.FurnaceTileEntity;
-import net.minecraft.util.NonNullList;
-import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.util.NonNullSupplier;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
 import javax.annotation.Nonnull;

@@ -1,16 +1,10 @@
-package com.qguidee.chroniclesofminecraft.common.blocks;
+package com.qguidee.chroniclesofminecraft;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
 import com.qguidee.chroniclesofminecraft.common.blocks.alembic.AlembicTile;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.ObjectHolder;
 
 @Mod.EventBusSubscriber(modid = ChroniclesOfMinecraftCore.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)

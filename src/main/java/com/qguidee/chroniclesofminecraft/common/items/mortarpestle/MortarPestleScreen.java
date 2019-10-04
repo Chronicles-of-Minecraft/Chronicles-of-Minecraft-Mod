@@ -2,7 +2,6 @@ package com.qguidee.chroniclesofminecraft.common.items.mortarpestle;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
-import com.qguidee.chroniclesofminecraft.common.ChroniclesOfMinecraftPacketHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.widget.button.Button;

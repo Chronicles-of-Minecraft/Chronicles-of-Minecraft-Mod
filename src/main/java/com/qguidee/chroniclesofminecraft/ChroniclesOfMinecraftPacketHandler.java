@@ -1,4 +1,4 @@
-package com.qguidee.chroniclesofminecraft.common;
+package com.qguidee.chroniclesofminecraft;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
 import net.minecraft.util.ResourceLocation;

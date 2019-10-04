@@ -1,4 +1,4 @@
-package com.qguidee.chroniclesofminecraft.common.blocks;
+package com.qguidee.chroniclesofminecraft;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
 import com.qguidee.chroniclesofminecraft.common.blocks.alembic.AlembicContainer;

@@ -1,6 +1,8 @@
-package com.qguidee.chroniclesofminecraft.common.blocks;
+package com.qguidee.chroniclesofminecraft;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
+import com.qguidee.chroniclesofminecraft.common.blocks.Distiller;
+import com.qguidee.chroniclesofminecraft.common.blocks.alembic.Alembic;
 import com.qguidee.chroniclesofminecraft.common.blocks.flowers.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

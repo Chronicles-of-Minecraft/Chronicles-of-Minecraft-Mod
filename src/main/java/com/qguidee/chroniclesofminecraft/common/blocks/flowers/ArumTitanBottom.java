@@ -1,7 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.flowers;
 
-import com.qguidee.chroniclesofminecraft.common.blocks.ChroniclesOfMinecraftBlocks;
-import com.qguidee.chroniclesofminecraft.common.items.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftBlocks;
+import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
 import net.minecraft.block.*;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;

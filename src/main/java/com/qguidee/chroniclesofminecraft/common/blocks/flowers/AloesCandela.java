@@ -1,6 +1,6 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.flowers;
 
-import com.qguidee.chroniclesofminecraft.common.items.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropsBlock;
 import net.minecraft.block.IGrowable;
