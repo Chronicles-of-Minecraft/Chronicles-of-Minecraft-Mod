@@ -7,9 +7,9 @@ import net.minecraftforge.items.SlotItemHandler;
 
 import javax.annotation.Nonnull;
 
-public class OneWaySlotItemHandler extends SlotItemHandler {
+public class SlotOutputItemHandler extends SlotItemHandler {
 
-    public OneWaySlotItemHandler(IItemHandler itemHandler, int index, int xPosition, int yPosition) {
+    public SlotOutputItemHandler(IItemHandler itemHandler, int index, int xPosition, int yPosition) {
         super(itemHandler, index, xPosition, yPosition);
     }
 

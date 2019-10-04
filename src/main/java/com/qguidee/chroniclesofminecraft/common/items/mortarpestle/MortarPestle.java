@@ -1,6 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.items.mortarpestle;
 
 import com.qguidee.chroniclesofminecraft.common.items.ChroniclesOfMinecraftItems;
+import net.minecraft.client.renderer.texture.ITickable;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -30,7 +31,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-public class MortarPestle extends Item {
+public class MortarPestle extends Item implements ITickable {
 
     public ICapabilityProvider capabilityProvider = null;
 
@@ -59,5 +60,23 @@ public class MortarPestle extends Item {
     @Override
     public ICapabilityProvider initCapabilities(ItemStack stack, @Nullable CompoundNBT nbt) {
         return capabilityProvider = new MortarPestleCapabilityProvider();
+    }
+
+    @Override
+    public void tick() {
+        LazyOptional<IItemHandler> ITEM_HANDLER_CAPABILITY = ((MortarPestle) ChroniclesOfMinecraftItems.mortarPestleStone).capabilityProvider.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
+
+        NonNullSupplier<IItemHandler> nonNullSupplier = new NonNullSupplier<IItemHandler>() {
+            @Nonnull
+            @Override
+            public IItemHandler get() {
+                return null;
+            }
+        };
+
+        if (ITEM_HANDLER_CAPABILITY.orElseGet(nonNullSupplier).getStackInSlot(0).getItem() == ChroniclesOfMinecraftItems.flowerRosaRosea) {
+            ITEM_HANDLER_CAPABILITY.orElseGet(nonNullSupplier).getStackInSlot(0).setCount(0);
+            ITEM_HANDLER_CAPABILITY.orElseGet(nonNullSupplier).insertItem(1, new ItemStack(ChroniclesOfMinecraftItems.flowerRosaRoseaPetals, 1), false);
+        }
     }
 }
