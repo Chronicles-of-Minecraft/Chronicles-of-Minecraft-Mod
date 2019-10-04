@@ -18,7 +18,7 @@ public class AlembicScreen extends ContainerScreen<AlembicContainer> {
 
     public AlembicScreen(AlembicContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
-        this.xSize = 204;
+        this.xSize = 176;
         this.ySize = 181;
     }
 
