@@ -14,10 +14,12 @@ import net.minecraftforge.items.IItemHandler;
 
 public class AlembicScreen extends ContainerScreen<AlembicContainer> {
 
-    private static ResourceLocation gui = new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/alembic.png");
+    private static ResourceLocation gui = new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/brewing_stand_mk1.png");
 
     public AlembicScreen(AlembicContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
+        this.xSize = 204;
+        this.ySize = 181;
     }
 
     @Override
