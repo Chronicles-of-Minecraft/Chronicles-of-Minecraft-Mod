@@ -40,6 +40,7 @@ public class ChroniclesOfMinecraftItems {
     public static Item flowerLiliaceaeCandela;
 
     public static Item flowerAloesCandela;
+    public static Item flowerBulbumAer;
     public static Item flowerCapparaceaeTropicalum;
     public static Item flowerStrelitziaReginae;
     public static Item flowerArumTitan;
@@ -90,6 +91,7 @@ public class ChroniclesOfMinecraftItems {
         flowerLiliaceaeCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerLiliaceaeCandela, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_liliaceae_candela");
 
         flowerAloesCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerAloesCandela, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_aloes_candela");
+        flowerBulbumAer = new BlockItem(ChroniclesOfMinecraftBlocks.flowerBulbumAer, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_bulbum_aer");
         flowerCapparaceaeTropicalum = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_capparaceae_tropicalum");
         flowerStrelitziaReginae = new BlockItem(ChroniclesOfMinecraftBlocks.flowerStrelitziaReginae, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_strelitzia_reginae");
         flowerArumTitan = new BlockItem(ChroniclesOfMinecraftBlocks.flowerArumTitanBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_arum_titan");
@@ -142,6 +144,7 @@ public class ChroniclesOfMinecraftItems {
             flowerArumTitan,
 
             flowerAloesCandela,
+            flowerBulbumAer,
             flowerCapparaceaeTropicalum,
 
             flowerRosaRoseaPetals,

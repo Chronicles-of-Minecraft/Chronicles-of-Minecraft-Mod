@@ -24,6 +24,7 @@ public class ChroniclesOfMinecraftBlocks {
     public static Block flowerRosaHyacinus;
     public static Block flowerLiliaceaeCandela;
     public static Block flowerStrelitziaReginae;
+    public static Block flowerBulbumAer;
 
     public static Block flowerAloesCandela;
     public static Block flowerCapparaceaeTropicalumBottom;
@@ -55,6 +56,7 @@ public class ChroniclesOfMinecraftBlocks {
         flowerCapparaceaeTropicalumBottom = new CapparaceaeTropicalumBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_bottom");
         flowerCapparaceaeTropicalumTop = new CapparaceaeTropicalumTop(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_top");
         flowerStrelitziaReginae = new StrelitziaReginae(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_strelitzia_reginae");
+        flowerBulbumAer = new BulbumAer(Block.Properties.create(Material.WATER).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer");
 
         flowerArumTitanBottom = new ArumTitanBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_bottom");
         flowerArumTitanMid = new ArumTitanMid(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_mid");
@@ -79,18 +81,20 @@ public class ChroniclesOfMinecraftBlocks {
                 // Biomes //
                 //********//
 
+                flowerAloesCandela,
                 flowerRosaRosea,
                 flowerRosaAlba,
                 flowerRosaHyacinus,
                 flowerLiliaceaeCandela,
 
-                flowerAloesCandela,
                 flowerCapparaceaeTropicalumBottom,
                 flowerCapparaceaeTropicalumTop,
                 flowerStrelitziaReginae,
                 flowerArumTitanBottom,
                 flowerArumTitanMid,
-                flowerArumTitanTop
+                flowerArumTitanTop,
+
+                flowerBulbumAer
         );
     }
 }

@@ -1,0 +1,15 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "age": {
+            "0": { "model": "chroniclesofminecraft:block/flower_bulbum_aer_stage0" },
+            "1": { "model": "chroniclesofminecraft:block/flower_bulbum_aer_stage1" },
+            "2": { "model": "chroniclesofminecraft:block/flower_bulbum_aer_stage2" },
+            "3": { "model": "chroniclesofminecraft:block/flower_bulbum_aer_stage3" },
+            "4": { "model": "chroniclesofminecraft:block/flower_bulbum_aer_stage4" },
+            "5": { "model": "chroniclesofminecraft:block/flower_bulbum_aer_stage5" },
+            "6": { "model": "chroniclesofminecraft:block/flower_bulbum_aer_stage6" },
+            "7": { "model": "chroniclesofminecraft:block/flower_bulbum_aer_stage7" }
+        }
+    }
+}
