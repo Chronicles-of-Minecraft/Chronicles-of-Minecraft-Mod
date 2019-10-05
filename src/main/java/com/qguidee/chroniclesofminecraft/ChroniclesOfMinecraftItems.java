@@ -1,5 +1,6 @@
 package com.qguidee.chroniclesofminecraft;
 
+import com.qguidee.chroniclesofminecraft.common.items.alchemy.AlchemicalBulb;
 import com.qguidee.chroniclesofminecraft.common.items.alchemy.Sickle;
 import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPestle;
 import com.qguidee.chroniclesofminecraft.common.others.ItemTierCustom;
@@ -77,7 +78,7 @@ public class ChroniclesOfMinecraftItems {
         distiller = new BlockItem(ChroniclesOfMinecraftBlocks.distiller, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller");
         alembic = new BlockItem(ChroniclesOfMinecraftBlocks.alembic, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic");
 
-        alchemicalBulbEmpty = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemical_bulb_empty");
+        alchemicalBulbEmpty = new AlchemicalBulb(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemical_bulb_empty");
 
         //********//
         // Biomes //
