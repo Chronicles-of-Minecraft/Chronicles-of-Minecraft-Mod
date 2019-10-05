@@ -23,8 +23,11 @@ public class ChroniclesOfMinecraftBlocks {
     public static Block flowerRosaAlba;
     public static Block flowerRosaHyacinus;
     public static Block flowerLiliaceaeCandela;
+    public static Block flowerCantharellusPlatyphyllus;
+
     public static Block flowerStrelitziaReginae;
     public static Block flowerBulbumAer;
+    public static Block flowerCoprinusLumus;
 
     public static Block flowerAloesCandela;
     public static Block flowerCapparaceaeTropicalumBottom;
@@ -51,12 +54,14 @@ public class ChroniclesOfMinecraftBlocks {
         flowerRosaAlba = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba");
         flowerRosaHyacinus = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus");
         flowerLiliaceaeCandela = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_liliaceae_candela");
+        flowerCantharellusPlatyphyllus = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_cantharellus_platyphyllus");
 
         flowerAloesCandela = new AloesCandela(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela");
         flowerCapparaceaeTropicalumBottom = new CapparaceaeTropicalumBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_bottom");
         flowerCapparaceaeTropicalumTop = new CapparaceaeTropicalumTop(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_top");
         flowerStrelitziaReginae = new StrelitziaReginae(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_strelitzia_reginae");
-        flowerBulbumAer = new BulbumAer(Block.Properties.create(Material.WATER).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer");
+        flowerBulbumAer = new BulbumAer(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer");
+        flowerCoprinusLumus = new CoprinusLumus(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_lumus");
 
         flowerArumTitanBottom = new ArumTitanBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_bottom");
         flowerArumTitanMid = new ArumTitanMid(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_mid");
@@ -86,6 +91,7 @@ public class ChroniclesOfMinecraftBlocks {
                 flowerRosaAlba,
                 flowerRosaHyacinus,
                 flowerLiliaceaeCandela,
+                flowerCantharellusPlatyphyllus,
 
                 flowerCapparaceaeTropicalumBottom,
                 flowerCapparaceaeTropicalumTop,
@@ -94,7 +100,8 @@ public class ChroniclesOfMinecraftBlocks {
                 flowerArumTitanMid,
                 flowerArumTitanTop,
 
-                flowerBulbumAer
+                flowerBulbumAer,
+                flowerCoprinusLumus
         );
     }
 }

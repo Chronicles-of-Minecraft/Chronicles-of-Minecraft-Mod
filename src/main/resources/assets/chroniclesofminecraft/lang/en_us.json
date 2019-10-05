@@ -15,6 +15,7 @@
     "item.chroniclesofminecraft.flower_rosa_rosea_petals": "Rosa rosea petals",
     "item.chroniclesofminecraft.flower_rosa_hyacinus_petals": "Rosa hyacinus petals",
     "item.chroniclesofminecraft.flower_rosa_alba_petals": "Rosa alba petals",
+    "block.chroniclesofminecraft.flower_aloes_candela_fruit": "Aloes candela fruit",
 
     "item.chroniclesofminecraft.ingot_alchemium": "Alchemium ingot",
 
@@ -32,6 +33,10 @@
     "block.chroniclesofminecraft.flower_strelitzia_reginae": "Strelitzia reginae",
     "block.chroniclesofminecraft.flower_capparaceae_tropicalum_bottom": "Capparaceae tropicalum",
     "block.chroniclesofminecraft.flower_arum_titan_bottom": "Arum titan",
+    "block.chroniclesofminecraft.flower_bulbum_aer": "Bulbum aer",
+    "block.chroniclesofminecraft.flower_coprinus_lumus": "Coprinus lumus",
+    "block.chroniclesofminecraft.flower_cantharellus_platyphyllus": "Cantharellus platyphyllus",
+
 
 
     "itemGroup.chroniclesOfMinecraftBiomes": "Chronicles of Minecraft Biomes",

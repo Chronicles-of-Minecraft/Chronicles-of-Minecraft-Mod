@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "chroniclesofminecraft:block/flower_coprinus_lumus_stage4"
+    }
+}

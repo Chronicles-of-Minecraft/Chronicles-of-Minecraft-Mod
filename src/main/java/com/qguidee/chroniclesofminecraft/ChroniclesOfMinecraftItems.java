@@ -38,17 +38,20 @@ public class ChroniclesOfMinecraftItems {
     public static Item flowerRosaAlba;
     public static Item flowerRosaHyacinus;
     public static Item flowerLiliaceaeCandela;
+    public static Item flowerCantharellusPlatyphyllus;
 
     public static Item flowerAloesCandela;
     public static Item flowerBulbumAer;
     public static Item flowerCapparaceaeTropicalum;
     public static Item flowerStrelitziaReginae;
     public static Item flowerArumTitan;
+    public static Item flowerCoprinusLumus;
 
     // Petals
     public static Item flowerRosaRoseaPetals;
     public static Item flowerRosaAlbaPetals;
     public static Item flowerRosaHyacinusPetals;
+    public static Item flowerAloesCandelaFruit;
 
     public static void init() {
 
@@ -89,9 +92,11 @@ public class ChroniclesOfMinecraftItems {
         flowerRosaAlba = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaAlba, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_alba");
         flowerRosaHyacinus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaHyacinus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_hyacinus");
         flowerLiliaceaeCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerLiliaceaeCandela, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_liliaceae_candela");
+        flowerCantharellusPlatyphyllus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCantharellusPlatyphyllus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_cantharellus_platyphyllus");
 
         flowerAloesCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerAloesCandela, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_aloes_candela");
         flowerBulbumAer = new BlockItem(ChroniclesOfMinecraftBlocks.flowerBulbumAer, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_bulbum_aer");
+        flowerCoprinusLumus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCoprinusLumus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_coprinus_lumus");
         flowerCapparaceaeTropicalum = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_capparaceae_tropicalum");
         flowerStrelitziaReginae = new BlockItem(ChroniclesOfMinecraftBlocks.flowerStrelitziaReginae, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_strelitzia_reginae");
         flowerArumTitan = new BlockItem(ChroniclesOfMinecraftBlocks.flowerArumTitanBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_arum_titan");
@@ -99,6 +104,7 @@ public class ChroniclesOfMinecraftItems {
         flowerRosaRoseaPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea_petals");
         flowerRosaAlbaPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba_petals");
         flowerRosaHyacinusPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus_petals");
+        flowerAloesCandelaFruit = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela_fruit");
     }
 
     @SubscribeEvent
@@ -140,16 +146,20 @@ public class ChroniclesOfMinecraftItems {
             flowerRosaAlba,
             flowerRosaHyacinus,
             flowerLiliaceaeCandela,
+            flowerCantharellusPlatyphyllus,
+
             flowerStrelitziaReginae,
             flowerArumTitan,
 
+            flowerCoprinusLumus,
             flowerAloesCandela,
             flowerBulbumAer,
             flowerCapparaceaeTropicalum,
 
             flowerRosaRoseaPetals,
             flowerRosaAlbaPetals,
-            flowerRosaHyacinusPetals
+            flowerRosaHyacinusPetals,
+            flowerAloesCandelaFruit
         );
     }
 }
