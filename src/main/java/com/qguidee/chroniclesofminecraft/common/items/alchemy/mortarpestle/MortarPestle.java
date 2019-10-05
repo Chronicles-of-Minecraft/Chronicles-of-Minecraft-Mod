@@ -1,4 +1,4 @@
-package com.qguidee.chroniclesofminecraft.common.items.mortarpestle;
+package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
 import net.minecraft.client.renderer.texture.ITickable;

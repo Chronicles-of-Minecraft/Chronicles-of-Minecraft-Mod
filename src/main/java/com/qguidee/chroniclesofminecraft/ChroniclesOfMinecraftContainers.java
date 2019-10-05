@@ -1,24 +1,15 @@
 package com.qguidee.chroniclesofminecraft;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
-import com.qguidee.chroniclesofminecraft.common.blocks.alembic.AlembicContainer;
-import com.qguidee.chroniclesofminecraft.common.blocks.alembic.AlembicTile;
-import com.qguidee.chroniclesofminecraft.common.items.mortarpestle.MortarPestle;
-import com.qguidee.chroniclesofminecraft.common.items.mortarpestle.MortarPestleContainer;
-import com.qguidee.chroniclesofminecraft.common.items.mortarpestle.MortarPillarContainerProvider;
+import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic.AlembicContainer;
+import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPestleContainer;
+import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPillarContainerProvider;
 import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.extensions.IForgeContainerType;
-import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.registries.ObjectHolder;
-
-import javax.swing.plaf.basic.BasicComboBoxUI;
 
 @Mod.EventBusSubscriber(modid = ChroniclesOfMinecraftCore.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(ChroniclesOfMinecraftCore.MOD_ID)

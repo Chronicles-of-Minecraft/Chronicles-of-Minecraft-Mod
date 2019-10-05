@@ -1,4 +1,4 @@
-package com.qguidee.chroniclesofminecraft.common.items.mortarpestle;
+package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
 
 import net.minecraft.util.Direction;
 import net.minecraftforge.common.capabilities.Capability;

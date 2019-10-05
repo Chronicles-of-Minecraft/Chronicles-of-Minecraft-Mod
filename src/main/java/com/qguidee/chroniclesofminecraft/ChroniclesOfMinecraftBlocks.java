@@ -1,9 +1,8 @@
 package com.qguidee.chroniclesofminecraft;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
-import com.qguidee.chroniclesofminecraft.common.blocks.Distiller;
-import com.qguidee.chroniclesofminecraft.common.blocks.alembic.Alembic;
-import com.qguidee.chroniclesofminecraft.common.blocks.flowers.*;
+import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.distiller.Distiller;
+import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic.Alembic;
+import com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
@@ -36,11 +35,17 @@ public class ChroniclesOfMinecraftBlocks {
 
     public static void init() {
 
-        // Distillery
+        //*********//
+        // Alchemy //
+        //*********//
+
         distiller = new Distiller(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller");
         alembic = new Alembic(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE))/*.setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic")*/;
 
-        // Flowers
+        //********//
+        // Biomes //
+        //********//
+
         flowerRosaRosea = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea");
         flowerRosaAlba = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba");
         flowerRosaHyacinus = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus");
@@ -61,11 +66,31 @@ public class ChroniclesOfMinecraftBlocks {
         init();
 
         event.getRegistry().registerAll(
-                distiller, alembic,
 
-                flowerRosaRosea, flowerRosaAlba, flowerRosaHyacinus, flowerLiliaceaeCandela,
+                //*********//
+                // Alchemy //
+                //*********//
 
-                flowerAloesCandela, flowerCapparaceaeTropicalumBottom, flowerCapparaceaeTropicalumTop, flowerStrelitziaReginae, flowerArumTitanBottom, flowerArumTitanMid, flowerArumTitanTop
+                distiller,
+                alembic,
+
+
+                //********//
+                // Biomes //
+                //********//
+
+                flowerRosaRosea,
+                flowerRosaAlba,
+                flowerRosaHyacinus,
+                flowerLiliaceaeCandela,
+
+                flowerAloesCandela,
+                flowerCapparaceaeTropicalumBottom,
+                flowerCapparaceaeTropicalumTop,
+                flowerStrelitziaReginae,
+                flowerArumTitanBottom,
+                flowerArumTitanMid,
+                flowerArumTitanTop
         );
     }
 }

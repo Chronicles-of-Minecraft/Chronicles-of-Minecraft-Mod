@@ -1,7 +1,7 @@
 package com.qguidee.chroniclesofminecraft;
 
-import com.qguidee.chroniclesofminecraft.common.items.Sickle;
-import com.qguidee.chroniclesofminecraft.common.items.mortarpestle.MortarPestle;
+import com.qguidee.chroniclesofminecraft.common.items.alchemy.Sickle;
+import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPestle;
 import com.qguidee.chroniclesofminecraft.common.others.ItemTierCustom;
 import net.minecraft.item.*;
 import net.minecraftforge.event.RegistryEvent;
@@ -18,8 +18,6 @@ public class ChroniclesOfMinecraftItems {
     public static Item earthWand;
     public static Item airWand;
 
-    public static Item rosePetal;
-
     public static Item sickleIron;
     public static Item sickleGold;
     public static Item sickleAlchemium;
@@ -32,6 +30,8 @@ public class ChroniclesOfMinecraftItems {
 
     public static Item distiller;
     public static Item alembic;
+
+    public static Item alchemicalBulbEmpty;
 
     public static Item flowerRosaRosea;
     public static Item flowerRosaAlba;
@@ -50,13 +50,15 @@ public class ChroniclesOfMinecraftItems {
 
     public static void init() {
 
-        // Wands
+        //*********//
+        // Alchemy //
+        //*********//
+
         fireWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "fire_wand");
         waterWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "water_wand");
         earthWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "earth_wand");
         airWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "air_wand");
 
-        // Tools
         sickleIron = new Sickle(ItemTierCustom.IRON_SICKLE, 1, 1.0f,
                         new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_iron");
 
@@ -70,13 +72,17 @@ public class ChroniclesOfMinecraftItems {
         mortarPestleGold = new MortarPestle(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_gold");
         mortarPestleAlchemium = new MortarPestle(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_alchemium");
 
-        // Ingots
         ingotAlchemium = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "ingot_alchemium");
 
         distiller = new BlockItem(ChroniclesOfMinecraftBlocks.distiller, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller");
         alembic = new BlockItem(ChroniclesOfMinecraftBlocks.alembic, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic");
 
-        // Flowers
+        alchemicalBulbEmpty = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemical_bulb_empty");
+
+        //********//
+        // Biomes //
+        //********//
+
         flowerRosaRosea = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaRosea, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_rosea");
         flowerRosaAlba = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaAlba, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_alba");
         flowerRosaHyacinus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaHyacinus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_hyacinus");
@@ -87,7 +93,6 @@ public class ChroniclesOfMinecraftItems {
         flowerStrelitziaReginae = new BlockItem(ChroniclesOfMinecraftBlocks.flowerStrelitziaReginae, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_strelitzia_reginae");
         flowerArumTitan = new BlockItem(ChroniclesOfMinecraftBlocks.flowerArumTitanBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_arum_titan");
 
-        // Petals
         flowerRosaRoseaPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea_petals");
         flowerRosaAlbaPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba_petals");
         flowerRosaHyacinusPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus_petals");
@@ -97,22 +102,50 @@ public class ChroniclesOfMinecraftItems {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         init();
 
-        event.getRegistry().registerAll(
-            fireWand, waterWand, earthWand, airWand,
+    event.getRegistry().registerAll(
 
-            sickleIron, sickleGold, sickleAlchemium,
+            //*********//
+            // Alchemy //
+            //*********//
 
-            mortarPestleStone, mortarPestleGold, mortarPestleAlchemium,
+            fireWand,
+            waterWand,
+            earthWand,
+            airWand,
+
+            sickleIron,
+            sickleGold,
+            sickleAlchemium,
+
+            mortarPestleStone,
+            mortarPestleGold,
+            mortarPestleAlchemium,
 
             ingotAlchemium,
 
-            distiller, alembic,
+            distiller,
+            alembic,
 
-            flowerRosaRosea, flowerRosaAlba, flowerRosaHyacinus, flowerLiliaceaeCandela, flowerStrelitziaReginae, flowerArumTitan,
+            alchemicalBulbEmpty,
 
-            flowerAloesCandela, flowerCapparaceaeTropicalum,
 
-            flowerRosaRoseaPetals, flowerRosaAlbaPetals, flowerRosaHyacinusPetals
+            //********//
+            // Biomes //
+            //********//
+
+            flowerRosaRosea,
+            flowerRosaAlba,
+            flowerRosaHyacinus,
+            flowerLiliaceaeCandela,
+            flowerStrelitziaReginae,
+            flowerArumTitan,
+
+            flowerAloesCandela,
+            flowerCapparaceaeTropicalum,
+
+            flowerRosaRoseaPetals,
+            flowerRosaAlbaPetals,
+            flowerRosaHyacinusPetals
         );
     }
 }

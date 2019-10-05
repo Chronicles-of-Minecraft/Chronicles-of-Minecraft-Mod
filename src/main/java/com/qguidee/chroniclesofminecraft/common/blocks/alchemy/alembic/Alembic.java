@@ -1,29 +1,19 @@
-package com.qguidee.chroniclesofminecraft.common.blocks.alembic;
+package com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
-import com.qguidee.chroniclesofminecraft.common.blocks.alembic.AlembicContainer;
-import com.qguidee.chroniclesofminecraft.common.blocks.alembic.AlembicTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.item.ItemStack;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.BlockRenderLayer;
-import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
-import net.minecraftforge.registries.ObjectHolder;
 
 import javax.annotation.Nullable;
 

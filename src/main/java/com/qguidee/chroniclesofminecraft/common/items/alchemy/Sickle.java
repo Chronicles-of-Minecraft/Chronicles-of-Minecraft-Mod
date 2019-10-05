@@ -1,4 +1,4 @@
-package com.qguidee.chroniclesofminecraft.common.items;
+package com.qguidee.chroniclesofminecraft.common.items.alchemy;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Sets;

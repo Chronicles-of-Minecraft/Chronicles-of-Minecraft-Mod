@@ -1,4 +1,4 @@
-package com.qguidee.chroniclesofminecraft.common.blocks.flowers;
+package com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftBlocks;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;

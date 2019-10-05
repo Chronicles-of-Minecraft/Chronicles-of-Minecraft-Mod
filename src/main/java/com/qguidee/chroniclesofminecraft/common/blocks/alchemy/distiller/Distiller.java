@@ -1,4 +1,4 @@
-package com.qguidee.chroniclesofminecraft.common.blocks;
+package com.qguidee.chroniclesofminecraft.common.blocks.alchemy.distiller;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

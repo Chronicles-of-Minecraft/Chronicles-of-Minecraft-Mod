@@ -1,4 +1,4 @@
-package com.qguidee.chroniclesofminecraft.common.blocks.alembic;
+package com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftTileEntities;
 import net.minecraft.entity.player.PlayerEntity;

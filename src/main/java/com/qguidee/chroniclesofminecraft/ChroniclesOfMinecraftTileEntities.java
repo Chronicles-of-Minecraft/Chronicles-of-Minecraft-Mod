@@ -1,6 +1,6 @@
 package com.qguidee.chroniclesofminecraft;
 
-import com.qguidee.chroniclesofminecraft.common.blocks.alembic.AlembicTile;
+import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic.AlembicTile;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

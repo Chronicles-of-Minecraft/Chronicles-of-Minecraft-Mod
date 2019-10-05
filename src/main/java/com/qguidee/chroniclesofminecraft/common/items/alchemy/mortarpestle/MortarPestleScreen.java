@@ -1,25 +1,24 @@
-package com.qguidee.chroniclesofminecraft.common.blocks.alembic;
+package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraftforge.client.event.GuiContainerEvent;
-import net.minecraftforge.items.IItemHandler;
 
-public class AlembicScreen extends ContainerScreen<AlembicContainer> {
+public class MortarPestleScreen extends ContainerScreen<MortarPestleContainer> {
 
-    private static ResourceLocation gui = new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/brewing_stand_mk1.png");
+    int id = 0;
 
-    public AlembicScreen(AlembicContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
+    private static ResourceLocation gui = new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/mortar_pestle.png");
+    private MortarPestleContainer container;
+
+    public MortarPestleScreen(MortarPestleContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
-        this.xSize = 176;
-        this.ySize = 181;
+        this.container = screenContainer;
     }
 
     @Override
@@ -32,7 +31,7 @@ public class AlembicScreen extends ContainerScreen<AlembicContainer> {
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
         // super.drawGuiContainerForegroundLayer(mouseX, mouseY);
-        drawString(Minecraft.getInstance().fontRenderer, "Alembic", 10, 10, 0xffffff);
+        drawString(Minecraft.getInstance().fontRenderer, "Mortar & pestle", 10, 10, 0xffffff);
     }
 
     @Override
@@ -42,5 +41,9 @@ public class AlembicScreen extends ContainerScreen<AlembicContainer> {
         int relX = (this.width - this.xSize) / 2;
         int relY = (this.height - this.ySize) / 2;
         this.blit(relX, relY, 0, 0, this.xSize, this.ySize);
+
+        this.addButton(new Button(relX + 22, relY + 59, 70, 20, "Grind", p_onPress_1_ -> {
+            container.grind();
+        }));
     }
 }
