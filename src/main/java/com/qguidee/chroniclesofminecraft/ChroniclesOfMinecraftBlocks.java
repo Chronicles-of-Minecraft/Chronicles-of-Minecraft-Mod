@@ -60,7 +60,7 @@ public class ChroniclesOfMinecraftBlocks {
         flowerLiliaceaeCandela = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_liliaceae_candela");
         flowerCantharellusPlatyphyllus = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_cantharellus_platyphyllus");
 
-        flowerAloesCandela = new AloesCandela(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela");
+        flowerAloesCandela = new AloesCandela().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela");
         flowerCapparaceaeTropicalumBottom = new CapparaceaeTropicalumBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_bottom");
         flowerCapparaceaeTropicalumTop = new CapparaceaeTropicalumTop(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_top");
         flowerStrelitziaReginae = new StrelitziaReginae().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_strelitzia_reginae");
