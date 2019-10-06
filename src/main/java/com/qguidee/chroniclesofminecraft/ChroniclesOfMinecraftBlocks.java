@@ -41,7 +41,7 @@ public class ChroniclesOfMinecraftBlocks {
     public static Block flowerArumTitanMid;
     public static Block flowerArumTitanTop;
 
-    public static void init() {
+    private static void init() {
 
         //*********//
         // Alchemy //

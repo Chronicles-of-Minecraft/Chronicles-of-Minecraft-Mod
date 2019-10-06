@@ -66,7 +66,7 @@ public class ChroniclesOfMinecraftItems {
     public static Item alchemiumBoots;
     public static Item alchemiumLeggings;
 
-    public static void init() {
+    private static void init() {
 
         //*********//
         // Alchemy //

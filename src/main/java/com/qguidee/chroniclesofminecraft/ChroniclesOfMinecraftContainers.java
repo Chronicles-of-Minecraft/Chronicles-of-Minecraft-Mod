@@ -20,7 +20,7 @@ public class ChroniclesOfMinecraftContainers {
     public static MortarPestleContainer mortarPestleContainer;
     public static ContainerType<MortarPestleContainer> mortarPestle;
 
-    public static void init() {
+    private static void init() {
         alembic = IForgeContainerType.create((windowId, inv, data) -> {
             BlockPos pos = data.readBlockPos();
             return new AlembicContainer(windowId, ChroniclesOfMinecraftCore.proxy.getClientWorld(), pos, inv, ChroniclesOfMinecraftCore.proxy.getClientPlayer());

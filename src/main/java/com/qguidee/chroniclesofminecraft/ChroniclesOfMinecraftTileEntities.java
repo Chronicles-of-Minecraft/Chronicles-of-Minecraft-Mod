@@ -13,7 +13,7 @@ public class ChroniclesOfMinecraftTileEntities {
 
     public static TileEntityType<AlembicTile> alembic;
 
-    public static void init() {
+    private static void init() {
         alembic = TileEntityType.Builder.create(AlembicTile::new, ChroniclesOfMinecraftBlocks.alembic).build(null);
         alembic.setRegistryName("alembic");
     }
@@ -26,5 +26,4 @@ public class ChroniclesOfMinecraftTileEntities {
                 alembic
         );
     }
-
 }
