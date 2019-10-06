@@ -15,8 +15,13 @@
     "item.chroniclesofminecraft.flower_rosa_rosea_petals": "Rosa rosea petals",
     "item.chroniclesofminecraft.flower_rosa_hyacinus_petals": "Rosa hyacinus petals",
     "item.chroniclesofminecraft.flower_rosa_alba_petals": "Rosa alba petals",
-    "block.chroniclesofminecraft.flower_aloes_candela_fruit": "Aloes candela fruit",
+    "item.chroniclesofminecraft.flower_aloes_candela_fruit": "Aloes candela fruit",
     "item.chroniclesofminecraft.flower_bambusa_givra_thorns": "Bambusa givra thorns",
+
+    "item.chroniclesofminecraft.alchemium_boots": "Alchemium boots",
+    "item.chroniclesofminecraft.alchemium_leggings": "Alchemium leggings",
+    "item.chroniclesofminecraft.alchemium_chestplate": "Alchemium chestplate",
+    "item.chroniclesofminecraft.alchemium_helmet": "Alchemium helmet",
 
     "item.chroniclesofminecraft.ingot_alchemium": "Alchemium ingot",
 

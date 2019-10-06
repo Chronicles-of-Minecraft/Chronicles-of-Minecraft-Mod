@@ -3,6 +3,10 @@ package com.qguidee.chroniclesofminecraft;
 import com.qguidee.chroniclesofminecraft.common.items.alchemy.AlchemicalBulb;
 import com.qguidee.chroniclesofminecraft.common.items.alchemy.Sickle;
 import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPestle;
+import com.qguidee.chroniclesofminecraft.common.items.fight.armors.alchemium.AlchemiumArmorBoots;
+import com.qguidee.chroniclesofminecraft.common.items.fight.armors.alchemium.AlchemiumArmorChestplate;
+import com.qguidee.chroniclesofminecraft.common.items.fight.armors.alchemium.AlchemiumArmorHelmet;
+import com.qguidee.chroniclesofminecraft.common.items.fight.armors.alchemium.AlchemiumArmorLeggings;
 import com.qguidee.chroniclesofminecraft.common.others.ItemTierCustom;
 import net.minecraft.item.*;
 import net.minecraftforge.event.RegistryEvent;
@@ -56,6 +60,11 @@ public class ChroniclesOfMinecraftItems {
     public static Item flowerRosaHyacinusPetals;
     public static Item flowerAloesCandelaFruit;
     public static Item flowerBambusaGivraThorns;
+
+    public static Item alchemiumChestplate;
+    public static Item alchemiumHelmet;
+    public static Item alchemiumBoots;
+    public static Item alchemiumLeggings;
 
     public static void init() {
 
@@ -113,6 +122,12 @@ public class ChroniclesOfMinecraftItems {
         flowerRosaHyacinusPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus_petals");
         flowerAloesCandelaFruit = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela_fruit");
         flowerBambusaGivraThorns = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra_thorns");
+
+        alchemiumChestplate = new AlchemiumArmorChestplate(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_chestplate");
+        alchemiumHelmet = new AlchemiumArmorHelmet(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_helmet");
+        alchemiumBoots = new AlchemiumArmorBoots(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_boots");
+        alchemiumLeggings = new AlchemiumArmorLeggings(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_leggings");
+
     }
 
     @SubscribeEvent
@@ -171,7 +186,17 @@ public class ChroniclesOfMinecraftItems {
             flowerRosaAlbaPetals,
             flowerRosaHyacinusPetals,
             flowerAloesCandelaFruit,
-            flowerBambusaGivraThorns
+            flowerBambusaGivraThorns,
+
+
+            //********//
+            // Combat //
+            //********//
+
+            alchemiumChestplate,
+            alchemiumHelmet,
+            alchemiumBoots,
+            alchemiumLeggings
         );
     }
 }
