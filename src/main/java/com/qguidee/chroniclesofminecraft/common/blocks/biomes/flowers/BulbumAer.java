@@ -6,10 +6,12 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ILiquidContainer;
 import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
@@ -18,7 +20,7 @@ import javax.annotation.Nonnull;
 
 public class BulbumAer extends FlowerBlockWithStages implements ILiquidContainer {
 
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 7);
+    private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 7);
 
     public BulbumAer() {
         super(7, ChroniclesOfMinecraftItems.flowerBulbumAer);
@@ -48,5 +50,15 @@ public class BulbumAer extends FlowerBlockWithStages implements ILiquidContainer
     @Override
     public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, IFluidState fluidStateIn) {
         return false;
+    }
+
+    @Nonnull
+    public BlockRenderLayer getRenderLayer() {
+        return BlockRenderLayer.CUTOUT;
+    }
+
+    @Nonnull
+    public IFluidState getFluidState(BlockState state) {
+        return Fluids.WATER.getStillFluidState(false);
     }
 }

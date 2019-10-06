@@ -7,6 +7,7 @@ import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effect;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
@@ -24,7 +25,7 @@ public abstract class FlowerBlockWithStages extends CropsBlock {
     private int maxAge;
     private Item seed;
 
-    public FlowerBlockWithStages(int maxAge, Item seed) {
+    FlowerBlockWithStages(int maxAge, Item seed) {
         super(Block.Properties
                 .create(Material.PLANTS)
                 .hardnessAndResistance(0)

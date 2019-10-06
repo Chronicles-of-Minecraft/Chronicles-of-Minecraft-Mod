@@ -13,6 +13,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
+import javax.annotation.Nonnull;
+
 public class StrelitziaReginae extends FlowerBlockWithStages {
 
     public static final IntegerProperty AGE = BlockStateProperties.AGE_0_2;
@@ -26,6 +28,7 @@ public class StrelitziaReginae extends FlowerBlockWithStages {
         builder.add(AGE);
     }
 
+    @Nonnull
     @Override
     public IntegerProperty getAgeProperty() {
         return AGE;
