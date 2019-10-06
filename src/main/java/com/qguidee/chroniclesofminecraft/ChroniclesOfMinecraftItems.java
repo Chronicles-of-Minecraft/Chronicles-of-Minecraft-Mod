@@ -46,12 +46,16 @@ public class ChroniclesOfMinecraftItems {
     public static Item flowerStrelitziaReginae;
     public static Item flowerArumTitan;
     public static Item flowerCoprinusLumus;
+    public static Item flowerCoprinusComatus;
+    public static Item flowerArmillariaMellea;
+    public static Item flowerBambusaGivra;
 
     // Petals
     public static Item flowerRosaRoseaPetals;
     public static Item flowerRosaAlbaPetals;
     public static Item flowerRosaHyacinusPetals;
     public static Item flowerAloesCandelaFruit;
+    public static Item flowerBambusaGivraThorns;
 
     public static void init() {
 
@@ -100,11 +104,15 @@ public class ChroniclesOfMinecraftItems {
         flowerCapparaceaeTropicalum = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_capparaceae_tropicalum");
         flowerStrelitziaReginae = new BlockItem(ChroniclesOfMinecraftBlocks.flowerStrelitziaReginae, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_strelitzia_reginae");
         flowerArumTitan = new BlockItem(ChroniclesOfMinecraftBlocks.flowerArumTitanBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_arum_titan");
+        flowerCoprinusComatus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCoprinusComatus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_coprinus_comatus");
+        flowerArmillariaMellea = new BlockItem(ChroniclesOfMinecraftBlocks.flowerArmillariaMellea, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_armillaria_mellea");
+        flowerBambusaGivra = new BlockItem(ChroniclesOfMinecraftBlocks.flowerBambusaGivra, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_bambusa_givra");
 
         flowerRosaRoseaPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea_petals");
         flowerRosaAlbaPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba_petals");
         flowerRosaHyacinusPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus_petals");
         flowerAloesCandelaFruit = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela_fruit");
+        flowerBambusaGivraThorns = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra_thorns");
     }
 
     @SubscribeEvent
@@ -150,16 +158,20 @@ public class ChroniclesOfMinecraftItems {
 
             flowerStrelitziaReginae,
             flowerArumTitan,
+            flowerCoprinusComatus,
+            flowerArmillariaMellea,
 
             flowerCoprinusLumus,
             flowerAloesCandela,
             flowerBulbumAer,
             flowerCapparaceaeTropicalum,
+            flowerBambusaGivra,
 
             flowerRosaRoseaPetals,
             flowerRosaAlbaPetals,
             flowerRosaHyacinusPetals,
-            flowerAloesCandelaFruit
+            flowerAloesCandelaFruit,
+            flowerBambusaGivraThorns
         );
     }
 }

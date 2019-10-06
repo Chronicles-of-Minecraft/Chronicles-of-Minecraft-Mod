@@ -28,6 +28,9 @@ public class ChroniclesOfMinecraftBlocks {
     public static Block flowerStrelitziaReginae;
     public static Block flowerBulbumAer;
     public static Block flowerCoprinusLumus;
+    public static Block flowerCoprinusComatus;
+    public static Block flowerArmillariaMellea;
+    public static Block flowerBambusaGivra;
 
     public static Block flowerAloesCandela;
     public static Block flowerCapparaceaeTropicalumBottom;
@@ -62,6 +65,9 @@ public class ChroniclesOfMinecraftBlocks {
         flowerStrelitziaReginae = new StrelitziaReginae(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_strelitzia_reginae");
         flowerBulbumAer = new BulbumAer(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer");
         flowerCoprinusLumus = new CoprinusLumus(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_lumus");
+        flowerCoprinusComatus = new CoprinusComatus(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_comatus");
+        flowerArmillariaMellea = new ArmillariaMellea(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_armillaria_mellea");
+        flowerBambusaGivra = new BambusaGivra(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra");
 
         flowerArumTitanBottom = new ArumTitanBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_bottom");
         flowerArumTitanMid = new ArumTitanMid(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_mid");
@@ -99,6 +105,9 @@ public class ChroniclesOfMinecraftBlocks {
                 flowerArumTitanBottom,
                 flowerArumTitanMid,
                 flowerArumTitanTop,
+                flowerCoprinusComatus,
+                flowerArmillariaMellea,
+                flowerBambusaGivra,
 
                 flowerBulbumAer,
                 flowerCoprinusLumus

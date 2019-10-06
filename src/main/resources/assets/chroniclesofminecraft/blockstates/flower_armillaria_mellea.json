@@ -1,0 +1,12 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "age": {
+            "0": { "model": "chroniclesofminecraft:block/flower_armillaria_mellea_stage0" },
+            "1": { "model": "chroniclesofminecraft:block/flower_armillaria_mellea_stage1" },
+            "2": { "model": "chroniclesofminecraft:block/flower_armillaria_mellea_stage2" },
+            "3": { "model": "chroniclesofminecraft:block/flower_armillaria_mellea_stage3" },
+            "4": { "model": "chroniclesofminecraft:block/flower_armillaria_mellea_stage4" }
+        }
+    }
+}

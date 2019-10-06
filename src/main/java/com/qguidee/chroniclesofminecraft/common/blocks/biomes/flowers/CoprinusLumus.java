@@ -13,7 +13,7 @@ import javax.annotation.Nonnull;
 
 public class CoprinusLumus extends FlowerBlockWithStages {
 
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
+    private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
 
     public CoprinusLumus(Properties builder) {
         super(builder, 5, ChroniclesOfMinecraftItems.flowerCoprinusLumus);

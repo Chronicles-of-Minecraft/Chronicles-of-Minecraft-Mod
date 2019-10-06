@@ -1,0 +1,13 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "age": {
+            "0": { "model": "chroniclesofminecraft:block/flower_coprinus_comatus_stage0" },
+            "1": { "model": "chroniclesofminecraft:block/flower_coprinus_comatus_stage1" },
+            "2": { "model": "chroniclesofminecraft:block/flower_coprinus_comatus_stage2" },
+            "3": { "model": "chroniclesofminecraft:block/flower_coprinus_comatus_stage3" },
+            "4": { "model": "chroniclesofminecraft:block/flower_coprinus_comatus_stage4" },
+            "5": { "model": "chroniclesofminecraft:block/flower_coprinus_comatus_stage5" }
+        }
+    }
+}

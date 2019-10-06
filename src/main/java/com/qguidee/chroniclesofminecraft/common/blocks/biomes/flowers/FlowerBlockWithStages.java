@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
-public class FlowerBlockWithStages extends CropsBlock implements ILiquidContainer {
+public abstract class FlowerBlockWithStages extends CropsBlock implements ILiquidContainer {
 
     private int maxAge;
     private Item seed;
@@ -60,4 +60,11 @@ public class FlowerBlockWithStages extends CropsBlock implements ILiquidContaine
     public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, IFluidState fluidStateIn) {
         return false;
     }
+
+    @Nonnull
+    @Override
+    public abstract IntegerProperty getAgeProperty();
+
+    @Override
+    protected abstract void fillStateContainer(StateContainer.Builder<Block, BlockState> builder);
 }
