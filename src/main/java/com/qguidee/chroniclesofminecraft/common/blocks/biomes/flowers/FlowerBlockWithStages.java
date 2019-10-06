@@ -34,7 +34,6 @@ public abstract class FlowerBlockWithStages extends CropsBlock {
 
         this.maxAge = maxAge;
         this.seed = seed;
-
     }
 
     @Override
