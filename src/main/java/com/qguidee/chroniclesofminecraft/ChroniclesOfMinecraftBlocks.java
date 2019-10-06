@@ -54,25 +54,25 @@ public class ChroniclesOfMinecraftBlocks {
         // Biomes //
         //********//
 
-        flowerRosaRosea = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea");
-        flowerRosaAlba = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba");
-        flowerRosaHyacinus = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus");
-        flowerLiliaceaeCandela = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_liliaceae_candela");
-        flowerCantharellusPlatyphyllus = new FlowerBlockWithoutStage(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_cantharellus_platyphyllus");
+        flowerRosaRosea = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea");
+        flowerRosaAlba = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba");
+        flowerRosaHyacinus = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus");
+        flowerLiliaceaeCandela = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_liliaceae_candela");
+        flowerCantharellusPlatyphyllus = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_cantharellus_platyphyllus");
 
-        flowerAloesCandela = new AloesCandela(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela");
-        flowerCapparaceaeTropicalumBottom = new CapparaceaeTropicalumBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_bottom");
-        flowerCapparaceaeTropicalumTop = new CapparaceaeTropicalumTop(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_top");
-        flowerStrelitziaReginae = new StrelitziaReginae(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_strelitzia_reginae");
-        flowerBulbumAer = new BulbumAer(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer");
-        flowerCoprinusLumus = new CoprinusLumus(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_lumus");
-        flowerCoprinusComatus = new CoprinusComatus(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_comatus");
-        flowerArmillariaMellea = new ArmillariaMellea(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_armillaria_mellea");
-        flowerBambusaGivra = new BambusaGivra(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra");
+        flowerAloesCandela = new AloesCandela(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela");
+        flowerCapparaceaeTropicalumBottom = new CapparaceaeTropicalumBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_bottom");
+        flowerCapparaceaeTropicalumTop = new CapparaceaeTropicalumTop(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_top");
+        flowerStrelitziaReginae = new StrelitziaReginae().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_strelitzia_reginae");
+        flowerBulbumAer = new BulbumAer().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer");
+        flowerCoprinusLumus = new CoprinusLumus().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_lumus");
+        flowerCoprinusComatus = new CoprinusComatus().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_comatus");
+        flowerArmillariaMellea = new ArmillariaMellea().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_armillaria_mellea");
+        flowerBambusaGivra = new BambusaGivra().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra");
 
-        flowerArumTitanBottom = new ArumTitanBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_bottom");
-        flowerArumTitanMid = new ArumTitanMid(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_mid");
-        flowerArumTitanTop = new ArumTitanTop(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_top");
+        flowerArumTitanBottom = new ArumTitanBottom(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_bottom");
+        flowerArumTitanMid = new ArumTitanMid(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_mid");
+        flowerArumTitanTop = new ArumTitanTop(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement()).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_top");
     }
 
     @SubscribeEvent

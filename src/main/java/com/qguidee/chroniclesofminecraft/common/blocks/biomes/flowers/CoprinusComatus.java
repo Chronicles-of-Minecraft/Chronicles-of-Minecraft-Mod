@@ -13,8 +13,8 @@ public class CoprinusComatus extends FlowerBlockWithStages {
 
     private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
 
-    public CoprinusComatus(Properties builder) {
-        super(builder, 5, ChroniclesOfMinecraftItems.flowerCoprinusComatus);
+    public CoprinusComatus() {
+        super(5, ChroniclesOfMinecraftItems.flowerCoprinusComatus);
     }
 
     @Nonnull

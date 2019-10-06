@@ -15,8 +15,8 @@ public class AloesCandela extends CropsBlock implements IGrowable {
 
     public static final IntegerProperty AGE = BlockStateProperties.AGE_0_2;
 
-    public AloesCandela(Properties builder) {
-        super(builder);
+    public AloesCandela(Properties properties) {
+        super(properties);
     }
 
     @Override

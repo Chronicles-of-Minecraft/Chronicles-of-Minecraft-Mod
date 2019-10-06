@@ -15,8 +15,8 @@ public class CoprinusLumus extends FlowerBlockWithStages {
 
     private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
 
-    public CoprinusLumus(Properties builder) {
-        super(builder, 5, ChroniclesOfMinecraftItems.flowerCoprinusLumus);
+    public CoprinusLumus() {
+        super(5, ChroniclesOfMinecraftItems.flowerCoprinusLumus);
     }
 
     @Override

@@ -24,8 +24,8 @@ public class ArmillariaMellea extends FlowerBlockWithStages {
 
     private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 4);
 
-    public ArmillariaMellea(Properties builder) {
-        super(builder, 4, ChroniclesOfMinecraftItems.flowerArmillariaMellea);
+    public ArmillariaMellea() {
+        super(4, ChroniclesOfMinecraftItems.flowerArmillariaMellea);
     }
 
     @Nonnull

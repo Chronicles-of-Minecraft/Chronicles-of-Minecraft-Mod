@@ -13,32 +13,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
-public class StrelitziaReginae extends CropsBlock implements IGrowable {
+public class StrelitziaReginae extends FlowerBlockWithStages {
 
     public static final IntegerProperty AGE = BlockStateProperties.AGE_0_2;
 
-    public StrelitziaReginae(Properties builder) {
-        super(builder);
-    }
-
-    @Override
-    public int getMaxAge() {
-        return 2;
-    }
-
-    @Override
-    protected int getBonemealAgeIncrease(World worldIn) {
-        return 1;
-    }
-
-    @Override
-    protected IItemProvider getSeedsItem() {
-        return ChroniclesOfMinecraftItems.flowerStrelitziaReginae;
-    }
-
-    @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        return true;
+    public StrelitziaReginae() {
+        super(2, ChroniclesOfMinecraftItems.flowerStrelitziaReginae);
     }
 
     @Override

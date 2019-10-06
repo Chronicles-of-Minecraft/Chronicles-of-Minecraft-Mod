@@ -2,6 +2,7 @@ package com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
 import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
@@ -18,13 +19,18 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
-public abstract class FlowerBlockWithStages extends CropsBlock implements ILiquidContainer {
+public abstract class FlowerBlockWithStages extends CropsBlock {
 
     private int maxAge;
     private Item seed;
 
-    public FlowerBlockWithStages(Properties builder, int maxAge, Item seed) {
-        super(builder);
+    public FlowerBlockWithStages(int maxAge, Item seed) {
+        super(Block.Properties
+                .create(Material.PLANTS)
+                .hardnessAndResistance(0)
+                .tickRandomly()
+                .doesNotBlockMovement()
+        );
 
         this.maxAge = maxAge;
         this.seed = seed;
@@ -49,16 +55,6 @@ public abstract class FlowerBlockWithStages extends CropsBlock implements ILiqui
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
         return true;
-    }
-
-    @Override
-    public boolean canContainFluid(IBlockReader worldIn, BlockPos pos, BlockState state, Fluid fluidIn) {
-        return false;
-    }
-
-    @Override
-    public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, IFluidState fluidStateIn) {
-        return false;
     }
 
     @Nonnull
