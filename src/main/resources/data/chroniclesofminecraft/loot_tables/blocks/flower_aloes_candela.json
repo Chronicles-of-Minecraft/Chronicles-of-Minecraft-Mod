@@ -1,0 +1,52 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "name": "chroniclesofminecraft:flower_aloes_candela_seeds",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_aloes_candela"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_aloes_candela",
+                    "properties": {
+                        "age": "2"
+                    }
+                },
+                {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.4
+                }
+            ]
+        },
+        {
+            "name": "chroniclesofminecraft:flower_aloes_candela_fruit",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_aloes_candela_fruit"
+                }
+            ],
+            "conditions":
+            [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_aloes_candela",
+                    "properties": {
+                        "age": "2"
+                    }
+                },
+                {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.2
+                }
+            ]
+        }
+    ]
+}
