@@ -60,6 +60,7 @@ public class ChroniclesOfMinecraftItems {
     public static Item flowerRosaHyacinusPetals;
     public static Item flowerAloesCandelaFruit;
     public static Item flowerBambusaGivraThorns;
+    public static Item flowerBulbumAerLeave;
 
     public static Item alchemiumChestplate;
     public static Item alchemiumHelmet;
@@ -122,12 +123,12 @@ public class ChroniclesOfMinecraftItems {
         flowerRosaHyacinusPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus_petals");
         flowerAloesCandelaFruit = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela_fruit");
         flowerBambusaGivraThorns = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra_thorns");
+        flowerBulbumAerLeave = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer_leave");
 
         alchemiumChestplate = new AlchemiumArmorChestplate(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_chestplate");
         alchemiumHelmet = new AlchemiumArmorHelmet(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_helmet");
         alchemiumBoots = new AlchemiumArmorBoots(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_boots");
         alchemiumLeggings = new AlchemiumArmorLeggings(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_leggings");
-
     }
 
     @SubscribeEvent
@@ -187,6 +188,7 @@ public class ChroniclesOfMinecraftItems {
             flowerRosaHyacinusPetals,
             flowerAloesCandelaFruit,
             flowerBambusaGivraThorns,
+            flowerBulbumAerLeave,
 
 
             //********//
