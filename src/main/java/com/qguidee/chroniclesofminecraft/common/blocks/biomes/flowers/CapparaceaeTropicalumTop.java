@@ -14,8 +14,7 @@ public class CapparaceaeTropicalumTop extends CapparaceaeTropicalumBottom {
         super(builder);
     }
 
-    public void grow(World worldIn, BlockPos pos, BlockState state)
-    {
+    public void grow(World worldIn, BlockPos pos, BlockState state) {
         // VOID
     }
 

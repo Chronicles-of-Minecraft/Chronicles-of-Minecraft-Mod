@@ -51,8 +51,7 @@ public class CapparaceaeTropicalumBottom extends CropsBlock implements IGrowable
         builder.add(AGE);
     }
 
-    public void grow(World worldIn, BlockPos pos, BlockState state)
-    {
+    public void grow(World worldIn, BlockPos pos, BlockState state) {
         int i = this.getAge(state) + this.getBonemealAgeIncrease(worldIn);
         int j = this.getMaxAge();
 

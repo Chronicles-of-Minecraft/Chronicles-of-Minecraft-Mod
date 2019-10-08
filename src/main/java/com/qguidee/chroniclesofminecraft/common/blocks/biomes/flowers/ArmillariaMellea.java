@@ -5,20 +5,17 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IPlantable;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.ArrayList;
 
 public class ArmillariaMellea extends FlowerBlockWithStages {
 
@@ -56,12 +53,12 @@ public class ArmillariaMellea extends FlowerBlockWithStages {
 
     private boolean isLeaves(Block block) {
         Block[] leaveBlocks = {
-            Blocks.ACACIA_LEAVES,
-            Blocks.BIRCH_LEAVES,
-            Blocks.DARK_OAK_LEAVES,
-            Blocks.JUNGLE_LEAVES,
-            Blocks.OAK_LEAVES,
-            Blocks.SPRUCE_LEAVES,
+                Blocks.ACACIA_LEAVES,
+                Blocks.BIRCH_LEAVES,
+                Blocks.DARK_OAK_LEAVES,
+                Blocks.JUNGLE_LEAVES,
+                Blocks.OAK_LEAVES,
+                Blocks.SPRUCE_LEAVES,
         };
 
         for (Block leave : leaveBlocks) {

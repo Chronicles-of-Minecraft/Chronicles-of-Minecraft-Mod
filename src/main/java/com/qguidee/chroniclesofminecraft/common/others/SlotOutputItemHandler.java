@@ -1,6 +1,5 @@
 package com.qguidee.chroniclesofminecraft.common.others;
 
-import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;

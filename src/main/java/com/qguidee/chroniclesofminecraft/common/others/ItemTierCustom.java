@@ -1,11 +1,8 @@
 package com.qguidee.chroniclesofminecraft.common.others;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.item.IItemTier;
-import net.minecraft.item.ItemTier;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.util.LazyLoadBase;
 
 import java.util.function.Supplier;

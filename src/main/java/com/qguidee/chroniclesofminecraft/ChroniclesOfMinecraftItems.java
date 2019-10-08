@@ -8,7 +8,8 @@ import com.qguidee.chroniclesofminecraft.common.items.fight.armors.alchemium.Alc
 import com.qguidee.chroniclesofminecraft.common.items.fight.armors.alchemium.AlchemiumArmorHelmet;
 import com.qguidee.chroniclesofminecraft.common.items.fight.armors.alchemium.AlchemiumArmorLeggings;
 import com.qguidee.chroniclesofminecraft.common.others.ItemTierCustom;
-import net.minecraft.item.*;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -79,13 +80,13 @@ public class ChroniclesOfMinecraftItems {
         airWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "air_wand");
 
         sickleIron = new Sickle(ItemTierCustom.IRON_SICKLE, 1, 1.0f,
-                        new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_iron");
+                new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_iron");
 
         sickleGold = new Sickle(ItemTierCustom.GOLD_SICKLE, 1, 1.0f,
-                        new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_gold");
+                new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_gold");
 
         sickleAlchemium = new Sickle(ItemTierCustom.ALCHEMIUM_SICKLE, 1, 1.0f,
-                        new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_alchemium");
+                new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_alchemium");
 
         mortarPestleStone = new MortarPestle(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_stone");
         mortarPestleGold = new MortarPestle(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_gold");
@@ -135,70 +136,70 @@ public class ChroniclesOfMinecraftItems {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         init();
 
-    event.getRegistry().registerAll(
+        event.getRegistry().registerAll(
 
-            //*********//
-            // Alchemy //
-            //*********//
+                //*********//
+                // Alchemy //
+                //*********//
 
-            fireWand,
-            waterWand,
-            earthWand,
-            airWand,
+                fireWand,
+                waterWand,
+                earthWand,
+                airWand,
 
-            sickleIron,
-            sickleGold,
-            sickleAlchemium,
+                sickleIron,
+                sickleGold,
+                sickleAlchemium,
 
-            mortarPestleStone,
-            mortarPestleGold,
-            mortarPestleAlchemium,
+                mortarPestleStone,
+                mortarPestleGold,
+                mortarPestleAlchemium,
 
-            ingotAlchemium,
+                ingotAlchemium,
 
-            distiller,
-            alembic,
+                distiller,
+                alembic,
 
-            alchemicalBulbEmpty,
-
-
-            //********//
-            // Biomes //
-            //********//
-
-            flowerRosaRosea,
-            flowerRosaAlba,
-            flowerRosaHyacinus,
-            flowerLiliaceaeCandela,
-            flowerCantharellusPlatyphyllus,
-
-            flowerStrelitziaReginae,
-            flowerArumTitan,
-            flowerCoprinusComatus,
-            flowerArmillariaMellea,
-
-            flowerCoprinusLumus,
-            flowerAloesCandela,
-            flowerBulbumAer,
-            flowerCapparaceaeTropicalum,
-            flowerBambusaGivra,
-
-            flowerRosaRoseaPetals,
-            flowerRosaAlbaPetals,
-            flowerRosaHyacinusPetals,
-            flowerAloesCandelaFruit,
-            flowerBambusaGivraThorns,
-            flowerBulbumAerLeave,
+                alchemicalBulbEmpty,
 
 
-            //********//
-            // Combat //
-            //********//
+                //********//
+                // Biomes //
+                //********//
 
-            alchemiumChestplate,
-            alchemiumHelmet,
-            alchemiumBoots,
-            alchemiumLeggings
+                flowerRosaRosea,
+                flowerRosaAlba,
+                flowerRosaHyacinus,
+                flowerLiliaceaeCandela,
+                flowerCantharellusPlatyphyllus,
+
+                flowerStrelitziaReginae,
+                flowerArumTitan,
+                flowerCoprinusComatus,
+                flowerArmillariaMellea,
+
+                flowerCoprinusLumus,
+                flowerAloesCandela,
+                flowerBulbumAer,
+                flowerCapparaceaeTropicalum,
+                flowerBambusaGivra,
+
+                flowerRosaRoseaPetals,
+                flowerRosaAlbaPetals,
+                flowerRosaHyacinusPetals,
+                flowerAloesCandelaFruit,
+                flowerBambusaGivraThorns,
+                flowerBulbumAerLeave,
+
+
+                //********//
+                // Combat //
+                //********//
+
+                alchemiumChestplate,
+                alchemiumHelmet,
+                alchemiumBoots,
+                alchemiumLeggings
         );
     }
 }

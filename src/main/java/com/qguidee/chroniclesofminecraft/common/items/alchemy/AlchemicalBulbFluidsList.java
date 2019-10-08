@@ -2,7 +2,6 @@ package com.qguidee.chroniclesofminecraft.common.items.alchemy;
 
 import com.google.common.collect.Lists;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AlchemicalBulbFluidsList {
@@ -13,5 +12,4 @@ public class AlchemicalBulbFluidsList {
     public static List<AlchemicalBulbFluid> getList() {
         return Lists.newArrayList(EMPTY, WATER);
     }
-
 }

@@ -3,7 +3,6 @@ package com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.item.Item;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 

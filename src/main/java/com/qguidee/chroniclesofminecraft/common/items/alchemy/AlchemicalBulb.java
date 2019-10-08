@@ -1,18 +1,12 @@
 package com.qguidee.chroniclesofminecraft.common.items.alchemy;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
-import net.minecraft.client.renderer.color.IItemColor;
-import net.minecraft.client.renderer.model.ModelBakery;
 import net.minecraft.client.renderer.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.AreaEffectCloudEntity;
-import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionUtils;
-import net.minecraft.potion.Potions;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.*;
@@ -20,18 +14,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.RayTraceContext;
 import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.common.model.IModelPart;
-import net.minecraftforge.common.model.IModelState;
-import net.minecraftforge.common.model.TRSRTransformation;
 
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Optional;
 
 public class AlchemicalBulb extends Item {
     public AlchemicalBulb(Properties builder) {
@@ -48,7 +37,7 @@ public class AlchemicalBulb extends Item {
             return new ActionResult<>(ActionResultType.PASS, itemstack);
         } else {
             if (raytraceresult.getType() == RayTraceResult.Type.BLOCK) {
-                BlockPos blockpos = ((BlockRayTraceResult)raytraceresult).getPos();
+                BlockPos blockpos = ((BlockRayTraceResult) raytraceresult).getPos();
                 if (!worldIn.isBlockModifiable(playerIn, blockpos)) {
                     return new ActionResult<>(ActionResultType.PASS, itemstack);
                 }

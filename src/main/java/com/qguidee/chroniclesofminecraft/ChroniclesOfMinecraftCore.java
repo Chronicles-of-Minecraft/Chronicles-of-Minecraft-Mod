@@ -18,8 +18,7 @@ import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("chroniclesofminecraft")
-public class ChroniclesOfMinecraftCore
-{
+public class ChroniclesOfMinecraftCore {
     public static final String MOD_ID = "chroniclesofminecraft";
 
     public static IProxy proxy = DistExecutor.runForDist(() -> ClientProxy::new, () -> ServerProxy::new);

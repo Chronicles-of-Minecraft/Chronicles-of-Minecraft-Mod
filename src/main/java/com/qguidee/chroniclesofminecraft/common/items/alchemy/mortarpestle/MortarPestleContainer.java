@@ -34,12 +34,12 @@ public class MortarPestleContainer extends Container {
         addSlot(new SlotItemHandler(getIItemHandler(), 6, 133, 57));
 
         for (int i = 0; i < 9; i++) {
-            addSlot(new Slot(playerInventory, i, 8 + (18*i), 142));
+            addSlot(new Slot(playerInventory, i, 8 + (18 * i), 142));
         }
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
-                addSlot(new Slot(playerInventory, 9 + (i * 9) + j, 8 + (18*j), 84 + (18*i)));
+                addSlot(new Slot(playerInventory, 9 + (i * 9) + j, 8 + (18 * j), 84 + (18 * i)));
             }
         }
     }
