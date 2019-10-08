@@ -1,6 +1,5 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -21,8 +20,6 @@ public class Alembic extends Block {
 
     public Alembic(Properties properties) {
         super(properties);
-
-        setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic");
     }
 
     @Override

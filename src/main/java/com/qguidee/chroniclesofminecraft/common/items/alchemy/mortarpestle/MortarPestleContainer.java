@@ -6,6 +6,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.Slot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
@@ -84,9 +85,20 @@ public class MortarPestleContainer extends Container {
     }
 
     void grind() {
-        if (mortarInventory.getStackInSlot(0).getItem() == ChroniclesOfMinecraftItems.flowerRosaRosea) {
-            mortarInventory.insertItem(1, new ItemStack(ChroniclesOfMinecraftItems.flowerRosaRoseaPetals, mortarInventory.getStackInSlot(0).getCount()), false);
-            mortarInventory.getStackInSlot(0).setCount(0);
+        Item item = mortarInventory.getStackInSlot(0).getItem();
+        Item resultItem;
+
+        if (item == ChroniclesOfMinecraftItems.flowerRosaRosea) {
+            resultItem = ChroniclesOfMinecraftItems.flowerRosaRoseaPetals;
+        } else if (item == ChroniclesOfMinecraftItems.flowerRosaAlba) {
+            resultItem = ChroniclesOfMinecraftItems.flowerRosaAlbaPetals;
+        } else if (item == ChroniclesOfMinecraftItems.flowerRosaHyacinus) {
+            resultItem = ChroniclesOfMinecraftItems.flowerRosaHyacinusPetals;
+        } else {
+            return;
         }
+
+        mortarInventory.insertItem(1, new ItemStack(resultItem, mortarInventory.getStackInSlot(0).getCount()), false);
+        mortarInventory.getStackInSlot(0).setCount(0);
     }
 }

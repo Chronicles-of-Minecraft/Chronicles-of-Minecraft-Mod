@@ -11,12 +11,20 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Mod.EventBusSubscriber(modid = ChroniclesOfMinecraftCore.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(ChroniclesOfMinecraftCore.MOD_ID)
 public class ChroniclesOfMinecraftBlocks {
 
+    public static List<Block> blocksAlchemy;
+    public static List<Block> blocksBiomes;
+
     public static Block distiller;
-    public static Block alembic;
+    public static Block alembicMk1;
+    public static Block alembicMk2;
+    public static Block alembicMk3;
 
     // Flowers
     public static Block flowerRosaRosea;
@@ -42,75 +50,47 @@ public class ChroniclesOfMinecraftBlocks {
 
     private static void init() {
 
-        //*********//
-        // Alchemy //
-        //*********//
+        blocksAlchemy = Arrays.asList(
+                distiller = new Distiller(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller"),
+                alembicMk1 = new Alembic(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk1"),
+                alembicMk2 = new Alembic(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk2"),
+                alembicMk3 = new Alembic(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk3")
+        );
 
-        distiller = new Distiller(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller");
-        alembic = new Alembic(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE))/*.setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic")*/;
+        blocksBiomes = Arrays.asList(
+                flowerRosaRosea = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea"),
+                flowerRosaAlba = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba"),
+                flowerRosaHyacinus = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus"),
+                flowerLiliaceaeCandela = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_liliaceae_candela"),
+                flowerCantharellusPlatyphyllus = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_cantharellus_platyphyllus"),
 
-        //********//
-        // Biomes //
-        //********//
+                flowerAloesCandela = new AloesCandela().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela"),
+                flowerCapparaceaeTropicalumBottom = new CapparaceaeTropicalumBottom().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_bottom"),
+                flowerCapparaceaeTropicalumTop = new CapparaceaeTropicalumTop().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_top"),
+                flowerStrelitziaReginae = new StrelitziaReginae().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_strelitzia_reginae"),
+                flowerBulbumAer = new BulbumAer().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer"),
+                flowerCoprinusLumus = new CoprinusLumus().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_lumus"),
+                flowerCoprinusComatus = new CoprinusComatus().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_comatus"),
+                flowerArmillariaMellea = new ArmillariaMellea().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_armillaria_mellea"),
+                flowerBambusaGivra = new BambusaGivra().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra"),
 
-        flowerRosaRosea = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea");
-        flowerRosaAlba = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba");
-        flowerRosaHyacinus = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus");
-        flowerLiliaceaeCandela = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_liliaceae_candela");
-        flowerCantharellusPlatyphyllus = new FlowerBlockWithoutStage().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_cantharellus_platyphyllus");
+                flowerArumTitanBottom = new ArumTitanBottom().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_bottom"),
+                flowerArumTitanMid = new ArumTitanMid().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_mid"),
+                flowerArumTitanTop = new ArumTitanTop().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_top")
+        );
 
-        flowerAloesCandela = new AloesCandela().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela");
-        flowerCapparaceaeTropicalumBottom = new CapparaceaeTropicalumBottom().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_bottom");
-        flowerCapparaceaeTropicalumTop = new CapparaceaeTropicalumTop().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_capparaceae_tropicalum_top");
-        flowerStrelitziaReginae = new StrelitziaReginae().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_strelitzia_reginae");
-        flowerBulbumAer = new BulbumAer().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer");
-        flowerCoprinusLumus = new CoprinusLumus().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_lumus");
-        flowerCoprinusComatus = new CoprinusComatus().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_coprinus_comatus");
-        flowerArmillariaMellea = new ArmillariaMellea().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_armillaria_mellea");
-        flowerBambusaGivra = new BambusaGivra().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra");
-
-        flowerArumTitanBottom = new ArumTitanBottom().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_bottom");
-        flowerArumTitanMid = new ArumTitanMid().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_mid");
-        flowerArumTitanTop = new ArumTitanTop().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_top");
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         init();
 
-        event.getRegistry().registerAll(
+        for (Block block : blocksAlchemy) {
+            event.getRegistry().register(block);
+        }
 
-                //*********//
-                // Alchemy //
-                //*********//
-
-                distiller,
-                alembic,
-
-
-                //********//
-                // Biomes //
-                //********//
-
-                flowerAloesCandela,
-                flowerRosaRosea,
-                flowerRosaAlba,
-                flowerRosaHyacinus,
-                flowerLiliaceaeCandela,
-                flowerCantharellusPlatyphyllus,
-
-                flowerCapparaceaeTropicalumBottom,
-                flowerCapparaceaeTropicalumTop,
-                flowerStrelitziaReginae,
-                flowerArumTitanBottom,
-                flowerArumTitanMid,
-                flowerArumTitanTop,
-                flowerCoprinusComatus,
-                flowerArmillariaMellea,
-                flowerBambusaGivra,
-
-                flowerBulbumAer,
-                flowerCoprinusLumus
-        );
+        for (Block block : blocksBiomes) {
+            event.getRegistry().register(block);
+        }
     }
 }

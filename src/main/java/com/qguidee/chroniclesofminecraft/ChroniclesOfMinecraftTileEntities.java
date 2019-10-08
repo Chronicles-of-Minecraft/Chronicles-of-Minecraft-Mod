@@ -11,11 +11,11 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(ChroniclesOfMinecraftCore.MOD_ID)
 public class ChroniclesOfMinecraftTileEntities {
 
-    public static TileEntityType<AlembicTile> alembic;
+    public static TileEntityType<AlembicTile> alembicMk1;
 
     private static void init() {
-        alembic = TileEntityType.Builder.create(AlembicTile::new, ChroniclesOfMinecraftBlocks.alembic).build(null);
-        alembic.setRegistryName("alembic");
+        alembicMk1 = TileEntityType.Builder.create(AlembicTile::new, ChroniclesOfMinecraftBlocks.alembicMk1).build(null);
+        alembicMk1.setRegistryName("alembic_mk1");
     }
 
     @SubscribeEvent
@@ -23,7 +23,7 @@ public class ChroniclesOfMinecraftTileEntities {
         init();
 
         event.getRegistry().registerAll(
-                alembic
+                alembicMk1
         );
     }
 }

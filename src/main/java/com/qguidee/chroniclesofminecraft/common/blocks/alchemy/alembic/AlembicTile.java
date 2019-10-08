@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public class AlembicTile extends TileEntity implements INamedContainerProvider {
 
     public AlembicTile() {
-        super(ChroniclesOfMinecraftTileEntities.alembic);
+        super(ChroniclesOfMinecraftTileEntities.alembicMk1);
     }
 
     @Override

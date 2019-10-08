@@ -15,9 +15,15 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Mod.EventBusSubscriber(modid = ChroniclesOfMinecraftCore.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(ChroniclesOfMinecraftCore.MOD_ID)
 public class ChroniclesOfMinecraftItems {
+
+    public static List<Item> itemsAlchemy;
+    public static List<Item> itemsBiomes;
 
     public static Item fireWand;
     public static Item waterWand;
@@ -35,7 +41,9 @@ public class ChroniclesOfMinecraftItems {
     public static Item ingotAlchemium;
 
     public static Item distiller;
-    public static Item alembic;
+    public static Item alembicMk1;
+    public static Item alembicMk2;
+    public static Item alembicMk3;
 
     public static Item alchemicalBulbEmpty;
 
@@ -70,136 +78,74 @@ public class ChroniclesOfMinecraftItems {
 
     private static void init() {
 
-        //*********//
-        // Alchemy //
-        //*********//
+        itemsAlchemy = Arrays.asList(
+                fireWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "fire_wand"),
+                waterWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "water_wand"),
+                earthWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "earth_wand"),
+                airWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "air_wand"),
 
-        fireWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "fire_wand");
-        waterWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "water_wand");
-        earthWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "earth_wand");
-        airWand = new Item(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "air_wand");
+                sickleIron = new Sickle(ItemTierCustom.IRON_SICKLE, 1, 1.0f,
+                        new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_iron"),
 
-        sickleIron = new Sickle(ItemTierCustom.IRON_SICKLE, 1, 1.0f,
-                new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_iron");
+                sickleGold = new Sickle(ItemTierCustom.GOLD_SICKLE, 1, 1.0f,
+                        new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_gold"),
 
-        sickleGold = new Sickle(ItemTierCustom.GOLD_SICKLE, 1, 1.0f,
-                new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_gold");
+                sickleAlchemium = new Sickle(ItemTierCustom.ALCHEMIUM_SICKLE, 1, 1.0f,
+                        new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_alchemium"),
 
-        sickleAlchemium = new Sickle(ItemTierCustom.ALCHEMIUM_SICKLE, 1, 1.0f,
-                new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_alchemium");
+                mortarPestleStone = new MortarPestle().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_stone"),
+                mortarPestleGold = new MortarPestle().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_gold"),
+                mortarPestleAlchemium = new MortarPestle().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_alchemium"),
 
-        mortarPestleStone = new MortarPestle().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_stone");
-        mortarPestleGold = new MortarPestle().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_gold");
-        mortarPestleAlchemium = new MortarPestle().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_alchemium");
+                ingotAlchemium = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "ingot_alchemium"),
 
-        ingotAlchemium = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "ingot_alchemium");
+                distiller = new BlockItem(ChroniclesOfMinecraftBlocks.distiller, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller"),
+                alembicMk1 = new BlockItem(ChroniclesOfMinecraftBlocks.alembicMk1, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk1"),
+                alembicMk2 = new BlockItem(ChroniclesOfMinecraftBlocks.alembicMk2, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk2"),
+                alembicMk3 = new BlockItem(ChroniclesOfMinecraftBlocks.alembicMk3, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk3"),
 
-        distiller = new BlockItem(ChroniclesOfMinecraftBlocks.distiller, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller");
-        alembic = new BlockItem(ChroniclesOfMinecraftBlocks.alembic, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic");
+                alchemicalBulbEmpty = new AlchemicalBulb(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemical_bulb_empty"));
 
-        alchemicalBulbEmpty = new AlchemicalBulb(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemical_bulb_empty");
+        itemsBiomes = Arrays.asList(
+                flowerRosaRosea = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaRosea, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_rosea"),
+                flowerRosaAlba = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaAlba, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_alba"),
+                flowerRosaHyacinus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaHyacinus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_hyacinus"),
+                flowerLiliaceaeCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerLiliaceaeCandela, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_liliaceae_candela"),
+                flowerCantharellusPlatyphyllus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCantharellusPlatyphyllus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_cantharellus_platyphyllus"),
 
-        //********//
-        // Biomes //
-        //********//
+                flowerAloesCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerAloesCandela, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_aloes_candela"),
+                flowerBulbumAer = new BlockItem(ChroniclesOfMinecraftBlocks.flowerBulbumAer, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_bulbum_aer"),
+                flowerCoprinusLumus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCoprinusLumus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_coprinus_lumus"),
+                flowerCapparaceaeTropicalum = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_capparaceae_tropicalum"),
+                flowerStrelitziaReginae = new BlockItem(ChroniclesOfMinecraftBlocks.flowerStrelitziaReginae, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_strelitzia_reginae"),
+                flowerArumTitan = new BlockItem(ChroniclesOfMinecraftBlocks.flowerArumTitanBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_arum_titan"),
+                flowerCoprinusComatus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCoprinusComatus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_coprinus_comatus"),
+                flowerArmillariaMellea = new BlockItem(ChroniclesOfMinecraftBlocks.flowerArmillariaMellea, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_armillaria_mellea"),
+                flowerBambusaGivra = new BlockItem(ChroniclesOfMinecraftBlocks.flowerBambusaGivra, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_bambusa_givra"),
 
-        flowerRosaRosea = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaRosea, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_rosea");
-        flowerRosaAlba = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaAlba, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_alba");
-        flowerRosaHyacinus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaHyacinus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_hyacinus");
-        flowerLiliaceaeCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerLiliaceaeCandela, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_liliaceae_candela");
-        flowerCantharellusPlatyphyllus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCantharellusPlatyphyllus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_cantharellus_platyphyllus");
+                flowerRosaRoseaPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea_petals"),
+                flowerRosaAlbaPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba_petals"),
+                flowerRosaHyacinusPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus_petals"),
+                flowerAloesCandelaFruit = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela_fruit"),
+                flowerBambusaGivraThorns = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra_thorns"),
+                flowerBulbumAerLeave = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer_leave"),
 
-        flowerAloesCandela = new BlockItem(ChroniclesOfMinecraftBlocks.flowerAloesCandela, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_aloes_candela");
-        flowerBulbumAer = new BlockItem(ChroniclesOfMinecraftBlocks.flowerBulbumAer, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_bulbum_aer");
-        flowerCoprinusLumus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCoprinusLumus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_coprinus_lumus");
-        flowerCapparaceaeTropicalum = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_capparaceae_tropicalum");
-        flowerStrelitziaReginae = new BlockItem(ChroniclesOfMinecraftBlocks.flowerStrelitziaReginae, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_strelitzia_reginae");
-        flowerArumTitan = new BlockItem(ChroniclesOfMinecraftBlocks.flowerArumTitanBottom, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_arum_titan");
-        flowerCoprinusComatus = new BlockItem(ChroniclesOfMinecraftBlocks.flowerCoprinusComatus, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_coprinus_comatus");
-        flowerArmillariaMellea = new BlockItem(ChroniclesOfMinecraftBlocks.flowerArmillariaMellea, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_armillaria_mellea");
-        flowerBambusaGivra = new BlockItem(ChroniclesOfMinecraftBlocks.flowerBambusaGivra, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_bambusa_givra");
-
-        flowerRosaRoseaPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_rosea_petals");
-        flowerRosaAlbaPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_alba_petals");
-        flowerRosaHyacinusPetals = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_rosa_hyacinus_petals");
-        flowerAloesCandelaFruit = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela_fruit");
-        flowerBambusaGivraThorns = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra_thorns");
-        flowerBulbumAerLeave = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer_leave");
-
-        alchemiumChestplate = new AlchemiumArmorChestplate(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_chestplate");
-        alchemiumHelmet = new AlchemiumArmorHelmet(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_helmet");
-        alchemiumBoots = new AlchemiumArmorBoots(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_boots");
-        alchemiumLeggings = new AlchemiumArmorLeggings(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_leggings");
+                alchemiumChestplate = new AlchemiumArmorChestplate(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_chestplate"),
+                alchemiumHelmet = new AlchemiumArmorHelmet(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_helmet"),
+                alchemiumBoots = new AlchemiumArmorBoots(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_boots"),
+                alchemiumLeggings = new AlchemiumArmorLeggings(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_leggings"));
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         init();
 
-        event.getRegistry().registerAll(
+        for (Item item : itemsAlchemy) {
+            event.getRegistry().register(item);
+        }
 
-                //*********//
-                // Alchemy //
-                //*********//
-
-                fireWand,
-                waterWand,
-                earthWand,
-                airWand,
-
-                sickleIron,
-                sickleGold,
-                sickleAlchemium,
-
-                mortarPestleStone,
-                mortarPestleGold,
-                mortarPestleAlchemium,
-
-                ingotAlchemium,
-
-                distiller,
-                alembic,
-
-                alchemicalBulbEmpty,
-
-
-                //********//
-                // Biomes //
-                //********//
-
-                flowerRosaRosea,
-                flowerRosaAlba,
-                flowerRosaHyacinus,
-                flowerLiliaceaeCandela,
-                flowerCantharellusPlatyphyllus,
-
-                flowerStrelitziaReginae,
-                flowerArumTitan,
-                flowerCoprinusComatus,
-                flowerArmillariaMellea,
-
-                flowerCoprinusLumus,
-                flowerAloesCandela,
-                flowerBulbumAer,
-                flowerCapparaceaeTropicalum,
-                flowerBambusaGivra,
-
-                flowerRosaRoseaPetals,
-                flowerRosaAlbaPetals,
-                flowerRosaHyacinusPetals,
-                flowerAloesCandelaFruit,
-                flowerBambusaGivraThorns,
-                flowerBulbumAerLeave,
-
-
-                //********//
-                // Combat //
-                //********//
-
-                alchemiumChestplate,
-                alchemiumHelmet,
-                alchemiumBoots,
-                alchemiumLeggings
-        );
+        for (Item item : itemsBiomes) {
+            event.getRegistry().register(item);
+        }
     }
 }
