@@ -6,12 +6,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
+import javax.annotation.Nonnull;
 import java.util.Random;
 
 public class CapparaceaeTropicalumTop extends CapparaceaeTropicalumBottom {
 
-    public CapparaceaeTropicalumTop(Properties builder) {
-        super(builder);
+    public CapparaceaeTropicalumTop() {
+        super();
     }
 
     public void grow(World worldIn, BlockPos pos, BlockState state) {
@@ -19,7 +20,7 @@ public class CapparaceaeTropicalumTop extends CapparaceaeTropicalumBottom {
     }
 
     @Override
-    public void tick(BlockState state, World worldIn, BlockPos pos, Random random) {
+    public void tick(@Nonnull BlockState state, World worldIn, @Nonnull BlockPos pos, @Nonnull Random random) {
         // VOID
     }
 

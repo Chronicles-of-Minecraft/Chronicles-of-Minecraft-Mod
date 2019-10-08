@@ -10,8 +10,8 @@ import java.util.Random;
 
 public class ArumTitanTop extends ArumTitanBottom {
 
-    public ArumTitanTop(Properties builder) {
-        super(builder);
+    public ArumTitanTop() {
+        super();
     }
 
     public void grow(World worldIn, BlockPos pos, BlockState state) {

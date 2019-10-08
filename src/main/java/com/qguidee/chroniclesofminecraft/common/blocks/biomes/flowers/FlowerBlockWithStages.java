@@ -41,6 +41,7 @@ public abstract class FlowerBlockWithStages extends CropsBlock {
         return 1;
     }
 
+    @Nonnull
     @Override
     protected IItemProvider getSeedsItem() {
         return seed;

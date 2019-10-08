@@ -2,48 +2,30 @@ package com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftBlocks;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
+import javax.annotation.Nonnull;
 import java.util.Random;
 
-public class CapparaceaeTropicalumBottom extends CropsBlock implements IGrowable {
+public class CapparaceaeTropicalumBottom extends FlowerBlockWithStages {
 
-    public static final int MAX_BOTTOM_AGE = 2;
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 4);
+    private static final int MAX_BOTTOM_AGE = 2;
+    private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 4);
 
-    public CapparaceaeTropicalumBottom(Properties builder) {
-        super(builder);
+    public CapparaceaeTropicalumBottom() {
+        super(4, ChroniclesOfMinecraftItems.flowerCapparaceaeTropicalum);
     }
 
-    @Override
-    public int getMaxAge() {
-        return 4;
-    }
-
+    @Nonnull
     @Override
     public IntegerProperty getAgeProperty() {
         return AGE;
-    }
-
-    @Override
-    protected int getBonemealAgeIncrease(World worldIn) {
-        return 1;
-    }
-
-    @Override
-    protected IItemProvider getSeedsItem() {
-        return ChroniclesOfMinecraftItems.flowerCapparaceaeTropicalum;
-    }
-
-    @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        return true;
     }
 
     @Override
@@ -64,7 +46,6 @@ public class CapparaceaeTropicalumBottom extends CropsBlock implements IGrowable
                 worldIn.setBlockState(pos.up(), ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumTop.getDefaultState());
             }
             if (worldIn.getBlockState(pos.up()).getBlock() == ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumTop) {
-                // BlockState topBlockState = worldIn.getBlockState(pos.up());
                 CapparaceaeTropicalumTop topBlock = (CapparaceaeTropicalumTop) worldIn.getBlockState(pos.up()).getBlock();
                 worldIn.setBlockState(pos.up(), topBlock.withAge(i), 2);
                 worldIn.setBlockState(pos, this.withAge(i), 2);
@@ -72,11 +53,10 @@ public class CapparaceaeTropicalumBottom extends CropsBlock implements IGrowable
         } else {
             worldIn.setBlockState(pos, this.withAge(i), 2);
         }
-
     }
 
     @Override
-    public void tick(BlockState state, World worldIn, BlockPos pos, Random random) {
+    public void tick(@Nonnull BlockState state, World worldIn, @Nonnull BlockPos pos, @Nonnull Random random) {
         super.tick(state, worldIn, pos, random);
 
         this.grow(worldIn, pos, state);

@@ -2,49 +2,31 @@ package com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftBlocks;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
+import javax.annotation.Nonnull;
 import java.util.Random;
 
-public class ArumTitanBottom extends CropsBlock implements IGrowable {
+public class ArumTitanBottom extends FlowerBlockWithStages {
 
-    public static final int MAX_BOT_AGE = 3;
-    public static final int MAX_MID_AGE = 5;
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 6);
+    private static final int MAX_BOT_AGE = 3;
+    private static final int MAX_MID_AGE = 5;
+    private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 6);
 
-    public ArumTitanBottom(Properties builder) {
-        super(builder);
+    public ArumTitanBottom() {
+        super(6, ChroniclesOfMinecraftItems.flowerArumTitan);
     }
 
-    @Override
-    public int getMaxAge() {
-        return 6;
-    }
-
+    @Nonnull
     @Override
     public IntegerProperty getAgeProperty() {
         return AGE;
-    }
-
-    @Override
-    protected int getBonemealAgeIncrease(World worldIn) {
-        return 1;
-    }
-
-    @Override
-    protected IItemProvider getSeedsItem() {
-        return ChroniclesOfMinecraftItems.flowerArumTitan;
-    }
-
-    @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        return true;
     }
 
     @Override
