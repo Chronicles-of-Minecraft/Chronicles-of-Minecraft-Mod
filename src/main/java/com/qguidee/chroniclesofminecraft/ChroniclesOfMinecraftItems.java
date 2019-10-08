@@ -88,9 +88,9 @@ public class ChroniclesOfMinecraftItems {
         sickleAlchemium = new Sickle(ItemTierCustom.ALCHEMIUM_SICKLE, 1, 1.0f,
                 new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "sickle_alchemium");
 
-        mortarPestleStone = new MortarPestle(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_stone");
-        mortarPestleGold = new MortarPestle(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_gold");
-        mortarPestleAlchemium = new MortarPestle(new Item.Properties().maxStackSize(1).group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_alchemium");
+        mortarPestleStone = new MortarPestle().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_stone");
+        mortarPestleGold = new MortarPestle().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_gold");
+        mortarPestleAlchemium = new MortarPestle().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "mortar_pestle_alchemium");
 
         ingotAlchemium = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "ingot_alchemium");
 

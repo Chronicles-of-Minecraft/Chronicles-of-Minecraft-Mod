@@ -1,5 +1,6 @@
 package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
 
+import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItemGroups;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftPacketHandler;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -12,10 +13,11 @@ import javax.annotation.Nonnull;
 
 public class MortarPestle extends Item {
 
-    // ICapabilityProvider capabilityProvider = null;
-
-    public MortarPestle(Properties properties) {
-        super(properties);
+    public MortarPestle() {
+        super(new Item.Properties()
+                .maxStackSize(1)
+                .group(ChroniclesOfMinecraftItemGroups.ALCHEMY)
+        );
     }
 
     @Nonnull

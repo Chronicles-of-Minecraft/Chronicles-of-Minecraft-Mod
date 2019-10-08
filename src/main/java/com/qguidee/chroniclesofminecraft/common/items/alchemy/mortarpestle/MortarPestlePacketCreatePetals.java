@@ -13,8 +13,8 @@ import java.util.function.Supplier;
 
 public class MortarPestlePacketCreatePetals {
 
-    public static final int OPEN_GUI = 0;
-    public static final int CREATE_PETALS = 1;
+    private static final int OPEN_GUI = 0;
+    private static final int GRIND = 1;
 
     private final int data;
 
@@ -22,7 +22,7 @@ public class MortarPestlePacketCreatePetals {
         this.data = buf.readInt();
     }
 
-    public MortarPestlePacketCreatePetals(int data) {
+    MortarPestlePacketCreatePetals(int data) {
         this.data = data;
     }
 
@@ -42,7 +42,7 @@ public class MortarPestlePacketCreatePetals {
                 case OPEN_GUI:
                     sender.openContainer(new MortarPillarContainerProvider());
                     break;
-                case CREATE_PETALS:
+                case GRIND:
                     MortarPestleContainer mortarPestleContainer = (MortarPestleContainer) sender.openContainer;
                     mortarPestleContainer.grind();
                     break;
