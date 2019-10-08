@@ -81,7 +81,7 @@ public class ArumTitanBottom extends CropsBlock implements IGrowable {
             }
 
             worldIn.setBlockState(pos, this.withAge(i), 2);
-        } else{
+        } else {
             worldIn.setBlockState(pos, this.withAge(i), 2);
         }
 
