@@ -7,31 +7,26 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.util.NonNullSupplier;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
 import javax.annotation.Nonnull;
 
 public class MortarPestleContainer extends Container {
 
-    // @CapabilityInject(IItemHandler.class)
-    // private static LazyOptional<IItemHandler> ITEM_HANDLER_CAPABILITY = LazyOptional.empty();
-
-    //private IItemHandler customInventory;
+    private IItemHandler mortarInventory = new ItemStackHandler(7);
 
     public MortarPestleContainer(int id, PlayerInventory playerInventory) {
         super(ChroniclesOfMinecraftContainers.mortarPestle, id);
 
-        addSlot(new SlotItemHandler(getIItemHandler(), 0, 25, 35));
-        addSlot(new SlotItemHandler(getIItemHandler(), 1, 104, 10));
-        addSlot(new SlotItemHandler(getIItemHandler(), 2, 133, 10));
-        addSlot(new SlotItemHandler(getIItemHandler(), 3, 104, 33));
-        addSlot(new SlotItemHandler(getIItemHandler(), 4, 133, 33));
-        addSlot(new SlotItemHandler(getIItemHandler(), 5, 104, 57));
-        addSlot(new SlotItemHandler(getIItemHandler(), 6, 133, 57));
+        addSlot(new SlotItemHandler(mortarInventory, 0, 25, 35));
+        addSlot(new SlotItemHandler(mortarInventory, 1, 104, 10));
+        addSlot(new SlotItemHandler(mortarInventory, 2, 133, 10));
+        addSlot(new SlotItemHandler(mortarInventory, 3, 104, 33));
+        addSlot(new SlotItemHandler(mortarInventory, 4, 133, 33));
+        addSlot(new SlotItemHandler(mortarInventory, 5, 104, 57));
+        addSlot(new SlotItemHandler(mortarInventory, 6, 133, 57));
 
         for (int i = 0; i < 9; i++) {
             addSlot(new Slot(playerInventory, i, 8 + (18 * i), 142));
@@ -53,8 +48,8 @@ public class MortarPestleContainer extends Container {
     public void onContainerClosed(PlayerEntity playerIn) {
         super.onContainerClosed(playerIn);
 
-        for (int i = 0; i < getIItemHandler().getSlots(); i++) {
-            playerIn.inventory.addItemStackToInventory(getIItemHandler().getStackInSlot(i));
+        for (int i = 0; i < mortarInventory.getSlots(); i++) {
+            playerIn.inventory.addItemStackToInventory(mortarInventory.getStackInSlot(i));
         }
     }
 
@@ -88,24 +83,10 @@ public class MortarPestleContainer extends Container {
         return previousItemStack;
     }
 
-    private IItemHandler getIItemHandler() {
-        LazyOptional<IItemHandler> ITEM_HANDLER_CAPABILITY = ((MortarPestle) ChroniclesOfMinecraftItems.mortarPestleStone).capabilityProvider.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
-
-        NonNullSupplier<IItemHandler> nonNullSupplier = new NonNullSupplier<IItemHandler>() {
-            @Nonnull
-            @Override
-            public IItemHandler get() {
-                return null;
-            }
-        };
-
-        return ITEM_HANDLER_CAPABILITY.orElseGet(nonNullSupplier);
-    }
-
     void grind() {
-        if (getIItemHandler().getStackInSlot(0).getItem() == ChroniclesOfMinecraftItems.flowerRosaRosea) {
-            getIItemHandler().getStackInSlot(0).setCount(0);
-            getIItemHandler().insertItem(1, new ItemStack(ChroniclesOfMinecraftItems.flowerRosaRoseaPetals, 1), false);
+        if (mortarInventory.getStackInSlot(0).getItem() == ChroniclesOfMinecraftItems.flowerRosaRosea) {
+            mortarInventory.insertItem(1, new ItemStack(ChroniclesOfMinecraftItems.flowerRosaRoseaPetals, mortarInventory.getStackInSlot(0).getCount()), false);
+            mortarInventory.getStackInSlot(0).setCount(0);
         }
     }
 }

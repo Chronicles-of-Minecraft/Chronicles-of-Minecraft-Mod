@@ -12,11 +12,11 @@ import net.minecraft.util.text.ITextComponent;
 
 public class MortarPestleScreen extends ContainerScreen<MortarPestleContainer> {
     private static ResourceLocation gui = new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/mortar_pestle.png");
-    private MortarPestleContainer container;
+    // private MortarPestleContainer container;
 
     public MortarPestleScreen(MortarPestleContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
-        this.container = screenContainer;
+        // this.container = screenContainer;
     }
 
     @Override
