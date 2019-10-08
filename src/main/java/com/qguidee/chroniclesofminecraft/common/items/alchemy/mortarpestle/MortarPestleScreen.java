@@ -37,7 +37,10 @@ public class MortarPestleScreen extends ContainerScreen<MortarPestleContainer> {
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+
+        assert this.minecraft != null;
         this.minecraft.getTextureManager().bindTexture(gui);
+
         int relX = (this.width - this.xSize) / 2;
         int relY = (this.height - this.ySize) / 2;
         this.blit(relX, relY, 0, 0, this.xSize, this.ySize);

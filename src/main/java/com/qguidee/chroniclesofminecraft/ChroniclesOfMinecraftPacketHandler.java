@@ -1,5 +1,6 @@
 package com.qguidee.chroniclesofminecraft;
 
+import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPestlePacketCreatePetals;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
@@ -14,4 +15,7 @@ public class ChroniclesOfMinecraftPacketHandler {
             PROTOCOL_VERSION::equals
     );
 
+    static void registerPackets() {
+        INSTANCE.registerMessage(0, MortarPestlePacketCreatePetals.class, MortarPestlePacketCreatePetals::encode, MortarPestlePacketCreatePetals::new, MortarPestlePacketCreatePetals::handle);
+    }
 }

@@ -41,6 +41,7 @@ public class ChroniclesOfMinecraftCore {
 
     private void setup(final FMLCommonSetupEvent event) {
         proxy.init();
+        ChroniclesOfMinecraftPacketHandler.registerPackets();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

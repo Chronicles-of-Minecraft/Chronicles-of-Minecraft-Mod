@@ -28,6 +28,7 @@ public class MortarPestle extends Item implements ITickable {
         super(properties);
     }
 
+    @Nonnull
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         ServerPlayerEntity playerEntity = null;
