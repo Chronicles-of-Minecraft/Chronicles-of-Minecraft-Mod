@@ -1,6 +1,6 @@
 {
-    "parent": "block/crop",
+    "parent": "block/cross",
     "textures": {
-        "crop": "chroniclesofminecraft:block/flower_aloes_candela_stage1"
+        "cross": "chroniclesofminecraft:block/flower_aloes_candela_stage1"
     }
 }

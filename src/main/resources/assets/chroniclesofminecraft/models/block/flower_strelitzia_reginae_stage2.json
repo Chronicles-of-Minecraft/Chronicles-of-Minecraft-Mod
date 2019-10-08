@@ -1,6 +1,6 @@
 {
-    "parent": "block/crop",
+    "parent": "block/cross",
     "textures": {
-        "crop": "chroniclesofminecraft:block/flower_strelitzia_reginae_stage2"
+        "cross": "chroniclesofminecraft:block/flower_strelitzia_reginae_stage2"
     }
 }
