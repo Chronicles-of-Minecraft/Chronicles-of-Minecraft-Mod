@@ -2,7 +2,6 @@ package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftContainers;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftPacketHandler;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
@@ -22,8 +21,6 @@ public class MortarPestleContainer extends Container {
     // private static LazyOptional<IItemHandler> ITEM_HANDLER_CAPABILITY = LazyOptional.empty();
 
     //private IItemHandler customInventory;
-
-    private int messageId = 0;
 
     public MortarPestleContainer(int id, PlayerInventory playerInventory) {
         super(ChroniclesOfMinecraftContainers.mortarPestle, id);
@@ -91,7 +88,7 @@ public class MortarPestleContainer extends Container {
         return previousItemStack;
     }
 
-    public IItemHandler getIItemHandler() {
+    private IItemHandler getIItemHandler() {
         LazyOptional<IItemHandler> ITEM_HANDLER_CAPABILITY = ((MortarPestle) ChroniclesOfMinecraftItems.mortarPestleStone).capabilityProvider.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
 
         NonNullSupplier<IItemHandler> nonNullSupplier = new NonNullSupplier<IItemHandler>() {
@@ -106,14 +103,9 @@ public class MortarPestleContainer extends Container {
     }
 
     void grind() {
-        // ChroniclesOfMinecraftPacketHandler.INSTANCE.registerMessage(messageId++, MortarPestlePacketDeleteFlower.class, MortarPestlePacketDeleteFlower::encode, MortarPestlePacketDeleteFlower::new, MortarPestlePacketDeleteFlower::handle);
-        // ChroniclesOfMinecraftPacketHandler.INSTANCE.sendToServer(new MortarPestlePacketDeleteFlower(getIItemHandler().getStackInSlot(0)));
-
-        ChroniclesOfMinecraftPacketHandler.INSTANCE.sendToServer(new MortarPestlePacketCreatePetals(0));
-
-        /*if (getIItemHandler().getStackInSlot(0).getItem() == ChroniclesOfMinecraftItems.flowerRosaRosea) {
+        if (getIItemHandler().getStackInSlot(0).getItem() == ChroniclesOfMinecraftItems.flowerRosaRosea) {
             getIItemHandler().getStackInSlot(0).setCount(0);
             getIItemHandler().insertItem(1, new ItemStack(ChroniclesOfMinecraftItems.flowerRosaRoseaPetals, 1), false);
-        }*/
+        }
     }
 }

@@ -2,6 +2,7 @@ package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
+import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftPacketHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.widget.button.Button;
@@ -10,9 +11,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
 public class MortarPestleScreen extends ContainerScreen<MortarPestleContainer> {
-
-    int id = 0;
-
     private static ResourceLocation gui = new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/mortar_pestle.png");
     private MortarPestleContainer container;
 
@@ -46,7 +44,9 @@ public class MortarPestleScreen extends ContainerScreen<MortarPestleContainer> {
         this.blit(relX, relY, 0, 0, this.xSize, this.ySize);
 
         this.addButton(new Button(relX + 22, relY + 59, 70, 20, "Grind", p_onPress_1_ -> {
-            container.grind();
+            ChroniclesOfMinecraftPacketHandler.INSTANCE.sendToServer(new MortarPestlePacketCreatePetals(1));
+
+            // container.grind();
         }));
     }
 }

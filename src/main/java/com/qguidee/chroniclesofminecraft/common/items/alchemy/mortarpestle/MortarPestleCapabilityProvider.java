@@ -17,7 +17,12 @@ public class MortarPestleCapabilityProvider implements ICapabilityProvider {
     @Nonnull
     private ItemStackHandler getItemHandler() {
         if (itemHandler == null)
-            itemHandler = new ItemStackHandler(7);
+            this.itemHandler = new ItemStackHandler(7) {
+                @Override
+                protected void onContentsChanged(int slot) {
+                    super.onContentsChanged(slot);
+                }
+            };
 
         return this.itemHandler;
     }

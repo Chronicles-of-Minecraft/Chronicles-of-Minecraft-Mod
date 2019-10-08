@@ -1,14 +1,20 @@
 package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fml.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
+/*enum MortarPestleAction {
+    OPEN_GUI,
+    CREATE_PETALS
+}*/
+
 public class MortarPestlePacketCreatePetals {
+
+    public static final int OPEN_GUI = 0;
+    public static final int CREATE_PETALS = 1;
 
     private final int data;
 
@@ -25,15 +31,23 @@ public class MortarPestlePacketCreatePetals {
     }
 
     public void handle(Supplier<NetworkEvent.Context> context) {
+
+
         context.get().enqueueWork(() -> {
             // Work that needs to be threadsafe (most work)
-            PlayerEntity sender = context.get().getSender(); // the client that sent this packet
+            ServerPlayerEntity sender = context.get().getSender(); // the client that sent this packet
+            assert sender != null;
 
-            MortarPestleContainer mortarPestleContainer = (MortarPestleContainer) sender.openContainer;
-            if (mortarPestleContainer.getIItemHandler().getStackInSlot(0).getItem() == ChroniclesOfMinecraftItems.flowerRosaRosea) {
-                mortarPestleContainer.getIItemHandler().getStackInSlot(0).setCount(0);
-                mortarPestleContainer.getIItemHandler().insertItem(1, new ItemStack(ChroniclesOfMinecraftItems.flowerRosaRoseaPetals, 1), false);
+            switch (this.data) {
+                case OPEN_GUI:
+                    sender.openContainer(new MortarPillarContainerProvider());
+                    break;
+                case CREATE_PETALS:
+                    MortarPestleContainer mortarPestleContainer = (MortarPestleContainer) sender.openContainer;
+                    mortarPestleContainer.grind();
+                    break;
             }
+
         });
         context.get().setPacketHandled(true);
     }
