@@ -35,6 +35,18 @@ public class ArumTitanMid extends ArumTitanBottom {
     }
 
     @Override
+    protected int getBonemealAgeIncrease(World worldIn) {
+        return 0;
+    }
+
+    @Override
+    public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
+        ((ArumTitanBottom) worldIn.getBlockState(pos.down()).getBlock()).grow(worldIn, worldIn.rand, pos.down(), worldIn.getBlockState(pos.down()));
+
+        return true;
+    }
+
+    @Override
     public void harvestBlock(@Nonnull World worldIn, PlayerEntity player, @Nonnull BlockPos pos, BlockState state, @Nullable TileEntity te, @Nonnull ItemStack stack) {
         super.harvestBlock(worldIn, player, pos, state, te, stack);
 

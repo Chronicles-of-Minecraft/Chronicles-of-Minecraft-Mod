@@ -40,4 +40,16 @@ public class CapparaceaeTropicalumTop extends CapparaceaeTropicalumBottom {
 
         worldIn.setBlockState(pos.down(), Blocks.AIR.getDefaultState());
     }
+
+    @Override
+    protected int getBonemealAgeIncrease(World worldIn) {
+        return 0;
+    }
+
+    @Override
+    public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
+        ((CapparaceaeTropicalumBottom) worldIn.getBlockState(pos.down()).getBlock()).grow(worldIn, worldIn.rand, pos.down(), worldIn.getBlockState(pos.down()));
+
+        return true;
+    }
 }
