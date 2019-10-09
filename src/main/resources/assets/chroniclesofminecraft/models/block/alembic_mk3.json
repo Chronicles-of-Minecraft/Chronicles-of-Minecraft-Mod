@@ -3,7 +3,7 @@
     "textures": {
         "4": "block/jungle_planks",
         "5": "block/cobblestone",
-        "6": "chroniclesofminecraft:block/gold_block",
+        "6": "chroniclesofminecraft:block/alchemium_block",
         "glass": "block/glass",
         "gold_block": "block/gold_block",
         "iron_block": "block/iron_block",
