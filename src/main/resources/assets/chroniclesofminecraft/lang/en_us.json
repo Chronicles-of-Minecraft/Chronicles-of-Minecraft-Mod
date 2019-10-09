@@ -3,34 +3,29 @@
     "item.chroniclesofminecraft.water_wand": "Water wand",
     "item.chroniclesofminecraft.earth_wand": "Earth wand",
     "item.chroniclesofminecraft.air_wand": "Air wand",
-
     "item.chroniclesofminecraft.sickle_gold": "Gold sickle",
     "item.chroniclesofminecraft.sickle_iron": "Iron sickle",
     "item.chroniclesofminecraft.sickle_alchemium": "Alchemium sickle",
-
     "item.chroniclesofminecraft.mortar_pestle_stone": "Stone mortar and pestle",
     "item.chroniclesofminecraft.mortar_pestle_gold": "Gold mortar and pestle",
     "item.chroniclesofminecraft.mortar_pestle_alchemium": "Alchemium mortar and pestle",
-
     "item.chroniclesofminecraft.flower_rosa_rosea_petals": "Rosa rosea petals",
     "item.chroniclesofminecraft.flower_rosa_hyacinus_petals": "Rosa hyacinus petals",
     "item.chroniclesofminecraft.flower_rosa_alba_petals": "Rosa alba petals",
     "item.chroniclesofminecraft.flower_aloes_candela_fruit": "Aloes candela fruit",
     "item.chroniclesofminecraft.flower_bambusa_givra_thorns": "Bambusa givra thorns",
-
+    "item.chroniclesofminecraft.flower_armillaria_mellea_heart": "Armillaria mellea heart",
+    "item.chroniclesofminecraft.flower_armillaria_mellea_spore": "Armillaria mellea spore",
+    "item.chroniclesofminecraft.flower_arum_titan_suc": "Arum titan suc",
+    "item.chroniclesofminecraft.flower_mushrooms_champignolite": "Champignolite",
     "item.chroniclesofminecraft.alchemium_boots": "Alchemium boots",
     "item.chroniclesofminecraft.alchemium_leggings": "Alchemium leggings",
     "item.chroniclesofminecraft.alchemium_chestplate": "Alchemium chestplate",
     "item.chroniclesofminecraft.alchemium_helmet": "Alchemium helmet",
-
     "item.chroniclesofminecraft.ingot_alchemium": "Alchemium ingot",
-
     "item.chroniclesofminecraft.alchemical_bulb_empty": "Alchemical bulb (empty)",
-
-
     "block.chroniclesofminecraft.distiller": "Distiller",
     "block.chroniclesofminecraft.alembic": "Alembic",
-
     "block.chroniclesofminecraft.flower_rosa_rosea": "Rosa rosea",
     "block.chroniclesofminecraft.flower_rosa_hyacinus": "Rosa hyacinus",
     "block.chroniclesofminecraft.flower_rosa_alba": "Rosa alba",
@@ -40,14 +35,12 @@
     "block.chroniclesofminecraft.flower_capparaceae_tropicalum_bottom": "Capparaceae tropicalum",
     "block.chroniclesofminecraft.flower_arum_titan_bottom": "Arum titan",
     "block.chroniclesofminecraft.flower_bulbum_aer": "Bulbum aer",
+    "block.chroniclesofminecraft.flower_bulbum_aer_leave": "Bulbum aer leave",
     "block.chroniclesofminecraft.flower_coprinus_lumus": "Coprinus lumus",
     "block.chroniclesofminecraft.flower_cantharellus_platyphyllus": "Cantharellus platyphyllus",
     "block.chroniclesofminecraft.flower_coprinus_comatus": "Coprinus comatus",
     "block.chroniclesofminecraft.flower_armillaria_mellea": "Armillaria mellea",
     "block.chroniclesofminecraft.flower_bambusa_givra": "Bambusa givra",
-
-
-
     "itemGroup.chroniclesOfMinecraftBiomes": "Chronicles of Minecraft Biomes",
     "itemGroup.chroniclesOfMinecraftAlchemy": "Chronicles of Minecraft Alchemy"
 }

@@ -70,6 +70,10 @@ public class ChroniclesOfMinecraftItems {
     public static Item flowerAloesCandelaFruit;
     public static Item flowerBambusaGivraThorns;
     public static Item flowerBulbumAerLeave;
+    public static Item flowerArumTitanSuc;
+    public static Item flowerArmillariaMelleaSpore;
+    public static Item flowerArmillariaMelleaHeart;
+    public static Item flowerMushroomsChampignolite;
 
     public static Item alchemiumChestplate;
     public static Item alchemiumHelmet;
@@ -129,6 +133,10 @@ public class ChroniclesOfMinecraftItems {
                 flowerAloesCandelaFruit = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_aloes_candela_fruit"),
                 flowerBambusaGivraThorns = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bambusa_givra_thorns"),
                 flowerBulbumAerLeave = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_bulbum_aer_leave"),
+                flowerArumTitanSuc = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_suc"),
+                flowerArmillariaMelleaSpore = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_armillaria_mellea_spore"),
+                flowerArmillariaMelleaHeart = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_armillaria_mellea_heart"),
+                flowerMushroomsChampignolite = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_mushrooms_champignolite"),
 
                 alchemiumChestplate = new AlchemiumArmorChestplate(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_chestplate"),
                 alchemiumHelmet = new AlchemiumArmorHelmet(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemium_helmet"),
