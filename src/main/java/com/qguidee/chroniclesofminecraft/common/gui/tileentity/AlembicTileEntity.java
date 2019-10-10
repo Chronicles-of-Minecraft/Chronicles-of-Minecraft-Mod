@@ -1,6 +1,5 @@
 package com.qguidee.chroniclesofminecraft.common.gui.tileentity;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftTileEntities;
 import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.AlembicTier;
 import com.qguidee.chroniclesofminecraft.common.gui.container.AlembicContainer;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,19 +18,23 @@ import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class AlembicTileEntity extends TileEntity implements INamedContainerProvider, ITickableTileEntity {
 
     private ItemStackHandler itemStackHandler;
-    private AlembicTier alembicTier = AlembicTier.ALEMBIC_MK1;
+
+    private AlembicTier alembicTier;
 
     public AlembicTileEntity() {
-        super(ChroniclesOfMinecraftTileEntities.alembicMk1);
+        super(AlembicTier.ALEMBIC_MK1.getTileEntity());
+
+        this.alembicTier = AlembicTier.ALEMBIC_MK1;
     }
 
     public AlembicTileEntity(AlembicTier alembicTier) {
-        super(ChroniclesOfMinecraftTileEntities.alembicMk1);
+        super(alembicTier.getTileEntity());
 
         this.alembicTier = alembicTier;
     }
@@ -46,7 +49,7 @@ public class AlembicTileEntity extends TileEntity implements INamedContainerProv
     @Override
     public Container createMenu(int i, @Nonnull PlayerInventory playerInventory, @Nonnull PlayerEntity playerEntity) {
         assert world != null;
-        return new AlembicContainer(i, world, pos, playerInventory, playerEntity);
+        return new AlembicContainer(i, world, pos, playerInventory, playerEntity, alembicTier);
     }
 
     @Override
@@ -57,23 +60,28 @@ public class AlembicTileEntity extends TileEntity implements INamedContainerProv
     @Nonnull
     @Override
     public CompoundNBT write(CompoundNBT compound) {
-        CompoundNBT compoundNBT = getItemStackHandler().serializeNBT();
-        compound.put("inventory", compoundNBT);
+        CompoundNBT compoundNBTInv = getItemStackHandler().serializeNBT();
+
+        compound.put("inventory", compoundNBTInv);
+        compound.putInt("alembic_tier", alembicTier.ordinal());
 
         return super.write(compound);
     }
 
     @Override
     public void read(CompoundNBT compound) {
-        CompoundNBT compoundNBT = compound.getCompound("inventory");
-        getItemStackHandler().deserializeNBT(compoundNBT);
+        CompoundNBT compoundNBTInv = compound.getCompound("inventory");
+        getItemStackHandler().deserializeNBT(compoundNBTInv);
+
+        int i = compound.getInt("alembic_tier");
+        this.alembicTier = new ArrayList<AlembicTier>().toArray(AlembicTier.values())[i];
 
         super.read(compound);
     }
 
     private ItemStackHandler getItemStackHandler() {
         if (itemStackHandler == null)
-            return itemStackHandler = new ItemStackHandler(5);
+            return itemStackHandler = new ItemStackHandler(alembicTier.getItemHandlerSize());
 
         return itemStackHandler;
     }

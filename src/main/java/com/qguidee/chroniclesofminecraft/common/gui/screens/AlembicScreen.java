@@ -2,7 +2,6 @@ package com.qguidee.chroniclesofminecraft.common.gui.screens;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
-import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.AlembicTier;
 import com.qguidee.chroniclesofminecraft.common.gui.container.AlembicContainer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -12,8 +11,6 @@ import net.minecraft.util.text.ITextComponent;
 
 public class AlembicScreen extends ContainerScreen<AlembicContainer> {
 
-    private static ResourceLocation gui = new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/brewing_stand_mk1.png");
-
     public AlembicScreen(AlembicContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
         this.xSize = 176;
@@ -21,13 +18,7 @@ public class AlembicScreen extends ContainerScreen<AlembicContainer> {
     }
 
     private ResourceLocation getGui() {
-        if (this.getContainer().alembicTier == AlembicTier.ALEMBIC_MK2) {
-            return new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/brewing_stand_mk2.png");
-        } else if (this.getContainer().alembicTier == AlembicTier.ALEMBIC_MK3) {
-            return new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/brewing_stand_mk3.png");
-        } else {
-            return new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/brewing_stand_mk1.png");
-        }
+        return new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, this.getContainer().alembicTier.getResource());
     }
 
     @Override
@@ -46,7 +37,7 @@ public class AlembicScreen extends ContainerScreen<AlembicContainer> {
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
         assert this.minecraft != null;
-        this.minecraft.getTextureManager().bindTexture(gui);
+        this.minecraft.getTextureManager().bindTexture(getGui());
         int relX = (this.width - this.xSize) / 2;
         int relY = (this.height - this.ySize) / 2;
         this.blit(relX, relY, 0, 0, this.xSize, this.ySize);

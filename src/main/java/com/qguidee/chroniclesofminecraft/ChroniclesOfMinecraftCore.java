@@ -23,7 +23,7 @@ public class ChroniclesOfMinecraftCore {
 
     public static IProxy proxy = DistExecutor.runForDist(() -> ClientProxy::new, () -> ServerProxy::new);
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public ChroniclesOfMinecraftCore() {
         // Register the setup method for modloading

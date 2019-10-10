@@ -1,5 +1,6 @@
 package com.qguidee.chroniclesofminecraft;
 
+import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.AlembicTier;
 import com.qguidee.chroniclesofminecraft.common.gui.container.AlembicContainer;
 import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPestleContainer;
 import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPillarContainerProvider;
@@ -15,17 +16,31 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(ChroniclesOfMinecraftCore.MOD_ID)
 public class ChroniclesOfMinecraftContainers {
 
-    public static ContainerType<AlembicContainer> alembic;
+    public static ContainerType<AlembicContainer> alembicMk1;
+    public static ContainerType<AlembicContainer> alembicMk2;
+    public static ContainerType<AlembicContainer> alembicMk3;
 
     public static MortarPestleContainer mortarPestleContainer;
     public static ContainerType<MortarPestleContainer> mortarPestle;
 
     private static void init() {
-        alembic = IForgeContainerType.create((windowId, inv, data) -> {
+        alembicMk1 = IForgeContainerType.create((windowId, inv, data) -> {
             BlockPos pos = data.readBlockPos();
-            return new AlembicContainer(windowId, ChroniclesOfMinecraftCore.proxy.getClientWorld(), pos, inv, ChroniclesOfMinecraftCore.proxy.getClientPlayer());
+            return new AlembicContainer(windowId, ChroniclesOfMinecraftCore.proxy.getClientWorld(), pos, inv, ChroniclesOfMinecraftCore.proxy.getClientPlayer(), AlembicTier.ALEMBIC_MK1);
         });
-        alembic.setRegistryName("alembic");
+        alembicMk1.setRegistryName("alembic_mk1");
+
+        alembicMk2 = IForgeContainerType.create((windowId, inv, data) -> {
+            BlockPos pos = data.readBlockPos();
+            return new AlembicContainer(windowId, ChroniclesOfMinecraftCore.proxy.getClientWorld(), pos, inv, ChroniclesOfMinecraftCore.proxy.getClientPlayer(), AlembicTier.ALEMBIC_MK2);
+        });
+        alembicMk2.setRegistryName("alembic_mk2");
+
+        alembicMk3 = IForgeContainerType.create((windowId, inv, data) -> {
+            BlockPos pos = data.readBlockPos();
+            return new AlembicContainer(windowId, ChroniclesOfMinecraftCore.proxy.getClientWorld(), pos, inv, ChroniclesOfMinecraftCore.proxy.getClientPlayer(), AlembicTier.ALEMBIC_MK3);
+        });
+        alembicMk3.setRegistryName("alembic_mk3");
 
         mortarPestle = IForgeContainerType.create((windowId, inv, data) -> {
             MortarPillarContainerProvider containerProvider = new MortarPillarContainerProvider();
@@ -39,7 +54,10 @@ public class ChroniclesOfMinecraftContainers {
         init();
 
         event.getRegistry().registerAll(
-                alembic, mortarPestle
+                alembicMk1,
+                alembicMk2,
+                alembicMk3,
+                mortarPestle
         );
     }
 }

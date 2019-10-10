@@ -79,9 +79,7 @@ public class ChroniclesOfMinecraftBlocks {
 
                 flowerArumTitanBottom = new ArumTitanBottom().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_bottom"),
                 flowerArumTitanMid = new ArumTitanMid().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_mid"),
-                flowerArumTitanTop = new ArumTitanTop().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_top")
-        );
-
+                flowerArumTitanTop = new ArumTitanTop().setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "flower_arum_titan_top"));
     }
 
     @SubscribeEvent

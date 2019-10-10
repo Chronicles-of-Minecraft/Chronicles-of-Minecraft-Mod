@@ -11,10 +11,10 @@ import net.minecraft.world.World;
 public class ClientProxy implements IProxy {
     @Override
     public void init() {
-        ScreenManager.registerFactory(ChroniclesOfMinecraftContainers.alembic, AlembicScreen::new);
+        ScreenManager.registerFactory(ChroniclesOfMinecraftContainers.alembicMk1, AlembicScreen::new);
+        ScreenManager.registerFactory(ChroniclesOfMinecraftContainers.alembicMk2, AlembicScreen::new);
+        ScreenManager.registerFactory(ChroniclesOfMinecraftContainers.alembicMk3, AlembicScreen::new);
         ScreenManager.registerFactory(ChroniclesOfMinecraftContainers.mortarPestle, MortarPestleScreen::new);
-
-        //ModLoadingContext.get().registerExtensionPoint(ExtensionPoint.CONFIGGUIFACTORY, );
     }
 
     @Override
