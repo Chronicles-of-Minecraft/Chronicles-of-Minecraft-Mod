@@ -1,6 +1,6 @@
 package com.qguidee.chroniclesofminecraft;
 
-import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic.AlembicContainer;
+import com.qguidee.chroniclesofminecraft.common.gui.container.AlembicContainer;
 import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPestleContainer;
 import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPillarContainerProvider;
 import net.minecraft.inventory.container.ContainerType;

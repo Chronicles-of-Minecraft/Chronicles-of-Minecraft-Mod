@@ -1,6 +1,7 @@
 package com.qguidee.chroniclesofminecraft;
 
 import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic.Alembic;
+import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.bottler.Bottler;
 import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.distiller.Distiller;
 import com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers.*;
 import net.minecraft.block.Block;
@@ -21,7 +22,8 @@ public class ChroniclesOfMinecraftBlocks {
     public static List<Block> blocksAlchemy;
     public static List<Block> blocksBiomes;
 
-    public static Block distiller;
+    public static Block maceratingTank;
+    public static Block bottler;
     public static Block alembicMk1;
     public static Block alembicMk2;
     public static Block alembicMk3;
@@ -51,7 +53,8 @@ public class ChroniclesOfMinecraftBlocks {
     private static void init() {
 
         blocksAlchemy = Arrays.asList(
-                distiller = new Distiller(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller"),
+                maceratingTank = new Distiller(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "macerating_tank"),
+                bottler = new Bottler(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "bottler"),
                 alembicMk1 = new Alembic(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk1"),
                 alembicMk2 = new Alembic(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk2"),
                 alembicMk3 = new Alembic(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk3")

@@ -1,7 +1,8 @@
-package com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic;
+package com.qguidee.chroniclesofminecraft.common.gui.screens;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
+import com.qguidee.chroniclesofminecraft.common.gui.container.AlembicContainer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
@@ -27,13 +28,13 @@ public class AlembicScreen extends ContainerScreen<AlembicContainer> {
 
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        // super.drawGuiContainerForegroundLayer(mouseX, mouseY);
         drawString(Minecraft.getInstance().fontRenderer, "Alembic", 10, 10, 0xffffff);
     }
 
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+        assert this.minecraft != null;
         this.minecraft.getTextureManager().bindTexture(gui);
         int relX = (this.width - this.xSize) / 2;
         int relY = (this.height - this.ySize) / 2;

@@ -1,7 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.setup;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftContainers;
-import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic.AlembicScreen;
+import com.qguidee.chroniclesofminecraft.common.gui.screens.AlembicScreen;
 import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPestleScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;

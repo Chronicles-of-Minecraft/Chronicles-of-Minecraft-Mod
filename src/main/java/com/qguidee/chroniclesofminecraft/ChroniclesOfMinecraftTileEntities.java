@@ -1,6 +1,6 @@
 package com.qguidee.chroniclesofminecraft;
 
-import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic.AlembicTile;
+import com.qguidee.chroniclesofminecraft.common.gui.tileentity.AlembicTileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -11,10 +11,10 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(ChroniclesOfMinecraftCore.MOD_ID)
 public class ChroniclesOfMinecraftTileEntities {
 
-    public static TileEntityType<AlembicTile> alembicMk1;
+    public static TileEntityType<AlembicTileEntity> alembicMk1;
 
     private static void init() {
-        alembicMk1 = TileEntityType.Builder.create(AlembicTile::new, ChroniclesOfMinecraftBlocks.alembicMk1).build(null);
+        alembicMk1 = TileEntityType.Builder.create(AlembicTileEntity::new, ChroniclesOfMinecraftBlocks.alembicMk1).build(null);
         alembicMk1.setRegistryName("alembic_mk1");
     }
 

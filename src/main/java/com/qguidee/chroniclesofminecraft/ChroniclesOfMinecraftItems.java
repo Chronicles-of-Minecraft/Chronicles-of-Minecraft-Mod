@@ -40,7 +40,8 @@ public class ChroniclesOfMinecraftItems {
 
     public static Item ingotAlchemium;
 
-    public static Item distiller;
+    public static Item maceratingTank;
+    public static Item bottler;
     public static Item alembicMk1;
     public static Item alembicMk2;
     public static Item alembicMk3;
@@ -103,7 +104,8 @@ public class ChroniclesOfMinecraftItems {
 
                 ingotAlchemium = new Item(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "ingot_alchemium"),
 
-                distiller = new BlockItem(ChroniclesOfMinecraftBlocks.distiller, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "distiller"),
+                maceratingTank = new BlockItem(ChroniclesOfMinecraftBlocks.maceratingTank, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "macerating_tank"),
+                bottler = new BlockItem(ChroniclesOfMinecraftBlocks.bottler, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "bottler"),
                 alembicMk1 = new BlockItem(ChroniclesOfMinecraftBlocks.alembicMk1, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk1"),
                 alembicMk2 = new BlockItem(ChroniclesOfMinecraftBlocks.alembicMk2, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk2"),
                 alembicMk3 = new BlockItem(ChroniclesOfMinecraftBlocks.alembicMk3, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk3"),

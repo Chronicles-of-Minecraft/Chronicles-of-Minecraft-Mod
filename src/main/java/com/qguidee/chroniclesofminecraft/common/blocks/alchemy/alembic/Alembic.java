@@ -1,5 +1,6 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic;
 
+import com.qguidee.chroniclesofminecraft.common.gui.tileentity.AlembicTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,6 +15,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public class Alembic extends Block {
@@ -22,6 +24,7 @@ public class Alembic extends Block {
         super(properties);
     }
 
+    @Nonnull
     @Override
     public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.TRANSLUCENT;
@@ -46,7 +49,7 @@ public class Alembic extends Block {
     @Nullable
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return new AlembicTile();
+        return new AlembicTileEntity();
     }
 
     @Override

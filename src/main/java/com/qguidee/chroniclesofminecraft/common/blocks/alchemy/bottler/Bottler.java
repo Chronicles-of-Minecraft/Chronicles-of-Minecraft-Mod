@@ -1,13 +1,13 @@
-package com.qguidee.chroniclesofminecraft.common.blocks.alchemy.distiller;
+package com.qguidee.chroniclesofminecraft.common.blocks.alchemy.bottler;
 
 import net.minecraft.block.Block;
 import net.minecraft.util.BlockRenderLayer;
 
 import javax.annotation.Nonnull;
 
-public class Distiller extends Block {
+public class Bottler extends Block {
 
-    public Distiller(Properties properties) {
+    public Bottler(Properties properties) {
         super(properties);
     }
 
