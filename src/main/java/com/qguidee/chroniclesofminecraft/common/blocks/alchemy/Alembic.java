@@ -1,4 +1,4 @@
-package com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic;
+package com.qguidee.chroniclesofminecraft.common.blocks.alchemy;
 
 import com.qguidee.chroniclesofminecraft.common.gui.tileentity.AlembicTileEntity;
 import net.minecraft.block.Block;

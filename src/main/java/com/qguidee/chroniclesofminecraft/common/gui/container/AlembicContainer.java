@@ -1,6 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.gui.container;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftContainers;
+import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.AlembicTier;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
@@ -22,21 +23,36 @@ public class AlembicContainer extends Container {
     private PlayerEntity playerEntity;
     private IItemHandler playerInventory;
 
+    public AlembicTier alembicTier;
+
     public AlembicContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
+        this(windowId, world, pos, playerInventory, player, AlembicTier.ALEMBIC_MK1);
+    }
+
+    public AlembicContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player, AlembicTier alembicTier) {
         super(ChroniclesOfMinecraftContainers.alembic, windowId);
 
         tileEntity = world.getTileEntity(pos);
         this.playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
 
+        this.alembicTier = alembicTier;
+
         assert tileEntity != null;
-        tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(itemHandler -> {
-            addSlot(new SlotItemHandler(itemHandler, 0, 8, 28));
-            addSlot(new SlotItemHandler(itemHandler, 0, 42, 28));
-            addSlot(new SlotItemHandler(itemHandler, 0, 152, 28));
-            addSlot(new SlotItemHandler(itemHandler, 0, 63, 66));
-            addSlot(new SlotItemHandler(itemHandler, 0, 97, 72));
-        });
+
+        if (alembicTier == AlembicTier.ALEMBIC_MK1) {
+            tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(itemHandler -> {
+                addSlot(new SlotItemHandler(itemHandler, 0, 8, 28));
+                addSlot(new SlotItemHandler(itemHandler, 0, 42, 28));
+                addSlot(new SlotItemHandler(itemHandler, 0, 152, 28));
+                addSlot(new SlotItemHandler(itemHandler, 0, 63, 66));
+                addSlot(new SlotItemHandler(itemHandler, 0, 97, 72));
+            });
+        } else if (alembicTier == AlembicTier.ALEMBIC_MK2) {
+
+        } else if (alembicTier == AlembicTier.ALEMBIC_MK3) {
+
+        }
 
         for (int i = 0; i < 9; i++) {
             addSlot(new Slot(playerInventory, i, 8 + (18 * i), 157));

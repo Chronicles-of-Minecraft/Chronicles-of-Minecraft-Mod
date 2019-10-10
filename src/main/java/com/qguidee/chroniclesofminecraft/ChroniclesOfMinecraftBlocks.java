@@ -1,6 +1,6 @@
 package com.qguidee.chroniclesofminecraft;
 
-import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.alembic.Alembic;
+import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.Alembic;
 import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.bottler.Bottler;
 import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.distiller.Distiller;
 import com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers.*;

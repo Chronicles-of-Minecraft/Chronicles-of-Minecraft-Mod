@@ -1,6 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.gui.tileentity;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftTileEntities;
+import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.AlembicTier;
 import com.qguidee.chroniclesofminecraft.common.gui.container.AlembicContainer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -23,9 +24,16 @@ import java.util.Objects;
 public class AlembicTileEntity extends TileEntity implements INamedContainerProvider, ITickableTileEntity {
 
     private ItemStackHandler itemStackHandler;
+    private AlembicTier alembicTier = AlembicTier.ALEMBIC_MK1;
 
     public AlembicTileEntity() {
         super(ChroniclesOfMinecraftTileEntities.alembicMk1);
+    }
+
+    public AlembicTileEntity(AlembicTier alembicTier) {
+        super(ChroniclesOfMinecraftTileEntities.alembicMk1);
+
+        this.alembicTier = alembicTier;
     }
 
     @Nonnull

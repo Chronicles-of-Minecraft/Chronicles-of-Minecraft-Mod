@@ -2,6 +2,7 @@ package com.qguidee.chroniclesofminecraft.common.gui.screens;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
+import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.AlembicTier;
 import com.qguidee.chroniclesofminecraft.common.gui.container.AlembicContainer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -17,6 +18,16 @@ public class AlembicScreen extends ContainerScreen<AlembicContainer> {
         super(screenContainer, inv, titleIn);
         this.xSize = 176;
         this.ySize = 181;
+    }
+
+    private ResourceLocation getGui() {
+        if (this.getContainer().alembicTier == AlembicTier.ALEMBIC_MK2) {
+            return new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/brewing_stand_mk2.png");
+        } else if (this.getContainer().alembicTier == AlembicTier.ALEMBIC_MK3) {
+            return new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/brewing_stand_mk3.png");
+        } else {
+            return new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/brewing_stand_mk1.png");
+        }
     }
 
     @Override
