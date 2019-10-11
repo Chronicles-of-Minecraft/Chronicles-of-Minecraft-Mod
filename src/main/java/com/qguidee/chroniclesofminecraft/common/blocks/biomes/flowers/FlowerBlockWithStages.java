@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropsBlock;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.IItemProvider;
@@ -17,9 +16,8 @@ import javax.annotation.Nonnull;
 public abstract class FlowerBlockWithStages extends CropsBlock {
 
     private int maxAge;
-    private Item seed;
 
-    FlowerBlockWithStages(int maxAge, Item seed) {
+    FlowerBlockWithStages(int maxAge) {
         super(Block.Properties
                 .create(Material.PLANTS)
                 .hardnessAndResistance(0)
@@ -28,7 +26,6 @@ public abstract class FlowerBlockWithStages extends CropsBlock {
         );
 
         this.maxAge = maxAge;
-        this.seed = seed;
     }
 
     @Override
@@ -41,16 +38,14 @@ public abstract class FlowerBlockWithStages extends CropsBlock {
         return 1;
     }
 
-    @Nonnull
     @Override
-    protected IItemProvider getSeedsItem() {
-        return seed;
-    }
-
-    @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+    public boolean canGrow(IBlockReader worldIn, BlockPos pos, @Nonnull BlockState state, boolean isClient) {
         return true;
     }
+
+    @Nonnull
+    @Override
+    protected abstract IItemProvider getSeedsItem();
 
     @Nonnull
     @Override

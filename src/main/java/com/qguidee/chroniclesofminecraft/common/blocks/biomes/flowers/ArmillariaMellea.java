@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
@@ -22,7 +23,13 @@ public class ArmillariaMellea extends FlowerBlockWithStages {
     private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 4);
 
     public ArmillariaMellea() {
-        super(4, ChroniclesOfMinecraftItems.flowerArmillariaMellea);
+        super(4);
+    }
+
+    @Nonnull
+    @Override
+    protected IItemProvider getSeedsItem() {
+        return ChroniclesOfMinecraftItems.flowerArmillariaMellea;
     }
 
     @Nonnull

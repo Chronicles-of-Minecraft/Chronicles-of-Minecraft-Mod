@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.IItemProvider;
 
 import javax.annotation.Nonnull;
 
@@ -14,7 +15,13 @@ public class StrelitziaReginae extends FlowerBlockWithStages {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_0_2;
 
     public StrelitziaReginae() {
-        super(2, ChroniclesOfMinecraftItems.flowerStrelitziaReginae);
+        super(2);
+    }
+
+    @Nonnull
+    @Override
+    protected IItemProvider getSeedsItem() {
+        return ChroniclesOfMinecraftItems.flowerStrelitziaReginae;
     }
 
     @Override

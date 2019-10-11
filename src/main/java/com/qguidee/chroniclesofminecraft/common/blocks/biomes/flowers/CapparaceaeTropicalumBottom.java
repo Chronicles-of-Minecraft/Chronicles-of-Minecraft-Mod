@@ -7,6 +7,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -19,7 +20,13 @@ public class CapparaceaeTropicalumBottom extends FlowerBlockWithStages {
     private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 4);
 
     public CapparaceaeTropicalumBottom() {
-        super(4, ChroniclesOfMinecraftItems.flowerCapparaceaeTropicalum);
+        super(4);
+    }
+
+    @Nonnull
+    @Override
+    protected IItemProvider getSeedsItem() {
+        return ChroniclesOfMinecraftItems.flowerCapparaceaeTropicalum;
     }
 
     @Nonnull

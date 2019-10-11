@@ -7,6 +7,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -20,7 +21,13 @@ public class ArumTitanBottom extends FlowerBlockWithStages {
     private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 6);
 
     public ArumTitanBottom() {
-        super(6, ChroniclesOfMinecraftItems.flowerArumTitan);
+        super(6);
+    }
+
+    @Nonnull
+    @Override
+    protected IItemProvider getSeedsItem() {
+        return ChroniclesOfMinecraftItems.flowerArumTitan;
     }
 
     @Nonnull

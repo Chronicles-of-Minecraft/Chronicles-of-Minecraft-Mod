@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.util.IItemProvider;
 
 import javax.annotation.Nonnull;
 
@@ -13,7 +14,13 @@ public class CoprinusComatus extends FlowerBlockWithStages {
     private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
 
     public CoprinusComatus() {
-        super(5, ChroniclesOfMinecraftItems.flowerCoprinusComatus);
+        super(5);
+    }
+
+    @Nonnull
+    @Override
+    protected IItemProvider getSeedsItem() {
+        return ChroniclesOfMinecraftItems.flowerCoprinusComatus;
     }
 
     @Nonnull

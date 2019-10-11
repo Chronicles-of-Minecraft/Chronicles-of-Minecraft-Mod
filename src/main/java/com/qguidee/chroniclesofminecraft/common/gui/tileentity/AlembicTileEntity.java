@@ -18,7 +18,6 @@ import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class AlembicTileEntity extends TileEntity implements INamedContainerProvider, ITickableTileEntity {
@@ -74,7 +73,7 @@ public class AlembicTileEntity extends TileEntity implements INamedContainerProv
         getItemStackHandler().deserializeNBT(compoundNBTInv);
 
         int i = compound.getInt("alembic_tier");
-        this.alembicTier = new ArrayList<AlembicTier>().toArray(AlembicTier.values())[i];
+        this.alembicTier = AlembicTier.values()[i];
 
         super.read(compound);
     }

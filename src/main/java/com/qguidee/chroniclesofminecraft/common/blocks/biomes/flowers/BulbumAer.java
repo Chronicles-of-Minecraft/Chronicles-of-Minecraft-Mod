@@ -11,6 +11,7 @@ import net.minecraft.fluid.IFluidState;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
@@ -22,7 +23,13 @@ public class BulbumAer extends FlowerBlockWithStages implements ILiquidContainer
     private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 7);
 
     public BulbumAer() {
-        super(7, ChroniclesOfMinecraftItems.flowerBulbumAer);
+        super(7);
+    }
+
+    @Nonnull
+    @Override
+    protected IItemProvider getSeedsItem() {
+        return ChroniclesOfMinecraftItems.flowerBulbumAer;
     }
 
     @Override
