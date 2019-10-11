@@ -1,6 +1,8 @@
 package com.qguidee.chroniclesofminecraft.common.items.alchemy;
 
-public class AlchemicalBulbFluid {
+public enum AlchemicalBulbFluid {
+    EMPTY("empty", 16777045),
+    WATER("water", 16755200);
 
     private String key;
     private int color;
@@ -12,5 +14,9 @@ public class AlchemicalBulbFluid {
 
     public String getKey() {
         return key;
+    }
+
+    public int getColor() {
+        return color;
     }
 }

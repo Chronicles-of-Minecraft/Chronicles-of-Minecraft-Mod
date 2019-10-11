@@ -46,7 +46,7 @@ public class ChroniclesOfMinecraftItems {
     public static Item alembicMk2;
     public static Item alembicMk3;
 
-    public static Item alchemicalBulbEmpty;
+    public static Item alchemicalBulb;
 
     public static Item flowerRosaRosea;
     public static Item flowerRosaAlba;
@@ -110,7 +110,7 @@ public class ChroniclesOfMinecraftItems {
                 alembicMk2 = new BlockItem(ChroniclesOfMinecraftBlocks.alembicMk2, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk2"),
                 alembicMk3 = new BlockItem(ChroniclesOfMinecraftBlocks.alembicMk3, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alembic_mk3"),
 
-                alchemicalBulbEmpty = new AlchemicalBulb(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemical_bulb_empty"));
+                alchemicalBulb = new AlchemicalBulb(new Item.Properties().group(ChroniclesOfMinecraftItemGroups.ALCHEMY)).setRegistryName(ChroniclesOfMinecraftCore.MOD_ID, "alchemical_bulb"));
 
         itemsBiomes = Arrays.asList(
                 flowerRosaRosea = new BlockItem(ChroniclesOfMinecraftBlocks.flowerRosaRosea, new Item.Properties().group(ChroniclesOfMinecraftItemGroups.BIOMES)).setRegistryName("flower_rosa_rosea"),

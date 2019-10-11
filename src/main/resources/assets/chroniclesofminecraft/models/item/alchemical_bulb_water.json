@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "chroniclesofminecraft:item/alchemical_bulb_empty",
+        "layer1": "chroniclesofminecraft:item/alchemical_bulb_water"
+    }
+}

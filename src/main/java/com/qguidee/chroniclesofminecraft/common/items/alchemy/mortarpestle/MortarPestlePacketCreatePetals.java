@@ -33,11 +33,8 @@ public class MortarPestlePacketCreatePetals {
     }
 
     public void handle(Supplier<NetworkEvent.Context> context) {
-
-
         context.get().enqueueWork(() -> {
-            // Work that needs to be threadsafe (most work)
-            ServerPlayerEntity sender = context.get().getSender(); // the client that sent this packet
+            ServerPlayerEntity sender = context.get().getSender();
             assert sender != null;
 
             switch (this.data) {

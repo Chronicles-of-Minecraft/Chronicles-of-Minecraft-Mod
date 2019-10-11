@@ -84,7 +84,7 @@ public class MortarPestleContainer extends Container {
         return previousItemStack;
     }
 
-    protected void grind() {
+    public void grind() {
         Item item = mortarInventory.getStackInSlot(0).getItem();
         Item resultItem;
 

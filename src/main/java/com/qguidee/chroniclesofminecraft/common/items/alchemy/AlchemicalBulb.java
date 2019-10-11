@@ -1,7 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.items.alchemy;
 
+import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItemGroups;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
-import net.minecraft.client.renderer.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -17,8 +17,8 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponent;
 import net.minecraft.world.World;
-import net.minecraftforge.client.model.ModelLoader;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 
@@ -27,9 +27,9 @@ public class AlchemicalBulb extends Item {
         super(builder);
     }
 
+    @Nonnull
     @Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, @Nonnull Hand handIn) {
         RayTraceResult raytraceresult = rayTrace(worldIn, playerIn, RayTraceContext.FluidMode.SOURCE_ONLY);
         ItemStack itemstack = playerIn.getHeldItem(handIn);
 
@@ -44,7 +44,7 @@ public class AlchemicalBulb extends Item {
 
                 if (worldIn.getFluidState(blockpos).isTagged(FluidTags.WATER)) {
                     worldIn.playSound(playerIn, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.NEUTRAL, 1.0F, 1.0F);
-                    return new ActionResult<>(ActionResultType.SUCCESS, this.turnBottleIntoItem(itemstack, playerIn, addPotionToItemStack(new ItemStack(ChroniclesOfMinecraftItems.alchemicalBulbEmpty), AlchemicalBulbFluidsList.WATER)));
+                    return new ActionResult<>(ActionResultType.SUCCESS, this.turnBottleIntoItem(itemstack, playerIn, addPotionToItemStack(new ItemStack(ChroniclesOfMinecraftItems.alchemicalBulb), AlchemicalBulbFluid.WATER)));
                 }
             }
 
@@ -52,7 +52,7 @@ public class AlchemicalBulb extends Item {
         }
     }
 
-    protected ItemStack turnBottleIntoItem(ItemStack itemStack, PlayerEntity player, ItemStack stack) {
+    private ItemStack turnBottleIntoItem(ItemStack itemStack, PlayerEntity player, ItemStack stack) {
         itemStack.shrink(1);
         player.addStat(Stats.ITEM_USED.get(this));
         if (itemStack.isEmpty()) {
@@ -66,47 +66,37 @@ public class AlchemicalBulb extends Item {
         }
     }
 
-    public static ItemStack addPotionToItemStack(ItemStack itemIn, AlchemicalBulbFluid alchemicalBulbFluid) {
-        // PotionUtils.addPotionToItemStack()
-
-        itemIn.getOrCreateTag().putString("AlchemicalBulbFluid", alchemicalBulbFluid.getKey());
+    private static ItemStack addPotionToItemStack(ItemStack itemIn, AlchemicalBulbFluid alchemicalBulbFluid) {
+        itemIn.getOrCreateTag().putInt("AlchemicalBulbFluid", alchemicalBulbFluid.ordinal());
 
         return itemIn;
     }
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        if (stack.getTag() != null && !stack.getTag().getString("AlchemicalBulbFluid").equals("") && stack.getTag().getString("AlchemicalBulbFluid").equals(AlchemicalBulbFluidsList.WATER.getKey())) {
+        if (stack.getTag() != null && stack.getTag().getInt("AlchemicalBulbFluid") == AlchemicalBulbFluid.EMPTY.ordinal()) {
             tooltip.add(new TextComponent() {
-                @Override
-                public String getUnformattedComponentText() {
-                    return "WATER";
-                }
-
-                @Override
-                public ITextComponent shallowCopy() {
-                    return null;
-                }
-            });
-        } else if (stack.getTag() != null && !stack.getTag().getString("AlchemicalBulbFluid").equals("") && stack.getTag().getString("AlchemicalBulbFluid").equals(AlchemicalBulbFluidsList.EMPTY.getKey())) {
-            tooltip.add(new TextComponent() {
+                @Nonnull
                 @Override
                 public String getUnformattedComponentText() {
                     return "EMPTY";
                 }
 
+                @Nonnull
                 @Override
                 public ITextComponent shallowCopy() {
                     return null;
                 }
             });
-        } else {
+        } else if (stack.getTag() != null && stack.getTag().getInt("AlchemicalBulbFluid") == AlchemicalBulbFluid.WATER.ordinal()) {
             tooltip.add(new TextComponent() {
+                @Nonnull
                 @Override
                 public String getUnformattedComponentText() {
-                    return "NULL";
+                    return "WATER";
                 }
 
+                @Nonnull
                 @Override
                 public ITextComponent shallowCopy() {
                     return null;
@@ -116,20 +106,16 @@ public class AlchemicalBulb extends Item {
     }
 
     @Override
-    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+    public void fillItemGroup(@Nonnull ItemGroup group, @Nonnull NonNullList<ItemStack> items) {
         super.fillItemGroup(group, items);
 
+        if (group == ChroniclesOfMinecraftItemGroups.ALCHEMY) {
+            for (AlchemicalBulbFluid alchemicalBulbFluid : AlchemicalBulbFluid.values()) {
+                ItemStack itemStack = new ItemStack(ChroniclesOfMinecraftItems.alchemicalBulb);
+                itemStack.getOrCreateTag().putInt("AlchemicalBulbFluid", alchemicalBulbFluid.ordinal());
 
-        for (AlchemicalBulbFluid alchemicalBulbFluid : AlchemicalBulbFluidsList.getList()) {
-            ItemStack itemStack = new ItemStack(ChroniclesOfMinecraftItems.alchemicalBulbEmpty);
-            itemStack.getOrCreateTag().putString("AlchemicalBulbFluid", alchemicalBulbFluid.getKey());
-
-            // "bulb_content=" + alchemicalBulbFluid.getKey()
-            ModelResourceLocation modelResourceLocation = new ModelResourceLocation(this.getRegistryName(), "inventory");
-
-            ModelLoader.addSpecialModel(modelResourceLocation);
-
-            items.add(itemStack);
+                items.add(itemStack);
+            }
         }
     }
 }
