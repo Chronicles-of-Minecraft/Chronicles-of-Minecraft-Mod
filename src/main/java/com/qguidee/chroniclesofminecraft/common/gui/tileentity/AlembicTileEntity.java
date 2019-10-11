@@ -80,7 +80,13 @@ public class AlembicTileEntity extends TileEntity implements INamedContainerProv
 
     private ItemStackHandler getItemStackHandler() {
         if (itemStackHandler == null)
-            return itemStackHandler = new ItemStackHandler(alembicTier.getItemHandlerSize());
+            return itemStackHandler = new ItemStackHandler(alembicTier.getItemHandlerSize()) {
+                @Override
+                protected void onContentsChanged(int slot) {
+                    super.onContentsChanged(slot);
+                    markDirty();
+                }
+            };
 
         return itemStackHandler;
     }
