@@ -1,5 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
 
+import com.qguidee.chroniclesofminecraft.common.gui.container.MortarPestleContainer;
+import com.qguidee.chroniclesofminecraft.common.gui.containerproviders.MortarPillarContainerProvider;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fml.network.NetworkEvent;
@@ -22,7 +24,7 @@ public class MortarPestlePacketCreatePetals {
         this.data = buf.readInt();
     }
 
-    MortarPestlePacketCreatePetals(int data) {
+    public MortarPestlePacketCreatePetals(int data) {
         this.data = data;
     }
 

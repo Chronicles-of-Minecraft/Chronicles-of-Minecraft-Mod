@@ -2,8 +2,8 @@ package com.qguidee.chroniclesofminecraft;
 
 import com.qguidee.chroniclesofminecraft.common.blocks.alchemy.AlembicTier;
 import com.qguidee.chroniclesofminecraft.common.gui.container.AlembicContainer;
-import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPestleContainer;
-import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPillarContainerProvider;
+import com.qguidee.chroniclesofminecraft.common.gui.container.MortarPestleContainer;
+import com.qguidee.chroniclesofminecraft.common.gui.containerproviders.MortarPillarContainerProvider;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.extensions.IForgeContainerType;

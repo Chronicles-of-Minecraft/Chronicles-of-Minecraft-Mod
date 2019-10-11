@@ -1,8 +1,10 @@
-package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
+package com.qguidee.chroniclesofminecraft.common.gui.screens;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftPacketHandler;
+import com.qguidee.chroniclesofminecraft.common.gui.container.MortarPestleContainer;
+import com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle.MortarPestlePacketCreatePetals;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.widget.button.Button;
@@ -12,11 +14,9 @@ import net.minecraft.util.text.ITextComponent;
 
 public class MortarPestleScreen extends ContainerScreen<MortarPestleContainer> {
     private static ResourceLocation gui = new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, "textures/gui/mortar_pestle.png");
-    // private MortarPestleContainer container;
 
     public MortarPestleScreen(MortarPestleContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
-        // this.container = screenContainer;
     }
 
     @Override
@@ -45,8 +45,6 @@ public class MortarPestleScreen extends ContainerScreen<MortarPestleContainer> {
 
         this.addButton(new Button(relX + 22, relY + 59, 70, 20, "Grind", p_onPress_1_ -> {
             ChroniclesOfMinecraftPacketHandler.INSTANCE.sendToServer(new MortarPestlePacketCreatePetals(1));
-
-            // container.grind();
         }));
     }
 }

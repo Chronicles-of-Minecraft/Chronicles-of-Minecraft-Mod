@@ -1,7 +1,8 @@
-package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
+package com.qguidee.chroniclesofminecraft.common.gui.containerproviders;
 
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.common.gui.container.MortarPestleContainer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;

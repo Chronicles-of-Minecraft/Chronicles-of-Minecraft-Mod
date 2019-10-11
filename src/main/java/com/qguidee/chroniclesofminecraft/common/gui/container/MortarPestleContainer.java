@@ -1,4 +1,4 @@
-package com.qguidee.chroniclesofminecraft.common.items.alchemy.mortarpestle;
+package com.qguidee.chroniclesofminecraft.common.gui.container;
 
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftContainers;
 import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
@@ -84,7 +84,7 @@ public class MortarPestleContainer extends Container {
         return previousItemStack;
     }
 
-    void grind() {
+    protected void grind() {
         Item item = mortarInventory.getStackInSlot(0).getItem();
         Item resultItem;
 
