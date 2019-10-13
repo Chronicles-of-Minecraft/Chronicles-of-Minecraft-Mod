@@ -7,13 +7,13 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nonnull;
 
-public class ChroniclesOfMinecraftItemGroups {
+public class ModItemGroups {
 
     public static final ItemGroup ALCHEMY = (new ItemGroup("chroniclesOfMinecraftAlchemy") {
         @Nonnull
         @OnlyIn(Dist.CLIENT)
         public ItemStack createIcon() {
-            return new ItemStack(ChroniclesOfMinecraftItems.fireWand);
+            return new ItemStack(ModItems.fireWand);
         }
     }).setTabPath("chronicles_of_minecraft_alchemy");
 
@@ -22,7 +22,7 @@ public class ChroniclesOfMinecraftItemGroups {
         @Nonnull
         @OnlyIn(Dist.CLIENT)
         public ItemStack createIcon() {
-            return new ItemStack(ChroniclesOfMinecraftItems.flowerRosaAlba);
+            return new ItemStack(ModItems.flowerRosaAlba);
         }
     }).setTabPath("chronicles_of_minecraft_biomes");
 

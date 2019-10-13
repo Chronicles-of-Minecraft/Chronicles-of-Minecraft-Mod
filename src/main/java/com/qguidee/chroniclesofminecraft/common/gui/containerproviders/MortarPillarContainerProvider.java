@@ -1,7 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.gui.containerproviders;
 
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.ModItems;
 import com.qguidee.chroniclesofminecraft.common.gui.container.MortarPestleContainer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -23,7 +23,7 @@ public class MortarPillarContainerProvider implements INamedContainerProvider {
     @Nonnull
     @Override
     public ITextComponent getDisplayName() {
-        return new StringTextComponent(Objects.requireNonNull(ChroniclesOfMinecraftItems.mortarPestleStone.getRegistryName()).getPath());
+        return new StringTextComponent(Objects.requireNonNull(ModItems.mortarPestleStone.getRegistryName()).getPath());
     }
 
     @Nullable

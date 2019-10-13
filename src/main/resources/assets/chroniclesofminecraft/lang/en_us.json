@@ -47,5 +47,6 @@
     "block.chroniclesofminecraft.flower_armillaria_mellea": "Armillaria mellea",
     "block.chroniclesofminecraft.flower_bambusa_givra": "Bambusa givra",
     "itemGroup.chroniclesOfMinecraftBiomes": "Chronicles of Minecraft Biomes",
-    "itemGroup.chroniclesOfMinecraftAlchemy": "Chronicles of Minecraft Alchemy"
+    "itemGroup.chroniclesOfMinecraftAlchemy": "Chronicles of Minecraft Alchemy",
+    "generator.chronicles": "Chronicles of Minecraft"
 }

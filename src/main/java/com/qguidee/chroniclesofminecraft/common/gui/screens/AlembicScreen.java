@@ -1,7 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.gui.screens;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
+import com.qguidee.chroniclesofminecraft.ModCore;
 import com.qguidee.chroniclesofminecraft.common.gui.container.AlembicContainer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -18,7 +18,7 @@ public class AlembicScreen extends ContainerScreen<AlembicContainer> {
     }
 
     private ResourceLocation getGui() {
-        return new ResourceLocation(ChroniclesOfMinecraftCore.MOD_ID, this.getContainer().alembicTier.getResource());
+        return new ResourceLocation(ModCore.MOD_ID, this.getContainer().alembicTier.getResource());
     }
 
     @Override

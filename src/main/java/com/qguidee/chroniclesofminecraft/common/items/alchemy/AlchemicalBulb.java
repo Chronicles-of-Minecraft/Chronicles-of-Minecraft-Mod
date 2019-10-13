@@ -1,7 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.items.alchemy;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItemGroups;
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.ModItemGroups;
+import com.qguidee.chroniclesofminecraft.ModItems;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -44,7 +44,7 @@ public class AlchemicalBulb extends Item {
 
                 if (worldIn.getFluidState(blockpos).isTagged(FluidTags.WATER)) {
                     worldIn.playSound(playerIn, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.NEUTRAL, 1.0F, 1.0F);
-                    return new ActionResult<>(ActionResultType.SUCCESS, this.turnBottleIntoItem(itemstack, playerIn, addPotionToItemStack(new ItemStack(ChroniclesOfMinecraftItems.alchemicalBulb), AlchemicalBulbFluid.WATER)));
+                    return new ActionResult<>(ActionResultType.SUCCESS, this.turnBottleIntoItem(itemstack, playerIn, addPotionToItemStack(new ItemStack(ModItems.alchemicalBulb), AlchemicalBulbFluid.WATER)));
                 }
             }
 
@@ -109,9 +109,9 @@ public class AlchemicalBulb extends Item {
     public void fillItemGroup(@Nonnull ItemGroup group, @Nonnull NonNullList<ItemStack> items) {
         super.fillItemGroup(group, items);
 
-        if (group == ChroniclesOfMinecraftItemGroups.ALCHEMY) {
+        if (group == ModItemGroups.ALCHEMY) {
             for (AlchemicalBulbFluid alchemicalBulbFluid : AlchemicalBulbFluid.values()) {
-                ItemStack itemStack = new ItemStack(ChroniclesOfMinecraftItems.alchemicalBulb);
+                ItemStack itemStack = new ItemStack(ModItems.alchemicalBulb);
                 itemStack.getOrCreateTag().putInt("AlchemicalBulbFluid", alchemicalBulbFluid.ordinal());
 
                 items.add(itemStack);

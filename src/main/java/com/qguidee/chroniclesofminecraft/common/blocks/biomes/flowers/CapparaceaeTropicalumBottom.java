@@ -1,7 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftBlocks;
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.ModBlocks;
+import com.qguidee.chroniclesofminecraft.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -26,7 +26,7 @@ public class CapparaceaeTropicalumBottom extends FlowerBlockWithStages {
     @Nonnull
     @Override
     protected IItemProvider getSeedsItem() {
-        return ChroniclesOfMinecraftItems.flowerCapparaceaeTropicalum;
+        return ModItems.flowerCapparaceaeTropicalum;
     }
 
     @Nonnull
@@ -50,9 +50,9 @@ public class CapparaceaeTropicalumBottom extends FlowerBlockWithStages {
             i = j;
         } else if (ageTop > 0) {
             if (worldIn.getBlockState(pos.up()).getBlock() == Blocks.AIR) {
-                worldIn.setBlockState(pos.up(), ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumTop.getDefaultState());
+                worldIn.setBlockState(pos.up(), ModBlocks.flowerCapparaceaeTropicalumTop.getDefaultState());
             }
-            if (worldIn.getBlockState(pos.up()).getBlock() == ChroniclesOfMinecraftBlocks.flowerCapparaceaeTropicalumTop) {
+            if (worldIn.getBlockState(pos.up()).getBlock() == ModBlocks.flowerCapparaceaeTropicalumTop) {
                 CapparaceaeTropicalumTop topBlock = (CapparaceaeTropicalumTop) worldIn.getBlockState(pos.up()).getBlock();
                 worldIn.setBlockState(pos.up(), topBlock.withAge(i), 2);
                 worldIn.setBlockState(pos, this.withAge(i), 2);

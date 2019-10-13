@@ -1,8 +1,8 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.alchemy;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftContainers;
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftTileEntities;
+import com.qguidee.chroniclesofminecraft.ModContainers;
+import com.qguidee.chroniclesofminecraft.ModItems;
+import com.qguidee.chroniclesofminecraft.ModTileEntities;
 import com.qguidee.chroniclesofminecraft.common.gui.container.AlembicContainer;
 import com.qguidee.chroniclesofminecraft.common.gui.tileentity.AlembicTileEntity;
 import net.minecraft.inventory.container.ContainerType;
@@ -10,9 +10,9 @@ import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntityType;
 
 public enum AlembicTier {
-    ALEMBIC_MK1(5, ChroniclesOfMinecraftItems.alembicMk1, ChroniclesOfMinecraftTileEntities.alembicMk1, ChroniclesOfMinecraftContainers.alembicMk1, "textures/gui/brewing_stand_mk1.png"),
-    ALEMBIC_MK2(6, ChroniclesOfMinecraftItems.alembicMk2, ChroniclesOfMinecraftTileEntities.alembicMk2, ChroniclesOfMinecraftContainers.alembicMk2, "textures/gui/brewing_stand_mk2.png"),
-    ALEMBIC_MK3(7, ChroniclesOfMinecraftItems.alembicMk3, ChroniclesOfMinecraftTileEntities.alembicMk3, ChroniclesOfMinecraftContainers.alembicMk3, "textures/gui/brewing_stand_mk3.png");
+    ALEMBIC_MK1(5, ModItems.alembicMk1, ModTileEntities.alembicMk1, ModContainers.alembicMk1, "textures/gui/brewing_stand_mk1.png"),
+    ALEMBIC_MK2(6, ModItems.alembicMk2, ModTileEntities.alembicMk2, ModContainers.alembicMk2, "textures/gui/brewing_stand_mk2.png"),
+    ALEMBIC_MK3(7, ModItems.alembicMk3, ModTileEntities.alembicMk3, ModContainers.alembicMk3, "textures/gui/brewing_stand_mk3.png");
 
     private int itemHandlerSize;
     private Item item;

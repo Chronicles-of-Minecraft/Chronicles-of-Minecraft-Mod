@@ -10,14 +10,14 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import java.util.Objects;
 
-@Mod.EventBusSubscriber(modid = ChroniclesOfMinecraftCore.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(ChroniclesOfMinecraftCore.MOD_ID)
-public class ChroniclesOfMinecraftModels {
+@Mod.EventBusSubscriber(modid = ModCore.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@ObjectHolder(ModCore.MOD_ID)
+public class ModModels {
 
     @SubscribeEvent
     public static void registerContainers(ModelRegistryEvent event) {
         for (AlchemicalBulbFluid alchemicalBulbFluid : AlchemicalBulbFluid.values()) {
-            ModelLoader.addSpecialModel(new ModelResourceLocation(Objects.requireNonNull(ChroniclesOfMinecraftItems.alchemicalBulb.getRegistryName()), "content=" + alchemicalBulbFluid.getKey()));
+            ModelLoader.addSpecialModel(new ModelResourceLocation(Objects.requireNonNull(ModItems.alchemicalBulb.getRegistryName()), "content=" + alchemicalBulbFluid.getKey()));
         }
     }
 }

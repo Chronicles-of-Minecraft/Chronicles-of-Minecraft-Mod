@@ -1,6 +1,6 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.IntegerProperty;
@@ -20,7 +20,7 @@ public class CoprinusComatus extends FlowerBlockWithStages {
     @Nonnull
     @Override
     protected IItemProvider getSeedsItem() {
-        return ChroniclesOfMinecraftItems.flowerCoprinusComatus;
+        return ModItems.flowerCoprinusComatus;
     }
 
     @Nonnull

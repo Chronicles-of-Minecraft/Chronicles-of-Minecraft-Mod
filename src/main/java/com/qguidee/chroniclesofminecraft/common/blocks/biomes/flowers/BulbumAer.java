@@ -1,6 +1,6 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -29,7 +29,7 @@ public class BulbumAer extends FlowerBlockWithStages implements ILiquidContainer
     @Nonnull
     @Override
     protected IItemProvider getSeedsItem() {
-        return ChroniclesOfMinecraftItems.flowerBulbumAer;
+        return ModItems.flowerBulbumAer;
     }
 
     @Override

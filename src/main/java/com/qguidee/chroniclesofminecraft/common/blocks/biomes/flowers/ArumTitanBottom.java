@@ -1,7 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftBlocks;
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.ModBlocks;
+import com.qguidee.chroniclesofminecraft.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -27,7 +27,7 @@ public class ArumTitanBottom extends FlowerBlockWithStages {
     @Nonnull
     @Override
     protected IItemProvider getSeedsItem() {
-        return ChroniclesOfMinecraftItems.flowerArumTitan;
+        return ModItems.flowerArumTitan;
     }
 
     @Nonnull
@@ -52,18 +52,18 @@ public class ArumTitanBottom extends FlowerBlockWithStages {
             i = j;
         } else if (ageMid > 0) {
             if (worldIn.getBlockState(pos.up()).getBlock() == Blocks.AIR) {
-                worldIn.setBlockState(pos.up(), ChroniclesOfMinecraftBlocks.flowerArumTitanMid.getDefaultState());
+                worldIn.setBlockState(pos.up(), ModBlocks.flowerArumTitanMid.getDefaultState());
             }
-            if (worldIn.getBlockState(pos.up()).getBlock() == ChroniclesOfMinecraftBlocks.flowerArumTitanMid) {
+            if (worldIn.getBlockState(pos.up()).getBlock() == ModBlocks.flowerArumTitanMid) {
                 ArumTitanMid topBlock = (ArumTitanMid) worldIn.getBlockState(pos.up()).getBlock();
                 worldIn.setBlockState(pos.up(), topBlock.withAge(i), 2);
             }
 
             if (ageTop > 0) {
                 if (worldIn.getBlockState(pos.up(2)).getBlock() == Blocks.AIR) {
-                    worldIn.setBlockState(pos.up(2), ChroniclesOfMinecraftBlocks.flowerArumTitanTop.getDefaultState());
+                    worldIn.setBlockState(pos.up(2), ModBlocks.flowerArumTitanTop.getDefaultState());
                 }
-                if (worldIn.getBlockState(pos.up(2)).getBlock() == ChroniclesOfMinecraftBlocks.flowerArumTitanTop) {
+                if (worldIn.getBlockState(pos.up(2)).getBlock() == ModBlocks.flowerArumTitanTop) {
                     ArumTitanTop topBlock = (ArumTitanTop) worldIn.getBlockState(pos.up(2)).getBlock();
                     worldIn.setBlockState(pos.up(2), topBlock.withAge(i), 2);
                 }

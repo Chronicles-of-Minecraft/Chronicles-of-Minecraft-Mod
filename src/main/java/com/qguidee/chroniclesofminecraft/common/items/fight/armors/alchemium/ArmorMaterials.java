@@ -1,6 +1,6 @@
 package com.qguidee.chroniclesofminecraft.common.items.fight.armors.alchemium;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 
 public enum ArmorMaterials implements IArmorMaterial {
     ALCHEMIUM("alchemium", 5, new int[]{1, 2, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F, () -> {
-        return Ingredient.fromItems(ChroniclesOfMinecraftItems.ingotAlchemium);
+        return Ingredient.fromItems(ModItems.ingotAlchemium);
     });
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};

@@ -1,6 +1,6 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.alchemy;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftCore;
+import com.qguidee.chroniclesofminecraft.ModCore;
 import com.qguidee.chroniclesofminecraft.common.gui.tileentity.AlembicTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -61,7 +61,7 @@ public class Alembic extends Block {
                 return AlembicTier.ALEMBIC_MK3;
         }
 
-        ChroniclesOfMinecraftCore.LOGGER.error("ALEMBIC_MK1 by default. Please check the issue. (" + getRegistryName().getPath() + ")");
+        ModCore.LOGGER.error("ALEMBIC_MK1 by default. Please check the issue. (" + getRegistryName().getPath() + ")");
         return AlembicTier.ALEMBIC_MK1;
     }
 

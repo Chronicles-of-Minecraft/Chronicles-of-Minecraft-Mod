@@ -1,7 +1,7 @@
 package com.qguidee.chroniclesofminecraft.common.gui.container;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftContainers;
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftItems;
+import com.qguidee.chroniclesofminecraft.ModContainers;
+import com.qguidee.chroniclesofminecraft.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
@@ -19,7 +19,7 @@ public class MortarPestleContainer extends Container {
     private IItemHandler mortarInventory = new ItemStackHandler(7);
 
     public MortarPestleContainer(int id, PlayerInventory playerInventory) {
-        super(ChroniclesOfMinecraftContainers.mortarPestle, id);
+        super(ModContainers.mortarPestle, id);
 
         addSlot(new SlotItemHandler(mortarInventory, 0, 25, 35));
         addSlot(new SlotItemHandler(mortarInventory, 1, 104, 10));
@@ -88,12 +88,12 @@ public class MortarPestleContainer extends Container {
         Item item = mortarInventory.getStackInSlot(0).getItem();
         Item resultItem;
 
-        if (item == ChroniclesOfMinecraftItems.flowerRosaRosea) {
-            resultItem = ChroniclesOfMinecraftItems.flowerRosaRoseaPetals;
-        } else if (item == ChroniclesOfMinecraftItems.flowerRosaAlba) {
-            resultItem = ChroniclesOfMinecraftItems.flowerRosaAlbaPetals;
-        } else if (item == ChroniclesOfMinecraftItems.flowerRosaHyacinus) {
-            resultItem = ChroniclesOfMinecraftItems.flowerRosaHyacinusPetals;
+        if (item == ModItems.flowerRosaRosea) {
+            resultItem = ModItems.flowerRosaRoseaPetals;
+        } else if (item == ModItems.flowerRosaAlba) {
+            resultItem = ModItems.flowerRosaAlbaPetals;
+        } else if (item == ModItems.flowerRosaHyacinus) {
+            resultItem = ModItems.flowerRosaHyacinusPetals;
         } else {
             return;
         }

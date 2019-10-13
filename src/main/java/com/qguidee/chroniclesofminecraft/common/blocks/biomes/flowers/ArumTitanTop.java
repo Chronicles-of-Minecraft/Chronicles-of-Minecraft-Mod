@@ -1,6 +1,6 @@
 package com.qguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
-import com.qguidee.chroniclesofminecraft.ChroniclesOfMinecraftBlocks;
+import com.qguidee.chroniclesofminecraft.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
@@ -31,7 +31,7 @@ public class ArumTitanTop extends ArumTitanBottom {
 
     @Override
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.getBlock() == ChroniclesOfMinecraftBlocks.flowerArumTitanMid;
+        return state.getBlock() == ModBlocks.flowerArumTitanMid;
     }
 
     @Override
