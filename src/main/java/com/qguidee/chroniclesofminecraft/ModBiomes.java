@@ -1,7 +1,8 @@
 package com.qguidee.chroniclesofminecraft;
 
 import com.qguidee.chroniclesofminecraft.common.world.WorldTypeDefault;
-import com.qguidee.chroniclesofminecraft.common.world.biomes.PlainBiome;
+import com.qguidee.chroniclesofminecraft.common.world.biomes.AridDesertBiome;
+import com.qguidee.chroniclesofminecraft.common.world.biomes.PlainsBiome;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,12 +20,16 @@ public class ModBiomes {
 
     private static WorldTypeDefault worldType;
 
+    public static Biome plainsBiome = new PlainsBiome();
+    public static Biome aridDesertBiome = new AridDesertBiome();
+
     static void setup() {
         worldType = new WorldTypeDefault();
     }
 
     private static void init() {
-        biomes.add(new PlainBiome());
+        biomes.add(plainsBiome);
+        biomes.add(aridDesertBiome);
     }
 
     @SubscribeEvent
