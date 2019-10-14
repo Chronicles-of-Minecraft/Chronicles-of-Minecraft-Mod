@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "chroniclesofminecraft:item/flower_armillaria_mellea_seeds"
+        "layer0": "chroniclesofminecraft:item/flower_armillaria_mellea_spore"
     }
 }

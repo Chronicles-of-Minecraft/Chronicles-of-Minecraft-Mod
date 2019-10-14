@@ -17,10 +17,10 @@ import java.util.Random;
 public class CapparaceaeTropicalumBottom extends FlowerBlockWithStages {
 
     private static final int MAX_BOTTOM_AGE = 2;
-    private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 4);
+    private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
 
     public CapparaceaeTropicalumBottom() {
-        super(4);
+        super(5);
     }
 
     @Nonnull

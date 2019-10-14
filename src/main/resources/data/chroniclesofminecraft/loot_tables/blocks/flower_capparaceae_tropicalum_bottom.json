@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "name": "chroniclesofminecraft:flower_capparaceae_tropicalum_berry",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_capparaceae_tropicalum_berry"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_capparaceae_tropicalum_bottom",
+                    "properties": {
+                        "age": "5"
+                    }
+                }
+            ]
+        }
+    ]
+}
