@@ -9,4 +9,4 @@
 ## How to contribute ?
 
 * You can join the Discord to ask : [Discord (KeyUf6K)](https://discord.gg/KeyUf6K)
-* You can go in the "issues" tab on the top of this page, and searching for things to do
+* You can go in the "issues" tab on the top of this page, and search for things to do
