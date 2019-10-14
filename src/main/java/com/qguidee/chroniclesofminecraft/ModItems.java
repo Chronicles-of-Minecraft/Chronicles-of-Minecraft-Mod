@@ -72,9 +72,11 @@ public class ModItems {
     public static Item flowerBambusaGivraThorns;
     public static Item flowerBulbumAerLeave;
     public static Item flowerArumTitanSuc;
-    public static Item flowerArmillariaMelleaSpore;
     public static Item flowerArmillariaMelleaHeart;
     public static Item flowerMushroomsChampignolite;
+    public static Item flowerCapparaceaeTropicalumBerry;
+    public static Item flowerCoprinusComatusCap;
+    public static Item flowerCoprinusLumusCap;
 
     public static Item alchemiumChestplate;
     public static Item alchemiumHelmet;
@@ -136,9 +138,11 @@ public class ModItems {
                 flowerBambusaGivraThorns = new Item(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "flower_bambusa_givra_thorns"),
                 flowerBulbumAerLeave = new Item(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "flower_bulbum_aer_leave"),
                 flowerArumTitanSuc = new Item(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "flower_arum_titan_suc"),
-                flowerArmillariaMelleaSpore = new Item(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "flower_armillaria_mellea_spore"),
                 flowerArmillariaMelleaHeart = new Item(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "flower_armillaria_mellea_heart"),
                 flowerMushroomsChampignolite = new Item(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "flower_mushrooms_champignolite"),
+                flowerCapparaceaeTropicalumBerry = new Item(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "flower_capparaceae_tropicalum_berry"),
+                flowerCoprinusComatusCap = new Item(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "flower_coprinus_comatus_cap"),
+                flowerCoprinusLumusCap = new Item(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "flower_coprinus_lumus_cap"),
 
                 alchemiumChestplate = new AlchemiumArmorChestplate(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "alchemium_chestplate"),
                 alchemiumHelmet = new AlchemiumArmorHelmet(new Item.Properties().group(ModItemGroups.BIOMES)).setRegistryName(ModCore.MOD_ID, "alchemium_helmet"),

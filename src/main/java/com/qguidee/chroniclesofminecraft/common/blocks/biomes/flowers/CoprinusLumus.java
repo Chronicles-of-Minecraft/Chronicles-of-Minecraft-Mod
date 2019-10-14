@@ -14,10 +14,10 @@ import javax.annotation.Nonnull;
 
 public class CoprinusLumus extends FlowerBlockWithStages {
 
-    private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
+    private static final IntegerProperty AGE = IntegerProperty.create("age", 0, 6);
 
     public CoprinusLumus() {
-        super(5);
+        super(6);
     }
 
     @Override
