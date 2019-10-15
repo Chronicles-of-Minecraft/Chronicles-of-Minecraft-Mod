@@ -1,5 +1,7 @@
 # Chronicles of Minecraft
 
+[![License: CC BY-ND 4.0](https://img.shields.io/badge/License-CC%20BY--ND%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-nd/4.0/)
+
 ## Introduction
 
 Dear fellow minecraftian, the time has come to push forwards the boundaries of the game. More realism, more opportunities and more fun! Chronicles of minecraft mod aims to bring creativity but also to make minecraft a truly challenging game. Are you ready to  join us on this epic open-source adventure? Together we'll make minecraft  immersive as it never has been before.
