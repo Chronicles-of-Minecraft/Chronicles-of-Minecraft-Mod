@@ -9,11 +9,20 @@ import javax.annotation.Nonnull;
 
 public class ModItemGroups {
 
-    public static final ItemGroup ALCHEMY = (new ItemGroup("chroniclesOfMinecraftAlchemy") {
+    public static final ItemGroup MAGIC = (new ItemGroup("chroniclesOfMinecraftMagic") {
         @Nonnull
         @OnlyIn(Dist.CLIENT)
         public ItemStack createIcon() {
             return new ItemStack(ModItems.fireWand);
+        }
+    }).setTabPath("chronicles_of_minecraft_magic");
+
+
+    public static final ItemGroup ALCHEMY = (new ItemGroup("chroniclesOfMinecraftAlchemy") {
+        @Nonnull
+        @OnlyIn(Dist.CLIENT)
+        public ItemStack createIcon() {
+            return new ItemStack(ModItems.sickleIron);
         }
     }).setTabPath("chronicles_of_minecraft_alchemy");
 

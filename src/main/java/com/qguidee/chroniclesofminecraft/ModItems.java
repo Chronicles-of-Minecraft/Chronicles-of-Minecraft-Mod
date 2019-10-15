@@ -22,6 +22,7 @@ import java.util.List;
 @ObjectHolder(ModCore.MOD_ID)
 public class ModItems {
 
+    public static List<Item> itemsMagic;
     public static List<Item> itemsAlchemy;
     public static List<Item> itemsBiomes;
 
@@ -85,20 +86,16 @@ public class ModItems {
 
     private static void init() {
 
+        itemsMagic = Arrays.asList(
+                fireWand = new Item(new Item.Properties().maxStackSize(1).group(ModItemGroups.MAGIC)).setRegistryName(ModCore.MOD_ID, "fire_wand"),
+                waterWand = new Item(new Item.Properties().maxStackSize(1).group(ModItemGroups.MAGIC)).setRegistryName(ModCore.MOD_ID, "water_wand"),
+                earthWand = new Item(new Item.Properties().maxStackSize(1).group(ModItemGroups.MAGIC)).setRegistryName(ModCore.MOD_ID, "earth_wand"),
+                airWand = new Item(new Item.Properties().maxStackSize(1).group(ModItemGroups.MAGIC)).setRegistryName(ModCore.MOD_ID, "air_wand"));
+
         itemsAlchemy = Arrays.asList(
-                fireWand = new Item(new Item.Properties().maxStackSize(1).group(ModItemGroups.ALCHEMY)).setRegistryName(ModCore.MOD_ID, "fire_wand"),
-                waterWand = new Item(new Item.Properties().maxStackSize(1).group(ModItemGroups.ALCHEMY)).setRegistryName(ModCore.MOD_ID, "water_wand"),
-                earthWand = new Item(new Item.Properties().maxStackSize(1).group(ModItemGroups.ALCHEMY)).setRegistryName(ModCore.MOD_ID, "earth_wand"),
-                airWand = new Item(new Item.Properties().maxStackSize(1).group(ModItemGroups.ALCHEMY)).setRegistryName(ModCore.MOD_ID, "air_wand"),
-
-                sickleIron = new Sickle(ItemTierCustom.IRON_SICKLE, 1, 1.0f,
-                        new Item.Properties().maxStackSize(1).group(ModItemGroups.ALCHEMY)).setRegistryName(ModCore.MOD_ID, "sickle_iron"),
-
-                sickleGold = new Sickle(ItemTierCustom.GOLD_SICKLE, 1, 1.0f,
-                        new Item.Properties().maxStackSize(1).group(ModItemGroups.ALCHEMY)).setRegistryName(ModCore.MOD_ID, "sickle_gold"),
-
-                sickleAlchemium = new Sickle(ItemTierCustom.ALCHEMIUM_SICKLE, 1, 1.0f,
-                        new Item.Properties().maxStackSize(1).group(ModItemGroups.ALCHEMY)).setRegistryName(ModCore.MOD_ID, "sickle_alchemium"),
+                sickleIron = new Sickle(ItemTierCustom.IRON_SICKLE, 1, 1.0f, new Item.Properties().maxStackSize(1).group(ModItemGroups.ALCHEMY)).setRegistryName(ModCore.MOD_ID, "sickle_iron"),
+                sickleGold = new Sickle(ItemTierCustom.GOLD_SICKLE, 1, 1.0f, new Item.Properties().maxStackSize(1).group(ModItemGroups.ALCHEMY)).setRegistryName(ModCore.MOD_ID, "sickle_gold"),
+                sickleAlchemium = new Sickle(ItemTierCustom.ALCHEMIUM_SICKLE, 1, 1.0f, new Item.Properties().maxStackSize(1).group(ModItemGroups.ALCHEMY)).setRegistryName(ModCore.MOD_ID, "sickle_alchemium"),
 
                 mortarPestleStone = new MortarPestle().setRegistryName(ModCore.MOD_ID, "mortar_pestle_stone"),
                 mortarPestleGold = new MortarPestle().setRegistryName(ModCore.MOD_ID, "mortar_pestle_gold"),
@@ -153,6 +150,10 @@ public class ModItems {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         init();
+
+        for (Item item : itemsMagic) {
+            event.getRegistry().register(item);
+        }
 
         for (Item item : itemsAlchemy) {
             event.getRegistry().register(item);

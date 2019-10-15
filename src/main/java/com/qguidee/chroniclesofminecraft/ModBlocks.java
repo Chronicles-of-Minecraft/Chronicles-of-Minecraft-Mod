@@ -19,6 +19,7 @@ import java.util.List;
 @ObjectHolder(ModCore.MOD_ID)
 public class ModBlocks {
 
+    // public static List<Block> blocksMagic;
     public static List<Block> blocksAlchemy;
     public static List<Block> blocksBiomes;
 
@@ -28,7 +29,6 @@ public class ModBlocks {
     public static Block alembicMk2;
     public static Block alembicMk3;
 
-    // Flowers
     public static Block flowerRosaRosea;
     public static Block flowerRosaAlba;
     public static Block flowerRosaHyacinus;
@@ -51,6 +51,10 @@ public class ModBlocks {
     public static Block flowerArumTitanTop;
 
     private static void init() {
+
+        /*blocksMagic = Arrays.asList(
+
+        );*/
 
         blocksAlchemy = Arrays.asList(
                 maceratingTank = new Distiller(Block.Properties.create(Material.IRON).hardnessAndResistance(5).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName(ModCore.MOD_ID, "macerating_tank"),
@@ -85,6 +89,10 @@ public class ModBlocks {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         init();
+
+        /*for (Block block : blocksMagic) {
+            event.getRegistry().register(block);
+        }*/
 
         for (Block block : blocksAlchemy) {
             event.getRegistry().register(block);
