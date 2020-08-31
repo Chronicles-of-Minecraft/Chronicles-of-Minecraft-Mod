@@ -19,17 +19,17 @@ public class ModBlocks {
             ChroniclesOfMinecraft.MODID);
 
     public static final RegistryObject<Block> FLOWER_ROSA_ROSEA = BLOCKS.register("flower_rosa_rosea",
-            () -> new Flower());
+            () -> new Flower(30));
     public static final RegistryObject<Block> FLOWER_ROSA_ALBA = BLOCKS.register("flower_rosa_alba",
-            () -> new Flower());
+            () -> new Flower(50));
     public static final RegistryObject<Block> FLOWER_ROSA_HYACINUS = BLOCKS.register("flower_rosa_hyacinus",
-            () -> new Flower());
+            () -> new Flower(30));
     public static final RegistryObject<Block> FLOWER_LILIACEAE_CANDELA = BLOCKS.register("flower_liliaceae_candela",
-            () -> new Flower());
+            () -> new Flower(50));
     public static final RegistryObject<Block> FLOWER_CANTHARELLUS_PLATYPHYLLUS = BLOCKS
-            .register("flower_cantharellus_platyphyllus", () -> new Flower());
+            .register("flower_cantharellus_platyphyllus", () -> new Flower(25));
     public static final RegistryObject<Block> FLOWER_CENTAUREA_MONTANA = BLOCKS.register("flower_centaurea_montana",
-            () -> new Flower());
+            () -> new Flower(20));
 
     public static final RegistryObject<Block> FLOWER_ALOES_CANDELA = BLOCKS.register("flower_aloes_candela",
             () -> new AloesCandela());
