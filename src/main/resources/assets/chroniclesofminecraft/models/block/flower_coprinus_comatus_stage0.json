@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "chroniclesofminecraft:block/flower_coprinus_comatus_stage0"
+    }
+}

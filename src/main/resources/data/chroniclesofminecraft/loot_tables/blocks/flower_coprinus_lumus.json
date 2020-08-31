@@ -1,0 +1,69 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "name": "chroniclesofminecraft:flower_coprinus_lumus_champignolite",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_mushrooms_champignolite"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_coprinus_lumus",
+                    "properties": {
+                        "age": "6"
+                    }
+                },
+                {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.0005
+                }
+            ]
+        },
+        {
+            "name": "chroniclesofminecraft:flower_coprinus_lumus_spore",
+            "rolls": {
+                "min": 2,
+                "max": 5
+            },
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_coprinus_lumus"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_coprinus_lumus",
+                    "properties": {
+                        "age": "6"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "chroniclesofminecraft:flower_coprinus_lumus_cap",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_coprinus_lumus_cap"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_coprinus_lumus",
+                    "properties": {
+                        "age": "6"
+                    }
+                }
+            ]
+        }
+    ]
+}

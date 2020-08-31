@@ -1,0 +1,65 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "name": "chroniclesofminecraft:flower_bulbum_aer_alchemical_bulb",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:alchemical_bulb"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_bulbum_aer",
+                    "properties": {
+                        "age": "7"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "chroniclesofminecraft:flower_bulbum_aer_seeds",
+            "rolls": {
+                "min": 1,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_bulbum_aer"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_bulbum_aer",
+                    "properties": {
+                        "age": "7"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "chroniclesofminecraft:flower_bulbum_aer_leave",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_bulbum_aer_leave"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_bulbum_aer",
+                    "properties": {
+                        "age": "7"
+                    }
+                }
+            ]
+        }
+    ]
+}

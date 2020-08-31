@@ -1,0 +1,69 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "name": "chroniclesofminecraft:flower_coprinus_comatus_champignolite",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_mushrooms_champignolite"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_coprinus_comatus",
+                    "properties": {
+                        "age": "5"
+                    }
+                },
+                {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.0005
+                }
+            ]
+        },
+        {
+            "name": "chroniclesofminecraft:flower_coprinus_comatus_spore",
+            "rolls": {
+                "min": 1,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_coprinus_comatus"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_coprinus_comatus",
+                    "properties": {
+                        "age": "5"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "chroniclesofminecraft:flower_coprinus_comatus_cap",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "chroniclesofminecraft:flower_coprinus_comatus_cap"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "chroniclesofminecraft:flower_coprinus_comatus",
+                    "properties": {
+                        "age": "5"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "chroniclesofminecraft:block/flower_arum_titan_bottom_stage3"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "chroniclesofminecraft:item/alchemical_bulb_empty"
+    },
+    "variants": {
+        "normal": [{}],
+        "inventory": [{}]
+    },
+    "variant": {
+        "bulb_content": {
+            "empty": {
+                "textures": {
+                    "layer1": "chroniclesofminecraft:block/transparent"
+                }
+            },
+            "water": {
+                "textures": {
+                    "layer1": "chroniclesofminecraft:item/alchemical_bulb_water"
+                }
+            }
+        }
+    }
+}

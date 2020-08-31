@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "chroniclesofminecraft:item/flower_capparaceae_tropicalum_seeds"
+    }
+}

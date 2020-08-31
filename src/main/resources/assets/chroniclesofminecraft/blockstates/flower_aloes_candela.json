@@ -1,0 +1,19 @@
+{
+    "defaults": {
+        "textures": {
+            "crop": "chroniclesofminecraft:block/flower_aloes_candela_stage0"
+        },
+        "model": "chroniclesofminecraft:block/flower_aloes_candela_stage0"
+    },
+    "variants": {
+        "age=0": {
+            "model": "chroniclesofminecraft:block/flower_aloes_candela_stage0"
+        },
+        "age=1": {
+            "model": "chroniclesofminecraft:block/flower_aloes_candela_stage1"
+        },
+        "age=2": {
+            "model": "chroniclesofminecraft:block/flower_aloes_candela_stage2"
+        }
+    }
+}

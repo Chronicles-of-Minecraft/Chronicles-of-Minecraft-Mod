@@ -1,0 +1,9 @@
+{
+    "parent": "forge:item/bucket",
+    "loader": "forge:bucket",
+    "fluid": "chroniclesofminecraft:item/alchemical_bulb_water",
+    "textures": {
+        "base": "chroniclesofminecraft:item/alchemical_bulb_empty",
+        "fluid": "chroniclesofminecraft:item/transparent"
+    }
+}

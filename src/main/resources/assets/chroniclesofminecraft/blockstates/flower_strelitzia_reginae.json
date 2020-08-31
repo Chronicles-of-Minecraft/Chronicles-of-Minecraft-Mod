@@ -1,0 +1,10 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "age": {
+            "0": { "model": "chroniclesofminecraft:block/flower_strelitzia_reginae_stage0" },
+            "1": { "model": "chroniclesofminecraft:block/flower_strelitzia_reginae_stage1" },
+            "2": { "model": "chroniclesofminecraft:block/flower_strelitzia_reginae_stage2" }
+        }
+    }
+}

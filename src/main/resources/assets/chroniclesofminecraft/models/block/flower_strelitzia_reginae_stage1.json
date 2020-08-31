@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "chroniclesofminecraft:block/flower_strelitzia_reginae_stage1"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "age": {
+            "0": {
+                "model": "chroniclesofminecraft:block/flower_capparaceae_tropicalum_bottom_stage0"
+            },
+            "1": {
+                "model": "chroniclesofminecraft:block/flower_capparaceae_tropicalum_bottom_stage1"
+            },
+            "2": {
+                "model": "chroniclesofminecraft:block/flower_capparaceae_tropicalum_bottom_stage2"
+            },
+            "3": {
+                "model": "chroniclesofminecraft:block/flower_capparaceae_tropicalum_bottom_stage3"
+            },
+            "4": {
+                "model": "chroniclesofminecraft:block/flower_capparaceae_tropicalum_bottom_stage4"
+            },
+            "5": {
+                "model": "chroniclesofminecraft:block/flower_capparaceae_tropicalum_bottom_stage5"
+            }
+        }
+    }
+}

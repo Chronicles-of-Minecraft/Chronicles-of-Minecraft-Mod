@@ -1,0 +1,25 @@
+{
+    "variants": {
+        "age=0": {
+            "model": "chroniclesofminecraft:block/flower_coprinus_lumus_stage0"
+        },
+        "age=1": {
+            "model": "chroniclesofminecraft:block/flower_coprinus_lumus_stage1"
+        },
+        "age=2": {
+            "model": "chroniclesofminecraft:block/flower_coprinus_lumus_stage2"
+        },
+        "age=3": {
+            "model": "chroniclesofminecraft:block/flower_coprinus_lumus_stage3"
+        },
+        "age=4": {
+            "model": "chroniclesofminecraft:block/flower_coprinus_lumus_stage4"
+        },
+        "age=5": {
+            "model": "chroniclesofminecraft:block/flower_coprinus_lumus_stage5"
+        },
+        "age=6": {
+            "model": "chroniclesofminecraft:block/flower_coprinus_lumus_stage6"
+        }
+    }
+}
