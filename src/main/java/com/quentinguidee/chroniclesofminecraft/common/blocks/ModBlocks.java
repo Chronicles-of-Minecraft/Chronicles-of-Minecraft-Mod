@@ -6,7 +6,7 @@ import com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers.Bamb
 import com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers.BulbumAer;
 import com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers.CoprinusComatus;
 import com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers.CoprinusLumus;
-import com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers.Flower;
+import com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers.ExpandableFlower;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,17 +19,17 @@ public class ModBlocks {
             ChroniclesOfMinecraft.MODID);
 
     public static final RegistryObject<Block> FLOWER_ROSA_ROSEA = BLOCKS.register("flower_rosa_rosea",
-            () -> new Flower(30));
+            () -> new ExpandableFlower(30));
     public static final RegistryObject<Block> FLOWER_ROSA_ALBA = BLOCKS.register("flower_rosa_alba",
-            () -> new Flower(50));
+            () -> new ExpandableFlower(50));
     public static final RegistryObject<Block> FLOWER_ROSA_HYACINUS = BLOCKS.register("flower_rosa_hyacinus",
-            () -> new Flower(30));
+            () -> new ExpandableFlower(30));
     public static final RegistryObject<Block> FLOWER_LILIACEAE_CANDELA = BLOCKS.register("flower_liliaceae_candela",
-            () -> new Flower(50));
+            () -> new ExpandableFlower(50));
     public static final RegistryObject<Block> FLOWER_CANTHARELLUS_PLATYPHYLLUS = BLOCKS
-            .register("flower_cantharellus_platyphyllus", () -> new Flower(25));
+            .register("flower_cantharellus_platyphyllus", () -> new ExpandableFlower(25));
     public static final RegistryObject<Block> FLOWER_CENTAUREA_MONTANA = BLOCKS.register("flower_centaurea_montana",
-            () -> new Flower(20));
+            () -> new ExpandableFlower(20));
 
     public static final RegistryObject<Block> FLOWER_ALOES_CANDELA = BLOCKS.register("flower_aloes_candela",
             () -> new AloesCandela());
