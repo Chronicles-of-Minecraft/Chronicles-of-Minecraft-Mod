@@ -3,7 +3,6 @@ package com.quentinguidee.chroniclesofminecraft.common.biomes.helpers;
 import com.google.common.collect.Lists;
 import com.quentinguidee.chroniclesofminecraft.common.biomes.surfacebuilder.ValleySurfaceBuilder;
 import com.quentinguidee.chroniclesofminecraft.common.blocks.ModBlocks;
-
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.biome.Biome;
@@ -51,7 +50,7 @@ public class ModBiomeFeatures {
     }
 
     public static void addLimestone(Biome biomeIn) {
-        biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.DISK.withConfiguration(new SphereReplaceConfig(LIMESTONE, 8, 2, Lists.newArrayList(new BlockState[]{Blocks.DIRT.getDefaultState(), Blocks.GRASS_BLOCK.getDefaultState()}))).withPlacement(Placement.COUNT_TOP_SOLID.configure(new FrequencyConfig(6))));
+        biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.DISK.withConfiguration(new SphereReplaceConfig(LIMESTONE, 8, 2, Lists.newArrayList(new BlockState[] {Blocks.DIRT.getDefaultState(), Blocks.GRASS_BLOCK.getDefaultState()}))).withPlacement(Placement.COUNT_TOP_SOLID.configure(new FrequencyConfig(6))));
         biomeIn.addFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, Feature.FOREST_ROCK.withConfiguration(new BlockBlobConfig(LIMESTONE, 0)).withPlacement(Placement.FOREST_ROCK.configure(new FrequencyConfig(2))));
     }
 

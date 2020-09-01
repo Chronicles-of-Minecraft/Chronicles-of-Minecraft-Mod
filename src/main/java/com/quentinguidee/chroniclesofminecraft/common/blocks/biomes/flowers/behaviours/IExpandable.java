@@ -2,5 +2,4 @@ package com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers.beh
 
 import net.minecraft.block.IGrowable;
 
-public interface IExpandable extends IGrowable {
-}
+public interface IExpandable extends IGrowable {}

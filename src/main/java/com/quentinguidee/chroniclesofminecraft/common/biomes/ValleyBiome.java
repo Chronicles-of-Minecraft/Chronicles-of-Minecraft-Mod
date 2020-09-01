@@ -2,45 +2,27 @@ package com.quentinguidee.chroniclesofminecraft.common.biomes;
 
 import com.quentinguidee.chroniclesofminecraft.common.biomes.helpers.BlockClusterBuilder;
 import com.quentinguidee.chroniclesofminecraft.common.biomes.helpers.ModBiomeFeatures;
-import com.quentinguidee.chroniclesofminecraft.common.biomes.surfacebuilder.ValleySurfaceBuilder;
 import com.quentinguidee.chroniclesofminecraft.common.blocks.ModBlocks;
-
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
+import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 
 public class ValleyBiome extends Biome {
-    public static final SurfaceBuilderConfig SURFACE_BUILDER_CONFIG = new SurfaceBuilderConfig(
-            Blocks.GRASS_BLOCK.getDefaultState(), Blocks.DIRT.getDefaultState(), Blocks.STONE.getDefaultState());
-    
-    public static final SurfaceBuilderConfig SURFACE_BUILDER_CONFIG_LIMESTONE = new SurfaceBuilderConfig(
-            ModBlocks.LIMESTONE.get().getDefaultState(), Blocks.DIRT.getDefaultState(), Blocks.SAND.getDefaultState());
-    
-    public static final SurfaceBuilderConfig SURFACE_BUILDER_CONFIG_STONE = new SurfaceBuilderConfig(
-            Blocks.STONE.getDefaultState(), Blocks.DIRT.getDefaultState(), Blocks.SAND.getDefaultState());
-
-    public static final SurfaceBuilderConfig SURFACE_BUILDER_CONFIG_GRAVEL = new SurfaceBuilderConfig(
-        Blocks.GRAVEL.getDefaultState(), Blocks.DIRT.getDefaultState(), Blocks.SAND.getDefaultState());
+    public static final SurfaceBuilderConfig SURFACE_BUILDER_CONFIG = new SurfaceBuilderConfig(Blocks.GRASS_BLOCK.getDefaultState(), Blocks.DIRT.getDefaultState(), Blocks.STONE.getDefaultState());
+    public static final SurfaceBuilderConfig SURFACE_BUILDER_CONFIG_LIMESTONE = new SurfaceBuilderConfig(ModBlocks.LIMESTONE.get().getDefaultState(), Blocks.DIRT.getDefaultState(), Blocks.SAND.getDefaultState());
+    public static final SurfaceBuilderConfig SURFACE_BUILDER_CONFIG_STONE = new SurfaceBuilderConfig(Blocks.STONE.getDefaultState(), Blocks.DIRT.getDefaultState(), Blocks.SAND.getDefaultState());
+    public static final SurfaceBuilderConfig SURFACE_BUILDER_CONFIG_GRAVEL = new SurfaceBuilderConfig(Blocks.GRAVEL.getDefaultState(), Blocks.DIRT.getDefaultState(), Blocks.SAND.getDefaultState());
 
     protected ValleyBiome() {
-        super((new Biome.Builder()).surfaceBuilder(new ConfiguredSurfaceBuilder<>(ModBiomeFeatures.VALLEY_SURFACE_BUILDER, SURFACE_BUILDER_CONFIG))
-                .precipitation(RainType.RAIN)
-                .category(Category.NONE)
-                .depth(0F)
-                .scale(0F)
-                .temperature(0.8F)
-                .downfall(0.4F)
-                .waterColor(4159204)
-                .waterFogColor(329011)
-                .parent((String) null));
+        super((new Biome.Builder()).surfaceBuilder(new ConfiguredSurfaceBuilder<>(ModBiomeFeatures.VALLEY_SURFACE_BUILDER, SURFACE_BUILDER_CONFIG)).precipitation(RainType.RAIN).category(Category.NONE).depth(0F).scale(0F).temperature(0.8F).downfall(0.4F).waterColor(4159204).waterFogColor(329011).parent((String)null));
 
         ModBiomeFeatures.addOres(this);
         ModBiomeFeatures.addLimestone(this);

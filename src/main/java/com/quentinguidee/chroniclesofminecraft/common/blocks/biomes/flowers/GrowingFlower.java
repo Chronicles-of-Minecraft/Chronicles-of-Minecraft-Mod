@@ -17,14 +17,11 @@ public abstract class GrowingFlower extends CropsBlock {
         this.MAX_AGE = maxAge;
     }
 
-    @Override
-    public abstract IntegerProperty getAgeProperty();
+    @Override public abstract IntegerProperty getAgeProperty();
 
-    @Override
-    protected abstract IItemProvider getSeedsItem();
+    @Override protected abstract IItemProvider getSeedsItem();
 
-    @Override
-    protected abstract void fillStateContainer(Builder<Block, BlockState> builder);
+    @Override protected abstract void fillStateContainer(Builder<Block, BlockState> builder);
 
     @Override
     public int getMaxAge() {
@@ -36,3 +33,4 @@ public abstract class GrowingFlower extends CropsBlock {
         return 1;
     }
 }
+

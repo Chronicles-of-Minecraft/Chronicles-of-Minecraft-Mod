@@ -1,12 +1,10 @@
 package com.quentinguidee.chroniclesofminecraft.common.biomes.world;
 
-import java.util.Set;
-import java.util.function.LongFunction;
-
 import com.google.common.collect.ImmutableSet;
 import com.quentinguidee.chroniclesofminecraft.common.biomes.Biomes;
 import com.quentinguidee.chroniclesofminecraft.common.biomes.layers.ModGenLayer;
-
+import java.util.Set;
+import java.util.function.LongFunction;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.provider.BiomeProvider;
@@ -31,21 +29,17 @@ public class ModBiomeProvider extends BiomeProvider {
         getBiomesToSpawnIn().clear();
         getBiomesToSpawnIn().addAll(biomes);
 
-        this.layer = makeLayers(settingsProvider.func_226850_a_(), settingsProvider.func_226851_b_(),
-                settingsProvider.getGeneratorSettings());
+        this.layer = makeLayers(settingsProvider.func_226850_a_(), settingsProvider.func_226851_b_(), settingsProvider.getGeneratorSettings());
     }
 
     public static Layer makeLayers(long seed, WorldType worldType, OverworldGenSettings genSettings) {
         int i = 25;
-        IAreaFactory<LazyArea> iareafactory = makeLayers(worldType, genSettings, (ctx) -> {
-            return new LazyAreaLayerContext(i, seed, ctx);
-        });
+        IAreaFactory<LazyArea> iareafactory = makeLayers(worldType, genSettings, (ctx) -> { return new LazyAreaLayerContext(i, seed, ctx); });
         return new Layer(iareafactory);
     }
 
-    public static <T extends IArea, C extends IExtendedNoiseRandom<T>> IAreaFactory<T> makeLayers(WorldType worldType,
-            OverworldGenSettings genSettings, LongFunction<C> lf) {
-        
+    public static <T extends IArea, C extends IExtendedNoiseRandom<T>> IAreaFactory<T> makeLayers(WorldType worldType, OverworldGenSettings genSettings, LongFunction<C> lf) {
+
         // Create the map
         IAreaFactory<T> iAreaFactory = ModGenLayer.INSTANCE.apply(lf.apply(1L));
 
@@ -55,7 +49,7 @@ public class ModBiomeProvider extends BiomeProvider {
         iAreaFactory = ZoomLayer.NORMAL.apply(lf.apply(2002L), iAreaFactory);
         iAreaFactory = ZoomLayer.NORMAL.apply(lf.apply(2003L), iAreaFactory);
 
-        iAreaFactory = SmoothLayer.INSTANCE.apply((IExtendedNoiseRandom) lf.apply(1000L), iAreaFactory);
+        iAreaFactory = SmoothLayer.INSTANCE.apply((IExtendedNoiseRandom)lf.apply(1000L), iAreaFactory);
 
         return iAreaFactory;
     }

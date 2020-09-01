@@ -1,9 +1,7 @@
 package com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
-import java.util.Random;
-
 import com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers.behaviours.IExpandable;
-
+import java.util.Random;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -15,13 +13,9 @@ import net.minecraft.world.server.ServerWorld;
 public class ExpandableFlower extends Flower implements IExpandable {
     private int expansionChance;
 
-    public ExpandableFlower() {
-        this(25);
-    }
+    public ExpandableFlower() { this(25); }
 
-    public ExpandableFlower(int expansionChance) {
-        this.expansionChance = expansionChance;
-    }
+    public ExpandableFlower(int expansionChance) { this.expansionChance = expansionChance; }
 
     @Override
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
@@ -39,21 +33,17 @@ public class ExpandableFlower extends Flower implements IExpandable {
                 }
             }
 
-            BlockPos blockPos = pos.add(generateCoordinate(rand), rand.nextInt(2) - rand.nextInt(2),
-                    generateCoordinate(rand));
+            BlockPos blockPos = pos.add(generateCoordinate(rand), rand.nextInt(2) - rand.nextInt(2), generateCoordinate(rand));
 
             for (int k = 0; k < 4; ++k) {
-                if (worldIn.isAirBlock(blockPos) && state.isValidPosition(worldIn, blockPos)
-                        && worldIn.canBlockSeeSky(blockPos)) {
+                if (worldIn.isAirBlock(blockPos) && state.isValidPosition(worldIn, blockPos) && worldIn.canBlockSeeSky(blockPos)) {
                     pos = blockPos;
                 }
 
-                blockPos = pos.add(generateCoordinate(rand), rand.nextInt(2) - rand.nextInt(2),
-                        generateCoordinate(rand));
+                blockPos = pos.add(generateCoordinate(rand), rand.nextInt(2) - rand.nextInt(2), generateCoordinate(rand));
             }
 
-            if (worldIn.isAirBlock(blockPos) && state.isValidPosition(worldIn, blockPos)
-                    && worldIn.canBlockSeeSky(blockPos)) {
+            if (worldIn.isAirBlock(blockPos) && state.isValidPosition(worldIn, blockPos) && worldIn.canBlockSeeSky(blockPos)) {
                 grow(worldIn, rand, blockPos, state);
             }
         }

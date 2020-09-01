@@ -1,10 +1,8 @@
 package com.quentinguidee.chroniclesofminecraft.common.biomes.layers;
 
+import com.quentinguidee.chroniclesofminecraft.common.biomes.world.ModBiomeProvider;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.quentinguidee.chroniclesofminecraft.common.biomes.world.ModBiomeProvider;
-
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.INoiseRandom;

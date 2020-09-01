@@ -1,7 +1,6 @@
 package com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
 import com.quentinguidee.chroniclesofminecraft.common.items.ModItems;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -19,9 +18,7 @@ import net.minecraft.world.IWorld;
 public class BulbumAer extends GrowingFlower implements ILiquidContainer {
     private static IntegerProperty age = IntegerProperty.create("age", 0, 7);
 
-    public BulbumAer() {
-        super(7);
-    }
+    public BulbumAer() { super(7); }
 
     @Override
     public IntegerProperty getAgeProperty() {

@@ -1,5 +1,10 @@
 package com.quentinguidee.chroniclesofminecraft;
 
+import com.quentinguidee.chroniclesofminecraft.common.biomes.Biomes;
+import com.quentinguidee.chroniclesofminecraft.common.biomes.world.NormalWorldType;
+import com.quentinguidee.chroniclesofminecraft.common.blocks.ModBlocks;
+import com.quentinguidee.chroniclesofminecraft.common.items.ModItems;
+import java.util.stream.Collectors;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -16,13 +21,6 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.stream.Collectors;
-
-import com.quentinguidee.chroniclesofminecraft.common.items.ModItems;
-import com.quentinguidee.chroniclesofminecraft.common.biomes.Biomes;
-import com.quentinguidee.chroniclesofminecraft.common.biomes.world.NormalWorldType;
-import com.quentinguidee.chroniclesofminecraft.common.blocks.ModBlocks;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("chroniclesofminecraft")
@@ -84,8 +82,7 @@ public class ChroniclesOfMinecraft {
 
     private void processIMC(final InterModProcessEvent event) {
         // some example code to receive and process InterModComms from other mods
-        LOGGER.info("Got IMC {}",
-                event.getIMCStream().map(m -> m.getMessageSupplier().get()).collect(Collectors.toList()));
+        LOGGER.info("Got IMC {}", event.getIMCStream().map(m -> m.getMessageSupplier().get()).collect(Collectors.toList()));
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
