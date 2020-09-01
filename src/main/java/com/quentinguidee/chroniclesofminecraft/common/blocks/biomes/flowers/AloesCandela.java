@@ -1,5 +1,6 @@
 package com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
+import com.quentinguidee.chroniclesofminecraft.common.blocks.ModBlocks;
 import com.quentinguidee.chroniclesofminecraft.common.items.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -11,7 +12,7 @@ import net.minecraft.util.IItemProvider;
 public class AloesCandela extends GrowingFlower {
     private static final IntegerProperty age = BlockStateProperties.AGE_0_2;
 
-    public AloesCandela() { super(2); }
+    public AloesCandela() { super(ModBlocks.DEFAULT_FLOWER_PROPERTIES.lightValue(2), 2); }
 
     @Override
     protected IItemProvider getSeedsItem() {

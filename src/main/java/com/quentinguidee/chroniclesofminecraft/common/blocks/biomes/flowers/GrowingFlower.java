@@ -1,9 +1,9 @@
 package com.quentinguidee.chroniclesofminecraft.common.blocks.biomes.flowers;
 
+import com.quentinguidee.chroniclesofminecraft.common.blocks.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropsBlock;
-import net.minecraft.block.material.Material;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer.Builder;
 import net.minecraft.util.IItemProvider;
@@ -12,8 +12,10 @@ import net.minecraft.world.World;
 public abstract class GrowingFlower extends CropsBlock {
     public final int MAX_AGE;
 
-    public GrowingFlower(int maxAge) {
-        super(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement());
+    public GrowingFlower(int maxAge) { this(ModBlocks.DEFAULT_FLOWER_PROPERTIES, maxAge); }
+
+    public GrowingFlower(Block.Properties properties, int maxAge) {
+        super(properties);
         this.MAX_AGE = maxAge;
     }
 
@@ -33,4 +35,3 @@ public abstract class GrowingFlower extends CropsBlock {
         return 1;
     }
 }
-

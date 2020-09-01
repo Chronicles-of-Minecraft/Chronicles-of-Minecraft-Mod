@@ -16,6 +16,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, ChroniclesOfMinecraft.MODID);
 
+    public static final Block.Properties DEFAULT_FLOWER_PROPERTIES = Block.Properties.create(Material.PLANTS).hardnessAndResistance(0).tickRandomly().doesNotBlockMovement();
+
     public static final RegistryObject<Block> FLOWER_ROSA_ROSEA = BLOCKS.register("flower_rosa_rosea", () -> new ExpandableFlower(30));
     public static final RegistryObject<Block> FLOWER_ROSA_ALBA = BLOCKS.register("flower_rosa_alba", () -> new ExpandableFlower(50));
     public static final RegistryObject<Block> FLOWER_ROSA_HYACINUS = BLOCKS.register("flower_rosa_hyacinus", () -> new ExpandableFlower(30));
